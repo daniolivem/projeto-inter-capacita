@@ -1,0 +1,42 @@
+/* Input Component Styles */
+
+.input-default {
+  width: 100%;
+  max-width: 558px;
+  height: 60px;
+  border-radius: 8px;
+  padding: 24px 16px;
+  background-color: var(--light-gray-3);
+  border: none;
+  outline: none;
+}
+
+.input-default.input-login {
+  max-width: 523px;
+}
+
+.input-default::placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: var(--light-gray-2);
+  transition: border 0.3s ease-in-out;
+}
+
+/* Responsividade */
+@media (max-width: 460px) {
+  .input-default {
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 60px;
+  }
+
+  .input-default.input-login {
+    min-width: 229px;
+  }
+
+  .input-default:not(.input-login) {
+    min-width: 315px;
+  }
+}

@@ -2,7 +2,7 @@ import Section from '../../components/Section';
 import Collection1 from '../../public/collection-1.png';
 import Collection2 from '../../public/collection-2.png';
 import Collection3 from '../../public/collection-3.png';
-import { ContainerBottom, ContainerCircles, ContentCard } from './styles';
+import './HomePage.css';
 import Camiseta from '../../assets/images/camiseta.png';
 import Pants from '../../assets/images/pants.png';
 import Sneakers from '../../assets/images/sneakers.png';
@@ -12,7 +12,7 @@ import Headphone from '../../assets/images/headphone.png';
 import {
   ButtonPrimary,
   ButtonSecundary,
-} from '../../components/Buttons/styles';
+} from '../../components/Buttons/ButtonComponents';
 import Gallery from '../../components/Gallery';
 import ProductListing from '../../components/ProductListing';
 import Thumb1 from '../../public/product-thumb-1.svg';
@@ -119,7 +119,7 @@ const HomePage = () => {
 
       {/* Seção de Coleções em destaque (cards) */}
       <Section title='Coleçoes em destaque'>
-        <ContentCard>
+        <section className='content-card'>
           <div className='card'>
             <div className='card-info'>
               <div className='card-tag'>
@@ -157,7 +157,7 @@ const HomePage = () => {
               <img src={Collection3} alt='Coleção 1' />
             </div>
           </div>
-        </ContentCard>
+        </section>
       </Section>
 
       {/* Seção de Coleções em destaque  (icons circles)*/}
@@ -165,7 +165,7 @@ const HomePage = () => {
         title='Coleçoes em destaque'
         titleAlign={windowWidth <= 1024 ? 'left' : 'center'}
       >
-        <ContainerCircles>
+        <section className='container-circles'>
           {cardsCircle.map(card => (
             <div className='content' key={card.id}>
               <div className='content-image'>
@@ -174,7 +174,7 @@ const HomePage = () => {
               <p>{card.title}</p>
             </div>
           ))}
-        </ContainerCircles>
+        </section>
       </Section>
 
       {/* Seção de Produtos em alta */}
@@ -187,7 +187,7 @@ const HomePage = () => {
 
       {/* Seção Marketing Bottom */}
       <Section $paddingBottom>
-        <ContainerBottom>
+        <section className='container-bottom'>
           <div className='content-bottom-left'>
             <div className='content-bottom-image'>
               <img src={MarketingBottom} alt='Marketing Bottom' />
@@ -203,11 +203,11 @@ const HomePage = () => {
               Suscipit, provident? Debitis cum minima temporibus animi sint modi
               nihil excepturi molestiae ipsa.
             </p>
-            <ButtonPrimary $mobile $desktop>
+            <ButtonPrimary className="mobile desktop">
               Ver Oferta
             </ButtonPrimary>
           </div>
-        </ContainerBottom>
+        </section>
       </Section>
     </div>
   );

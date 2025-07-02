@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import QueimaEstoque from '../../assets/images/queima-estoque.png';
 import OrnamentImg from '../../assets/icons/Ornament.png';
-import { ButtonPrimary } from '../Buttons/styles';
-import { Container } from './styles';
+import { ButtonPrimary } from '../Buttons/ButtonComponents';
+import './Gallery.css';
 
 import Slide01 from '../../assets/bg-removed/home-slide-01.svg';
 
@@ -75,7 +75,7 @@ const Gallery = () => {
   };
 
   return (
-    <Container>
+    <div className="gallery-container">
       <div className='content-gallery'>
         <div className='content-info'>
           <h2>Melhores ofertas personalizadas</h2>
@@ -122,7 +122,7 @@ const Gallery = () => {
           ></div>
         ))}
       </div>
-    </Container>
+    </div>
   );
 };
 

@@ -1,0 +1,128 @@
+/* Gallery Component Styles */
+
+.gallery-container {
+  width: 100%;
+  height: 681px;
+  padding: 78px 37px 0px 100px;
+  background-color: var(--light-gray-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-container .content-gallery {
+  width: 100%;
+  max-width: 1440px;
+  height: 398px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.gallery-container .content-gallery .content-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  z-index: 2;
+}
+
+.gallery-container .content-gallery .content-info h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: var(--warning-color);
+}
+
+.gallery-container .content-gallery .content-info h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 1px;
+  color: var(--dark-gray-2);
+}
+
+.gallery-container .content-gallery .content-info p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.75px;
+  color: var(--dark-gray-2);
+}
+
+.gallery-container .content-gallery .content-image {
+  width: 100%;
+  max-width: 466px;
+  height: 466px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(227, 198, 247, 1) 0%,
+    rgba(242, 227, 252, 1) 27%,
+    rgba(255, 255, 255, 1) 64%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gallery-container .content-gallery .content-image img {
+  width: 570px;
+  height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 1400px) {
+  .gallery-container {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .gallery-container .content-gallery {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+  }
+
+  .gallery-container .content-gallery .content-info h1 {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+
+  .gallery-container .content-gallery .content-image {
+    max-width: 350px;
+    height: 350px;
+  }
+
+  .gallery-container .content-gallery .content-image img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 460px) {
+  .gallery-container {
+    padding: 20px 10px;
+  }
+
+  .gallery-container .content-gallery .content-info h1 {
+    font-size: 2rem;
+    line-height: 36px;
+  }
+
+  .gallery-container .content-gallery .content-info p {
+    font-size: 1rem;
+    line-height: 28px;
+  }
+
+  .gallery-container .content-gallery .content-image {
+    max-width: 250px;
+    height: 250px;
+  }
+
+  .gallery-container .content-gallery .content-image img {
+    width: 300px;
+  }
+}

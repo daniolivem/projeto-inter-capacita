@@ -1,15 +1,14 @@
-import FooterScom from '../../components/Footer/FooterScom';
-import Header from '../../components/Header';
-
-import { Container, Content } from './styles';
+import Header from '../../components/Header/HeaderComponent';
+import Footer from '../../components/Footer/Footer';
+import './Layout.css';
 
 const Layout = ({ children }) => {
   return (
-    <Container>
+    <div className="layout-container">
       <Header />
-      <Content>{children}</Content>
-      <FooterScom />
-    </Container>
+      <main className="layout-content">{children}</main>
+      <Footer />
+    </div>
   );
 };
 

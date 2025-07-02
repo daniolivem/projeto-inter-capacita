@@ -1,9 +1,9 @@
-import { Input } from './styles';
+import './Input.css';
 
-export const InputDefault = ({ ...props }) => {
+export const InputDefault = ({ className = '', $inputLogin, ...props }) => {
+  const inputClasses = `input-default ${$inputLogin ? 'input-login' : ''} ${className}`;
+  
   return (
-    <>
-      <Input {...props} />
-    </>
+    <input className={inputClasses} {...props} />
   );
 };

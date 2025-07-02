@@ -1,7 +1,7 @@
 import './style.css';
 import NikeImg from '../../assets/images/White-Sneakers.png';
 import ConfeteIcon from '../../assets/icons/confete.png';
-import { ButtonShop } from '../../components/Buttons/styles';
+import { ButtonShop } from '../../components/Buttons/ButtonComponents';
 
 const BuySuccessPage = () => {
   return (

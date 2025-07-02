@@ -1,6 +1,6 @@
 import { useCart } from '../../contexts/CartContext'; // Importe o hook
-import { ButtonPrimary } from '../Buttons/styles';
-import { Container } from './styles';
+import { ButtonPrimary } from '../Buttons/ButtonComponents';
+import './ProductCard.css';
 import { Link } from 'react-router-dom'; // Import Link
 
 function ProductCard({ product }) {
@@ -28,7 +28,7 @@ function ProductCard({ product }) {
   };
 
   return (
-    <Container>
+    <div className="product-card">
       {/* Link envolve a maior parte do card, exceto o botão de adicionar ao carrinho */}
       <Link to={`/produtos/${id}`} className='product-link'>
         <div className='card-product'>
@@ -50,10 +50,10 @@ function ProductCard({ product }) {
         </div>
       </Link>
       {/* Botão Adicionar ao Carrinho fica fora do Link para ter sua própria ação */}
-      <ButtonPrimary $mobile $btnAddToCart $desktop onClick={handleAddToCart}>
+      <ButtonPrimary className="mobile btn-add-to-cart desktop" onClick={handleAddToCart}>
         Adicionar ao Carrinho
       </ButtonPrimary>
-    </Container>
+    </div>
   );
 }
 
