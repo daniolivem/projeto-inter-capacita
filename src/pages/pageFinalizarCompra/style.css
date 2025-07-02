@@ -1,0 +1,388 @@
+/*container*/
+
+.container {
+
+  display: flex;
+  width: 1440px;
+  height: 2926px;
+  top: -1843px;
+  left: 1014px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: rgb(226, 221, 221);
+  gap: 5px;
+  padding-left: 60px;
+
+
+
+}
+
+/* opcao  para a div ficar  uma do lado da outra */
+.ladoalado {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(226, 221, 221);
+  gap: 30px;
+}
+
+/* linha abaixo do h1*/
+.h1 {
+  width: 440px;
+  height: 36px;
+  top: 252px;
+  left: 99px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+
+}
+
+/*div resumo*/
+.resumo {
+
+  width: 468px;
+  height: 552px;
+  top: 318px;
+  left: 871px;
+  border-radius: 4px;
+  padding: 30px;
+  gap: 20px;
+  background-color: #FFFFFF;
+  margin-right: 20px;
+
+
+
+}
+
+/*div informacões pessoais */
+.border {
+  border-bottom: solid 1px;
+  gap: 364px;
+}
+
+
+
+.primeira {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  height: 538px;
+  top: 318px;
+  left: 101px;
+  margin-left: 40px;
+  border-radius: 4px;
+  padding: 30px;
+  gap: 20px;
+  background-color: #FFFFFF;
+
+}
+
+.primeira input {
+  width: 690px;
+  height: 60px;
+  top: 121px;
+  left: 30px;
+  opacity: 3px;
+  border-radius: 8px;
+  background-color: #dfd7d7;
+  border: none;
+
+}
+
+input::placeholder {
+  color: #666666;
+  font-size: 14px;
+  padding-left: 15px;
+
+
+}
+
+.border {
+  border-bottom: solid 1px;
+  gap: 364px;
+}
+
+
+/*div informacão de entrega*/
+
+
+.segunda {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  height: 538px;
+  top: 318px;
+  left: 101px;
+  margin-left: 40px;
+  border-radius: 4px;
+  padding: 30px;
+  gap: 20px;
+  background-color: #FFFFFF;
+
+
+
+}
+
+.segunda input {
+  width: 690px;
+  height: 60px;
+  top: 121px;
+  left: 30px;
+  opacity: 3px;
+  border-radius: 8px;
+  background-color: #dfd7d7;
+  border: none;
+
+}
+
+input::placeholder {
+  color: #666666;
+  font-size: 14px;
+  padding-left: 15px;
+
+
+}
+
+/*div informacão pagamento*/
+
+.terceira {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  height: 580px;
+  top: 318px;
+  left: 101px;
+  margin-left: 40px;
+  border-radius: 4px;
+  padding: 30px;
+  gap: 20px;
+  background-color: #FFFFFF;
+
+
+
+}
+
+.terceira input {
+  width: 690px;
+  height: 60px;
+  top: 121px;
+  left: 30px;
+  opacity: 3px;
+  border-radius: 8px;
+  background-color: #dfd7d7;
+  border: none;
+ 
+}
+
+input::placeholder {
+  color: #666666;
+  font-size: 14px;
+  padding-left: 15px;
+
+
+}
+
+
+
+.teste {
+  display: flex;
+  gap: 20px;
+  width: 690px;
+  height: 20px;
+}
+
+.teste input {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  appearance: none;
+  border: 1px solid #cf0808;
+
+
+}
+
+.teste input:checked {
+  background-color: #cf0808;
+}
+
+.terceira h6{
+font-family: Inter;
+font-weight: 700;
+font-size: 12px;
+line-height: 24px;
+letter-spacing: 0.75px;
+
+}
+
+
+
+
+
+.quarta {
+
+
+  width: 750px;
+  height: 248px;
+  top: 2048px;
+  left: 101px;
+  margin-left: 40px;
+  border-radius: 4px;
+  padding: 30px;
+  gap: 20px;
+  background-color: #FFFFFF;
+
+}
+
+.dois {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+
+}
+
+.dois div input {
+  width: 300px;
+
+}
+
+.cvv input {
+  display: flex;
+  align-self: flex-end;
+  width: 300px;
+
+}
+
+.finaliza {
+  display: flex;
+  justify-content: space-between;
+}
+
+.finaliza h3 {
+  color: #cf0808;
+}
+
+.quarta button {
+  width: 100%;
+  color: white;
+
+  background-color: #F6AA1C;
+}
+
+
+.resumo h4 {
+  width: 408;
+  height: 38;
+  gap: 365px;
+
+
+
+}
+
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+
+
+
+}
+
+
+
+
+.tenis {
+  width: 50px;
+  height: 50px;
+  padding-bottom: 10px;
+
+}
+
+.tenisf {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  background-color: cadetblue;
+  height: 45px;
+  border-radius: 4px;
+  align-self: flex-start;
+
+
+}
+
+.teniseh6 {
+  display: inline-flex;
+
+
+}
+
+
+.h {
+  font-size: 19px;
+  margin-left: 10px;
+
+
+}
+
+
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.linha span {
+  font-size: 16px;
+}
+
+.total {
+  font-weight: bold;
+  padding-top: 8px;
+  margin-top: 8px;
+  border: 1px solid #F6AA1C26;
+  border-radius: 4px;
+  width: 96%;
+  height: 100px;
+  margin-top: 50px;
+  background-color: #f6aa1c0D;
+  width: 408;
+
+
+
+
+}
+
+.resumo button {
+  width: 100%;
+  height: 60px;
+  background-color: #F6AA1C;
+  border-radius: 8px;
+  color: white;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  vertical-align: middle;
+
+
+}
+
+.spanbold {
+  font-weight: bold;
+}
+
+.span {
+  color: #999;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+}

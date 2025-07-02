@@ -1,0 +1,136 @@
+/* Container principal do select customizado */
+.custom-select-container {
+  position: relative;
+  display: inline-block;
+  min-width: 250px;
+}
+
+/* Botão principal que mostra o valor selecionado */
+.custom-select-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 48px;
+  gap: 12px;
+}
+
+/* Estado hover do botão */
+.custom-select-button:hover {
+  border-color: #c92071;
+  box-shadow: 0 0 0 3px rgba(201, 32, 113, 0.1);
+}
+
+/* Estado aberto do botão */
+.custom-select-button.open {
+  border-color: #c92071;
+  box-shadow: 0 0 0 3px rgba(201, 32, 113, 0.1);
+}
+
+/* Label "Ordenar por:" */
+.select-label {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap; /* Impede que o texto quebre em múltiplas linhas */
+}
+
+/* Valor selecionado */
+.select-value {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1; /* Ocupa todo o espaço disponível */
+  text-align: left;
+  margin-left: 8px;
+}
+
+/* Ícone da seta */
+.select-arrow {
+  transition: transform 0.2s ease;
+  flex-shrink: 0; /* Impede que a seta encolha */
+}
+
+/* Rotação da seta quando aberto */
+.select-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+/* Dropdown com as opções */
+.custom-select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Garante que o dropdown fique sobre outros elementos */
+  margin-top: 4px;
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o border-radius */
+}
+
+/* Cada opção do dropdown */
+.select-option {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+/* Última opção sem borda inferior */
+.select-option:last-child {
+  border-bottom: none;
+}
+
+/* Estado hover das opções */
+.select-option:hover {
+  background-color: #f8f9fa;
+}
+
+/* Opção selecionada */
+.select-option.selected {
+  background-color: #c92071;
+  color: white;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .custom-select-container {
+    min-width: 200px;
+  }
+
+  .custom-select-button {
+    padding: 10px 12px;
+    min-height: 44px;
+  }
+
+  .select-label,
+  .select-value,
+  .select-option {
+    font-size: 13px;
+  }
+}
+
+/* Ajustes específicos para o layout da sua página */
+@media (max-width: 460px) {
+  .custom-select-container {
+    min-width: 265px;
+  }
+
+  .select-label {
+    font-size: 12px;
+  }
+
+  .select-value {
+    font-size: 12px;
+  }
+}

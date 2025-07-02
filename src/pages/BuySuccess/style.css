@@ -1,0 +1,225 @@
+.container-main {
+  width: 100%;
+  height: 1300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.container {
+  width: 100%;
+  
+  height: 1048px;
+  background-color: var(--white);
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container .linha-divisor {
+  width: 100%;
+  max-width: 778px;
+  height: 1px;
+  background-color: var(--light-gray-2);
+}
+
+.content-icon-title {
+  width: 100%;
+  max-width: 778px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-icon-title .content-icon {
+  width: 33px;
+  height: 33px;
+}
+
+.content-icon-title .content-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.content-icon-title .content-title {
+  width: 100%;
+  max-width: 652px;
+}
+
+.content-icon-title .content-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+.section-info {
+  width: 100%;
+  max-width: 778px;
+  height: 152px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-info h2,
+.section-payment h2,
+.section-resumo h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  text-align: left;
+  color: var(--dark-gray-2);
+}
+
+.section-info p,
+.section-payment p {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.section-info span,
+.section-payment span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  text-align: left;
+  color: var(--light-gray);
+}
+
+.section-info strong {
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  color: var(--dark-gray);
+}
+
+.section-payment {
+  width: 100%;
+  max-width: 778px;
+  height: 88px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-resumo {
+  width: 100%;
+  max-width: 778px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.section-resumo .container-imagem-texto {
+  width: 100%;
+  max-width: 778px;
+  height: 58px;
+  gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 9px 0;
+}
+
+.section-resumo .container-imagem-texto .lado-esquerdo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 71.18px;
+  height: 58px;
+  border-radius: 2px;
+  background-color: #e2e3ff;
+}
+
+.section-resumo .container-imagem-texto .lado-esquerdo img {
+  width: 50px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.container-total-valor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 778px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: #f6aa1c12;
+  border: 1px solid #f6aa1c50;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
+
+.container-total-valor .total-valor {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.container-total-valor .info-parcelas {
+  width: 100%;
+  height: 22px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 5px;
+}
+
+.content-print {
+  width: 100%;
+  max-width: 778px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-print a {
+  color: var(--dark-gray-2);
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--light-gray);
+}
+
+/* Opcional: Media Query para telas menores */
+@media (max-width: 768px) {
+  .container-imagem-texto {
+    flex-direction: column;
+    /* Em telas menores, os itens ficam um abaixo do outro */
+    text-align: center;
+    /* Centraliza o texto quando estiver em coluna */
+  }
+
+  .lado-esquerdo,
+  .lado-direito {
+    flex: none;
+    /* Remove o flex-grow em telas pequenas */
+    width: 80%;
+    /* Ocupam a largura total */
+  }
+}

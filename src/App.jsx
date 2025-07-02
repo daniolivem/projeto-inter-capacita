@@ -1,35 +1,115 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import FormCreatePage from './pages/FormCreatePage';
+import UserDashboard from './components/UserDashboard';
+import BuySuccessPage from './pages/BuySuccess';
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ProductListingPage = lazy(() => import('./pages/ProductListingPage'));
+const ProductViewPage = lazy(() => import('./pages/ProductViewPage'));
+const LoginPage = lazy(() => import('./pages/LoginPage'));
+const CreateAccountInitialPage = lazy(
+  () => import('./pages/CreateAccountInitialPage')
+);
+// Adicione a importação da nova página do carrinho
+const ShoppingCartPage = lazy(() => import('./pages/ShoppingCartPage')); // Nova linha
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Suspense fallback={<div>Carregando...</div>}>
+      <Routes>
+        <Route
+          path='/'
+          element={
+            <Layout>
+              <HomePage />
+            </Layout>
+          }
+        />
+        <Route
+          path='/produtos'
+          element={
+            <Layout>
+              <ProductListingPage />
+            </Layout>
+          }
+        />
+        <Route
+          path='/produtos/:id'
+          element={
+            <Layout>
+              <ProductViewPage />
+            </Layout>
+          }
+        />
+        <Route
+          path='/categorias'
+          element={
+            <Layout>
+              <div>Categoria</div>
+            </Layout>
+          }
+        />
+        <Route
+          path='/orders'
+          element={
+            <Layout>
+              <UserDashboard />
+            </Layout>
+          }
+        />
+        {/* <Route
+          path='/profile'
+          element={
+            <Layout>
+              <UserDashboard />
+            </Layout>
+          }
+        /> */}
+        <Route
+          path='/login'
+          element={
+            <Layout>
+              <LoginPage />
+            </Layout>
+          }
+        />
+        <Route
+          path='/register'
+          element={
+            <Layout>
+              <CreateAccountInitialPage />
+            </Layout>
+          }
+        />
+        <Route
+          path='/create-account' 
+          element={
+            <Layout>
+              <FormCreatePage />
+            </Layout>
+          }
+        />
+        <Route
+          path='/product-success'
+          element={
+            <Layout>
+              <BuySuccessPage />
+            </Layout>
+          }
+        />
+        {/* Nova rota para o carrinho */}
+        <Route
+          path='/shopping-cart' // Changed from '/cart'
+          element={
+            <Layout>
+              <ShoppingCartPage />
+            </Layout>
+          }
+        />
+      </Routes>
+    </Suspense>
+  );
+};
 
-export default App
+export default App;

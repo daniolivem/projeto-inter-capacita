@@ -1,0 +1,306 @@
+/* Header da listagem */
+.listing-header {
+  width: 100%;
+  max-width: 1212px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  left: 433px;
+  top: 30px;
+}
+
+.results-info h2 {
+  color: var(--dark-gray-2, #474747);
+  font-feature-settings:
+    'liga' off,
+    'clig' off;
+
+  /* Text Small Bold */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.75px;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+}
+
+.sort-container label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.sort-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #c92071;
+}
+
+/* Container principal */
+.content-container {
+  display: flex;
+  gap: 30px;
+}
+
+/* Sidebar de filtros */
+.filters-sidebar {
+  width: 280px;
+  height: 100%;
+  flex-shrink: 0;
+  display: inline-flex;
+  padding: 30px;
+  left: 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 4px;
+  background: var(--white, #ffffff);
+}
+
+.filters-sidebar h3 {
+  color: var(--dark-gray-2, #474747);
+  font-feature-settings:
+    'liga' off,
+    'clig' off;
+
+  /* Text Small Bold */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.75px;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+}
+
+.filter-group h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 15px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--dark-gray-2, #474747);
+  font-feature-settings:
+    'liga' off,
+    'clig' off;
+
+  /* Text X-Small - Desktop */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  letter-spacing: 0.25px;
+}
+
+.filter-option input[type='checkbox'] {
+  width: 22px;
+  height: 22px;
+  accent-color: #c92071;
+  cursor: pointer;
+}
+
+.filter-option:hover {
+  color: #c92071;
+}
+
+/* Grid de produtos */
+
+.products-grid {
+  width: 100%;
+  max-width: 904px;
+  padding-bottom: 30px;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para o botão Adicionar ao Carrinho dentro do ProductCard */
+.add-to-cart-button {
+  display: block; /* Faz o botão ocupar a largura total do card se necessário */
+  width: calc(
+    100% - 40px
+  ); /* Ajusta a largura considerando o padding do card */
+  margin: 15px auto 20px; /* Centraliza e adiciona margem */
+  padding: 10px 15px;
+  background-color: #c92071; /* Cor primária do seu tema */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #a51057; /* Um tom mais escuro para o hover */
+}
+
+.buy-button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  /* Tablet */
+}
+
+@media (max-width: 768px) {
+  /* Mobile maior */
+  .product-listing-page {
+    padding: 15px;
+  }
+
+  .listing-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .content-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filters-sidebar {
+    width: 100%;
+  }
+
+  .products-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Mantém 2 itens, ou ajuste para 1 se preferir */
+    gap: 16px;
+  }
+}
+
+@media (max-width: 460px) {
+  /* Mobile menor */
+  .products-grid {
+    max-width: 335px;
+  }
+  .listing-header {
+    width: 100%;
+    min-width: 335px;
+    height: 100%;
+    min-height: 102px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    left: 20px;
+    top: 20px;
+  }
+
+  .results-info {
+    width: 100%;
+    min-width: 297px;
+    height: 100%;
+    min-height: 22px;
+  }
+
+  .sort-container {
+    right: 125px;
+    top: 0;
+  }
+
+  .filter-icon-wrapper {
+    position: absolute;
+    right: 70px;
+    top: 0;
+    background-color: var(--primary-color);
+    width: 43px;
+    height: 43px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* Estilos do Sidebar para Mobile (gaveta) */
+  .filters-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0; /* Ou height: 100vh; */
+    width: 280px; /* Ou a largura desejada para o sidebar mobile */
+    max-width: 80%; /* Para não ocupar a tela inteira em telas um pouco maiores que mobile */
+    background: var(--white, #ffffff);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto; /* Caso o conteúdo do filtro seja grande */
+    padding: 20px; /* Ajuste o padding conforme necessário */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    /* Mantém flex-direction e gap, se aplicável ao layout interno do sidebar */
+    display: flex; /* Alterado de inline-flex para flex para melhor controle em fixed */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .filters-sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Overlay para escurecer o fundo quando o sidebar estiver aberto em mobile */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Abaixo do sidebar, mas acima do resto */
+  }
+
+  .results-info h2 {
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+  }
+}

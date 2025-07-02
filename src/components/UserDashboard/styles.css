@@ -1,0 +1,307 @@
+/* Variáveis globais */
+:root {
+  --primary: #C92071;
+  --dark-gray: #1F1F1F;
+  --dark-gray-2: #474747;
+  --light-gray: #8F8F8F;
+  --light-gray-2: #CCC;
+  --text-gray: #4b5563;
+  --background-color: #F9F8FE;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Inter', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+/* Containers principais */
+.order-tracking-container, .profile-container {
+  width: 90%;
+  margin: 40px 10px 60px 50px;
+  display: flex;
+  background-color: var(--background-color);
+}
+
+/* Sidebar (menu lateral) - Estilo padronizado */
+.sidebar, .profile-sidebar {
+  display: flex;
+  width: 350px;
+  height: 240px;
+  min-height: 260px;
+  padding: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 6px;
+  background: #FFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Itens do menu lateral - Estilo padronizado */
+.sidebar-item {
+  display: flex;
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+  color: var(--text-gray);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+
+/* Item ativo do menu lateral - Estilo padronizado */
+.sidebar-item.active {
+  color: #e11d48;
+  font-weight: 700;
+  background-color: rgba(233, 233, 255, 0.2);
+}
+
+/* Área principal onde fica o conteúdo - Estilo comum */
+.main-content, .profile-main-content {
+  background-color: #FFF;
+  flex: 1;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.profile-main-content {
+  width: 830px;
+}
+
+/* Cabeçalho da página - Estilo comum */
+.header, .profile-title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-right: 100px;
+  color: var(--light-gray);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+}
+
+/* Subtítulos - Estilos específicos para perfil */
+.profile-subtitle1, .profile-subtitle2 {
+  margin-top: 10px;
+  color: var(--dark-gray-2);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+}
+
+.profile-subtitle2 {
+  margin-top: 2px;
+}
+
+/* Título do cabeçalho */
+.header h1 {
+  color: var(--dark-gray-2);
+  text-align: left;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+}
+
+/* Subtítulo/status do cabeçalho */
+.status-header {
+  margin-top: -24px;
+  color: var(--dark-gray-2);
+  text-align: right;
+  margin-right: -99px;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+}
+
+/* Link de edição - Específico para perfil */
+.profile-edit {
+  margin-top: -42px;
+  color: var(--primary);
+  text-align: center;
+  margin-left: 90%;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  text-decoration-line: underline;
+}
+
+/* Linha divisória */
+.divider, .divisor1, .divisor2 {
+  width: 750px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  stroke: var(--light-gray-2);
+}
+
+.divider {
+  position: absolute;
+  margin-top: 20px;
+}
+
+.divisor1 {
+  height: 0px;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.divisor2 {
+  height: 0px;
+  margin-top: -35px;
+  margin-bottom: 30px;
+  align-self: center;
+  margin-right: 1px;
+}
+
+/* Lista de pedidos - Específico para rastreamento de pedidos */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+/* Cada item de pedido */
+.order-item {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Detalhes do pedido (lado esquerdo do item) */
+.order-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Container da imagem do produto */
+.product-image-container {
+  width: 71.178px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 2.669px;
+  background: #E2E3FF;
+}
+
+/* Imagem do produto */
+.product-image {
+  width: 70.628px;
+  height: 55.191px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 2.669px;
+  background-color: #E2E3FF;
+  background-image: url('/src/assets/images/tenisnike.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Número do pedido */
+.order-info .order-number {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+/* Nome do produto */
+.order-info .product-name {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+/* Indicadores de status do pedido */
+.status {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Status: em trânsito */
+.status.in-transit {
+  color: #f59e0b;
+}
+
+/* Status: concluído */
+.status.completed {
+  color: #6b7280;
+}
+
+/* Status: cancelado */
+.status.canceled {
+  color: #e11d48;
+}
+
+/* Seções de informações - Específico para perfil */
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-label {
+  color: var(--light-gray);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  margin-right: 8px;
+  min-width: 100px;
+}
+
+/* Valores dos campos */
+.profile-info {
+  color: var(--dark-gray);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  flex: 1;
+}

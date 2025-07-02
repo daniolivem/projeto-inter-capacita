@@ -1,0 +1,19 @@
+.simple-header {
+    display: flex;
+    width: 100%;
+    padding: 25px 50px;
+    margin-right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    background: #FFF;
+}
+
+
+.simple-header .dropshadow,
+.simple-header .search-input,
+.simple-header .header-buttons,
+.simple-header .header-nav,
+.simple-header .menu-button {
+    display: none !important;
+}
