@@ -1,232 +1,237 @@
-# E-commerce de Hardware - Frontend React
+# 🔧 Projeto E-commerce - Tecnobits
+### _"Poder para o seu setup."_
 
-Bem-vindos ao projeto de frontend do nosso e-commerce de hardware! Este README servirá como o ponto de partida e guia principal para o desenvolvimento da aplicação em React. Nosso objetivo é construir uma interface de usuário intuitiva e responsiva para apresentar uma variedade de 100 produtos de hardware.
+Este projeto faz parte do curso de Front-End e será desenvolvido em equipe por 6 membros. A aplicação é uma loja virtual de componentes de hardware feita em **React** com **Vite**, seguindo os requisitos da escola.
 
------
+---
 
-## Visão Geral do Projeto
+## 👥 Equipe
 
-Este é um projeto **apenas de frontend**, o que significa que focaremos exclusivamente na interface do usuário (UI) e na experiência do usuário (UX). A comunicação com a "API" será simulada por meio de dados em arquivos JSON locais.
+| Membro | Nome         | Responsabilidade Principal                                      |
+| ------ | ------------ | --------------------------------------------------------------- |
+| 👤 1   | **Dani**     | ProductListing + Section + HomePage + Categorias (404)         |
+| 👤 2   | **May**      | ProductOptions + Input + PageFinalizarCompra + BuySuccess      |
+| 👤 3   | **Gaabe**    | Header + Logo + ProductViewPage + LoginPage                    |
+| 👤 4   | **Carlos**   | FilterGroup + Buttons + ProductListingPage + ShoppingCartPage  |
+| 👤 5   | **Vini**     | Footer + ProductCard + FormCreatePage                          |
+| 👤 6   | **Anderson** | CustomSelect + Gallery + CreateAccountInitialPage              |
 
-**Tecnologias Principais:**
+> Observação: todos podem revisar e ajudar nas tarefas uns dos outros via Pull Request!
 
-  * **React 19.1.0:** ✅ Biblioteca para construção da interface de usuário.
-  * **Vite 7.0.0:** ✅ Ferramenta de build rápida e moderna.
-  * **ESLint:** ✅ Linting de código para manter qualidade.
-  * **React Router DOM:** 📋 Para gerenciamento de rotas e navegação (a instalar).
-  * **Context API:** 📋 Para gerenciamento de estado global (a implementar).
-  * **CSS Modules:** 📋 Para modularização do CSS (a configurar).
-  * **Git e GitHub:** ✅ Para controle de versão e colaboração.
+---
 
-**Legenda:** ✅ Configurado | 📋 Pendente
+## 🗂 Estrutura de pastas
 
------
-
-## Estrutura do Projeto (Planejada)
-
-A organização do código é fundamental para a colaboração eficiente. Seguiremos a seguinte estrutura de pastas conforme o projeto evolui:
-
-```
+```bash
 src/
-├── assets/                  # Imagens, ícones, fontes (✅ criado)
-│   ├── images/              # (📋 a criar)
-│   ├── icons/               # (📋 a criar)
-│   └── fonts/               # (📋 a criar)
-├── components/              # Componentes reutilizáveis (📋 a criar)
-│   ├── Button/
-│   │   └── Button.jsx
-│   │   └── Button.module.css
-│   └── ProductCard/
-│       └── ProductCard.jsx
-│       └── ProductCard.module.css
-├── contexts/                # Context API para estado global (📋 a criar)
+├── assets/               # Imagens de produtos e ícones
+│   ├── images/
+│   │   ├── motherboards/
+│   │   ├── processors/
+│   │   ├── graphics-cards/
+│   │   ├── memory/
+│   │   └── storage/
+│   └── icons/
+├── components/           # Componentes reutilizáveis
+│   ├── Header/           # Gaabe
+│   ├── Footer/           # Vini
+│   ├── Logo/             # Gaabe
+│   ├── ProductListing/   # Dani
+│   ├── ProductCard/      # Vini
+│   ├── ProductOptions/   # May
+│   ├── BuyBox/
+│   ├── Section/          # Dani
+│   ├── FilterGroup/      # Carlos
+│   ├── CategoryFilter/
+│   ├── Gallery/          # Anderson
+│   ├── CustomSelect/     # Anderson
+│   ├── Input/            # May
+│   └── Buttons/          # Carlos
+├── pages/                # Páginas
+│   ├── HomePage/         # Dani
+│   ├── ProductListingPage/  # Carlos
+│   ├── ProductViewPage/  # Gaabe
+│   ├── ShoppingCartPage/ # Carlos
+│   ├── LoginPage/        # Gaabe
+│   ├── FormCreatePage/   # Vini
+│   ├── CreateAccountInitialPage/  # Anderson
+│   ├── PageFinalizarCompra/       # May
+│   ├── BuySuccess/       # May
+│   └── CategoriaPage/    # Dani (404)
+├── data/                 # Dados mockados
+│   └── products.json     # Produtos de hardware
+├── contexts/             # Gerenciamento de estado
 │   └── CartContext.jsx
-├── pages/                   # Componentes de página (📋 a criar)
-│   ├── Home/
-│   │   └── Home.jsx
-│   │   └── Home.module.css
-│   └── ProductDetail/
-│       └── ProductDetail.jsx
-│       └── ProductDetail.module.css
-├── data/                    # Arquivos JSON mockados (📋 a criar)
-│   └── products.json
-├── hooks/                   # Custom Hooks (📋 a criar)
-│   └── useCart.js
-├── services/                # Simulação de API (📋 a criar)
-│   └── products.js
-├── utils/                   # Funções utilitárias (📋 a criar)
-│   └── helpers.js
-├── App.jsx                  # Componente raiz (✅ criado)
-├── main.jsx                 # Ponto de entrada (✅ criado)
-├── routes.jsx               # Definição das rotas (📋 a criar)
-└── styles/                  # Estilos globais (📋 a criar)
-    ├── global.css
-    └── variables.css
+├── App.jsx
+└── main.jsx
 ```
 
-**Legenda:** ✅ Criado | 📋 A criar
+---
 
------
+## 📋 Regras de colaboração
 
-## Divisão de Responsabilidades e Componentes
+- Criar sempre uma **branch por funcionalidade**:
+  - Ex: `feat/homepage-slide`, `feat/header-nav`, `feat/product-card`
+- Após concluir, **criar um Pull Request** e marcar a equipe para revisão.
+- Nunca trabalhar direto na branch `main`.
 
-Para otimizar nosso trabalho em equipe, dividiremos as responsabilidades com base nos componentes e páginas do projeto. A comunicação constante é crucial para evitar retrabalho e garantir a integração.
+---
 
-**Páginas Principais:**
+## 🔄 Repartição de Tarefas
 
-  * **Página Inicial (Homepage):** Layout geral, destaque de produtos, categorias.
-  * **Página de Produto (Product Detail Page):** Exibição detalhada de um produto, informações e botão "Adicionar ao Carrinho".
-  * **Página de Listagem de Produtos (Product Listing Page):** Exibição de todos os produtos/filtrados, opções de filtro e ordenação.
-  * **Página de Carrinho (Cart Page):** Itens no carrinho, resumo da compra.
-  * **Página de Checkout (Checkout Page):** Formulários de endereço e pagamento, finalização do pedido.
-  * **Páginas Institucionais:** Contato, Sobre, Políticas, etc.
+### 👤 **Dani** - HomePage + Componentes de Listagem
 
-**Componentes Reutilizáveis:**
+📁 Diretório: `src/pages/HomePage` + `src/components/`
 
-  * **Header e Footer:** Elementos de navegação e informações gerais do site.
-  * **Card de Produto:** Componente reutilizável para exibir produtos em listagens.
-  * **Componentes de UI:** Botões, inputs, modais, loaders, dropdowns.
-  * **Sistema de Filtros e Ordenação:** Lógica e UI para filtrar e ordenar produtos.
-  * **Galeria de Imagens:** Componente para visualização de múltiplas imagens de um produto.
+**Responsável por:**
+- Componente `<ProductListing />` (listagem de produtos)
+- Componente `<Section />` (seções reutilizáveis)
+- Página `HomePage` (página inicial)
+- Página de Categorias + 404 (página não encontrada)
 
-**Gerenciamento de Estado (Context API):**
+---
 
-  * **Contexto do Carrinho:** Gerenciamento dos itens adicionados ao carrinho, quantidade, total.
-  * **Contexto de Autenticação (se aplicável):** Gerenciamento de estado de login/usuário (mesmo que mockado).
+### 👤 **May** - Finalização de Compra + Inputs
 
------
+📁 Diretório: `src/pages/` + `src/components/`
 
-## Estado Atual do Projeto
+**Responsável por:**
+- Componente `<ProductOptions />` (opções de produto)
+- Componente `<Input />` (campos de entrada)
+- Página `PageFinalizarCompra` (checkout)
+- Página `BuySuccess` (confirmação de compra)
 
-**Status:** ✅ Projeto inicial configurado com Vite + React
+---
 
-**Estrutura atual:**
+### 👤 **Gaabe** - Header + Visualização de Produto
+
+📁 Diretório: `src/components/Header` + `src/pages/`
+
+**Responsável por:**
+- Componente `<Header />` (cabeçalho principal)
+- Componente `<Logo />` (logotipo da Tecnobits)
+- Página `ProductViewPage` (detalhes do produto)
+- Página `LoginPage` (autenticação)
+
+---
+
+### 👤 **Carlos** - Filtros + Carrinho
+
+📁 Diretório: `src/components/` + `src/pages/`
+
+**Responsável por:**
+- Componente `<FilterGroup />` (grupo de filtros)
+- Componente `<Buttons />` (botões reutilizáveis)
+- Página `ProductListingPage` (listagem com filtros)
+- Página `ShoppingCartPage` (carrinho de compras)
+
+---
+
+### 👤 **Vini** - Footer + Cards
+
+📁 Diretório: `src/components/` + `src/pages/`
+
+**Responsável por:**
+- Componente `<Footer />` (rodapé)
+- Componente `<ProductCard />` (card de produto)
+- Página `FormCreatePage` (formulário de criação)
+
+---
+
+### 👤 **Anderson** - Seleção + Galeria
+
+📁 Diretório: `src/components/` + `src/pages/`
+
+**Responsável por:**
+- Componente `<CustomSelect />` (select personalizado)
+- Componente `<Gallery />` (galeria de imagens)
+- Página `CreateAccountInitialPage` (criação de conta)
+
+---
+
+## � Categorias de Hardware
+
+A loja trabalhará com as seguintes categorias principais:
+
+- **🔧 Processadores:** Intel Core, AMD Ryzen
+- **🎮 Placas de Vídeo:** NVIDIA GeForce, AMD Radeon
+- **🔌 Motherboards:** Gaming, Office, Workstation
+- **💾 Memória RAM:** DDR4, DDR5, Gaming
+- **💿 Armazenamento:** SSD, HDD, NVMe
+- **⚡ Fontes:** Modular, Semi-modular, 80+ Gold
+- **❄️ Refrigeração:** Air coolers, Liquid cooling
+- **📦 Gabinetes:** Mid tower, Full tower, Mini-ITX
+- **🔗 Periféricos:** Teclados, Mouses, Monitores
+
+## �💅 Estilo e cores
+
+Utilizar a paleta focada em tecnologia:
+
+- Primary: `#00D4FF` (Azul tech)
+- Secondary: `#FF6B35` (Laranja energia)
+- Tertiary: `#1A1A2E` (Azul escuro)
+- Background: `#16213E` (Azul profundo)
+- Success: `#00C851` (Verde confirmação)
+- Warning: `#FFB000` (Amarelo alerta)
+- Error: `#FF3547` (Vermelho erro)
+- Text: `#FFFFFF` / `#E0E6ED` (Textos claros)
+
+## ✒️ Fontes e weights
+
+Utilizar a fonte `Roboto` (ideal para tech):
+
+- `Roboto-700` para títulos e preços
+- `Roboto-500` para especificações e labels
+- `Roboto-400` para textos descritivos
+- `Roboto Mono` para códigos de produto
+
+---
+
+## 🧠 Dicas técnicas para Tecnobits
+
+- Usar `react-router-dom` para rotas
+- Usar `props.children` nos componentes de layout
+- Usar `NavLink` para navegação com destaque na rota atual
+- Preferência por componentes funcionais com hooks
+- Reutilizar componentes com base em props
+- **Específico para hardware:**
+  - Implementar filtros por especificações (socket, memória, etc.)
+  - Criar sistema de compatibilidade entre componentes
+  - Adicionar comparador de produtos
+  - Incluir calculadora de PSU (fonte de alimentação)
+
+---
+
+## ✅ Status do projeto
+
+| Parte                          | Responsável | Status                                    |
+| ------------------------------ | ----------- | ----------------------------------------- |
+| Header + Logo                  | **Gaabe**   | ⬜️ Pendente                              |
+| Footer + ProductCard           | **Vini**    | ⬜️ Pendente                              |
+| HomePage + ProductListing      | **Dani**    | ⬜️ Pendente                              |
+| ProductViewPage + LoginPage    | **Gaabe**   | ⬜️ Pendente                              |
+| FilterGroup + Buttons          | **Carlos**  | ⬜️ Pendente                              |
+| ProductListingPage + Cart      | **Carlos**  | ⬜️ Pendente                              |
+| ProductOptions + Input         | **May**     | ⬜️ Pendente                              |
+| Finalizar Compra + BuySuccess  | **May**     | ⬜️ Pendente                              |
+| CustomSelect + Gallery         | **Anderson**| ⬜️ Pendente                              |
+| CreateAccountInitialPage       | **Anderson**| ⬜️ Pendente                              |
+| FormCreatePage                 | **Vini**    | ⬜️ Pendente                              |
+| Section + Categorias (404)     | **Dani**    | ⬜️ Pendente                              |
+
+---
+
+## 📌 Como rodar o projeto
+
+```bash
+git clone https://github.com/SEU-USUARIO/tecnobits.git
+cd tecnobits
+npm install
+npm start
 ```
-projeto-inter-capacita/
-├── public/                  # Arquivos públicos estáticos
-├── src/                     # Código fonte da aplicação
-│   ├── assets/              # Imagens e recursos (react.svg)
-│   ├── App.jsx              # Componente principal da aplicação
-│   ├── App.css              # Estilos do componente App
-│   ├── main.jsx             # Ponto de entrada da aplicação
-│   └── index.css            # Estilos globais
-├── package.json             # Dependências e scripts do projeto
-├── vite.config.js           # Configuração do Vite
-├── eslint.config.js         # Configuração do ESLint
-└── README.md                # Este arquivo
-```
 
-**Dependências instaladas:**
-- React 19.1.0
-- React DOM 19.1.0
-- Vite 7.0.0 (ferramenta de build)
-- ESLint (linting de código)
+---
 
-## Como Começar
+> 🔧 Qualquer dúvida sobre compatibilidade de hardware ou sugestão técnica, converse com o time no grupo da equipe e atualize o progresso com Pull Requests! 
 
-1.  **Instale as Dependências (se necessário):**
-    ```bash
-    npm install
-    ```
-
-2.  **Inicie o Servidor de Desenvolvimento:**
-    ```bash
-    npm start
-    ```
-    Isso abrirá a aplicação no seu navegador padrão em `http://localhost:5173`.
-
------
-
-## Fluxo de Trabalho (Git)
-
-Seguiremos o fluxo **Git Flow Simplificado**:
-
-1.  **Crie uma nova branch para sua feature/tarefa:**
-
-    ```bash
-    git checkout -b feature/nome-da-sua-feature
-    ```
-
-    Exemplos: `feature/product-card`, `feature/home-page-layout`, `fix/cart-bug`.
-
-2.  **Desenvolva sua feature:** Faça suas alterações e commits regularmente.
-
-    ```bash
-    git add .
-    git commit -m "feat: Adiciona componente ProductCard"
-    ```
-
-3.  **Mantenha sua branch atualizada com a `main`:**
-
-    ```bash
-    git pull origin main
-    ```
-
-    Resolva quaisquer conflitos de merge que possam surgir.
-
-4.  **Envie sua branch para o GitHub:**
-
-    ```bash
-    git push origin feature/nome-da-sua-feature
-    ```
-
-5.  **Abra um Pull Request (PR):** No GitHub, crie um Pull Request da sua branch para a branch `main`.
-
-      * Descreva as mudanças que você fez.
-      * **Solicite uma revisão de código** de um ou mais colegas de equipe.
-
-6.  **Revisão de Código:** Seu código será revisado. Faça as alterações solicitadas, se houver.
-
-7.  **Merge:** Após a aprovação, seu PR será mesclado na branch `main`.
-
------
-
-## Convenções de Código
-
-  * **Nomeclatura:**
-      * **Componentes:** PascalCase (Ex: `ProductCard.jsx`, `HomePage.jsx`).
-      * **Arquivos CSS Modules:** `Componente.module.css` (Ex: `ProductCard.module.css`).
-      * **Variáveis/Funções:** camelCase.
-      * **Pastas:** kebab-case ou lowercase.
-  * **Estilo:** Manteremos um estilo de código consistente. Usaremos ferramentas como **ESLint** e **Prettier** para ajudar a aplicar as regras automaticamente.
-  * **Commits:** Mensagens claras e concisas, seguindo o padrão Conventional Commits (Ex: `feat: adiciona funcionalidade X`, `fix: corrige bug Y`).
-
------
-
-## Comunicação
-
-A comunicação é a chave para o sucesso do projeto. Utilize nosso canal de comunicação (WhatsApp/Discord/Slack) para:
-
-  * **Reuniões Diárias (Stand-ups):** Compartilhar o que você fez, o que fará e quaisquer bloqueios.
-  * **Dúvidas e Ajuda:** Peça ajuda se estiver travado.
-  * **Discussões:** Discutir decisões de design ou implementação.
-
------
-
-## Próximos Passos
-
-Para dar continuidade ao desenvolvimento do e-commerce, sugerimos a seguinte ordem de implementação:
-
-### 📋 Fase 1 - Configuração Base
-1. **Instalar React Router DOM:** `npm install react-router-dom`
-2. **Criar estrutura de pastas** conforme planejado acima
-3. **Configurar roteamento básico** (Home, Products, Cart, etc.)
-4. **Criar componentes base** (Header, Footer, Layout)
-
-### 📋 Fase 2 - Dados e Serviços  
-1. **Criar arquivo de dados mockados** (`src/data/products.json`)
-2. **Implementar serviços** para buscar produtos
-3. **Criar Context API** para gerenciamento de estado
-4. **Implementar hook customizado** para carrinho
-
-### 📋 Fase 3 - Componentes e Páginas
-1. **Desenvolver ProductCard** (componente reutilizável)
-2. **Criar páginas principais** (Home, ProductList, ProductDetail, Cart)
-3. **Implementar sistema de filtros** e busca
-4. **Adicionar responsividade** com CSS
-
-### 📋 Fase 4 - Funcionalidades Avançadas
-1. **Implementar carrinho de compras** completo
-2. **Criar formulário de checkout**
-3. **Adicionar validações** de formulário
-4. **Implementar persistência** no localStorage
+## 🚀 **Tecnobits - _"Poder para o seu setup."_**
