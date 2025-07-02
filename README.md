@@ -1,6 +1,3 @@
-Aqui está uma versão consolidada e sem duplicidades do seu README.md, pronta para copiar e colar no GitHub:
-
-```markdown
 # 🔧 Projeto E-commerce - Tecnobits
 
 _"Poder para o seu setup."_
