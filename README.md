@@ -1,11 +1,83 @@
 # 🔧 Projeto E-commerce - Tecnobits
 ### _"Poder para o seu setup."_
 
-Este projeto faz parte do curso de Front-End e será desenvolvido em equipe por 6 membros. A aplicação é uma loja virtual de componentes de hardware feita em **React** com **Vite**, seguindo os requisitos da escola.
+Este projeto faz parte do módulo intermediário do Capacita Brasil e será desenvolvido em equipe por 6 membros. O objetivo é criar um **Frontend React completo** para uma loja virtual de componentes de hardware.
 
 ---
 
-## 👥 Equipe
+## 📊 Visão Geral do Projeto
+
+### 🎯 Objetivo
+Desenvolver uma loja virtual completa e moderna especializad### 🔗 Links Importantes
+- [React Documentation](https://react.dev/)
+- [Vite Guide](https://vitejs.dev/)
+- [CSS Documentation](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [React Router](https://reactrouter.com/)componentes de hardware para computadores, proporcionando uma experiência de compra intuitiva e profissional.
+
+### 🎮 Conceito da Loja
+A **Tecnobits** é uma loja especializada em hardware para gamers, entusiastas e profissionais de TI. Oferecemos desde componentes básicos até configurações high-end para quem busca **"Poder para o seu setup"**.
+
+### 🎯 Requisitos Mínimos Obrigatórios
+- ✅ **Frontend em React** para página de E-commerce
+- 📦 **Mínimo 100 produtos** com descrição, preço e fotos
+- 🛒 **Carrinho de compras** que calcula preço total com quantidades
+- 🔄 **Finalização de compra** completa
+- 🌐 **Mínimo 3 páginas dinâmicas** com rotas específicas:
+  - 🏠 Página Inicial
+  - 📄 Detalhes do Produto  
+  - 🛒 Carrinho de Compras
+
+### ✨ Funcionalidades Extras Implementadas
+- 📑 **Listagem de Produtos** com filtros avançados
+- 🔐 **Sistema de Login/Cadastro** completo
+- 💳 **Checkout e Finalização** profissional
+- ✅ **Confirmação de Compra** detalhada
+- 🚫 **Página 404** para rotas inexistentes
+
+### 🛠️ Tecnologias Utilizadas
+- **Frontend:** React 19.1.0 + Vite 7.0.0
+- **Estilização:** CSS puro (CSS tradicional)
+- **Roteamento:** React Router DOM
+- **Estado Global:** Context API (carrinho, autenticação)
+- **Controle de Qualidade:** ESLint + Prettier
+- **Versionamento:** Git & GitHub
+- **Deploy:** (A definir - Vercel/Netlify)
+
+### 🎯 Arquitetura do Projeto
+- **Component-Based:** Componentes reutilizáveis e modulares
+- **State Management:** Context API para estado global
+- **Responsive Design:** Mobile-first approach
+- **Performance:** Lazy loading e otimizações
+- **Acessibilidade:** Semântica HTML e ARIA labels
+
+---
+
+## 🗺️ Mapa de Rotas da Aplicação
+
+| Rota | Componente | Responsável | Descrição |
+|------|------------|-------------|-----------|
+| `/` | HomePage | **Dani** | Página inicial com produtos em destaque |
+| `/products` | ProductListingPage | **Carlos** | Listagem completa com filtros |
+| `/product/:id` | ProductViewPage | **Gaabe** | Detalhes específicos do produto |
+| `/cart` | ShoppingCartPage | **Carlos** | Carrinho de compras com cálculos |
+| `/checkout` | PageFinalizarCompra | **May** | Processo de finalização |
+| `/success` | BuySuccess | **May** | Confirmação de compra realizada |
+| `/login` | LoginPage | **Gaabe** | Autenticação de usuário |
+| `/register` | FormCreatePage | **Vini** | Cadastro de novo usuário |
+| `/account` | CreateAccountInitialPage | **Anderson** | Perfil e dados do usuário |
+| `/*` | CategoriaPage (404) | **Dani** | Página de erro para rotas inválidas |
+
+### 🎯 **Fluxo Principal do Usuário:**
+1. **Início** → HomePage (`/`)
+2. **Navegação** → ProductListingPage (`/products`) 
+3. **Seleção** → ProductViewPage (`/product/:id`)
+4. **Carrinho** → ShoppingCartPage (`/cart`)
+5. **Checkout** → PageFinalizarCompra (`/checkout`)
+6. **Confirmação** → BuySuccess (`/success`)
+
+---
+
+## 👥 Equipe e Responsabilidades
 
 | Membro | Nome         | Responsabilidade Principal                                      |
 | ------ | ------------ | --------------------------------------------------------------- |
@@ -18,9 +90,51 @@ Este projeto faz parte do curso de Front-End e será desenvolvido em equipe por 
 
 > Observação: todos podem revisar e ajudar nas tarefas uns dos outros via Pull Request!
 
+### 🔄 Detalhamento das Responsabilidades
+
+#### 👤 **Dani** - HomePage + Componentes de Listagem
+📁 Diretório: `src/pages/HomePage` + `src/components/`
+- Componente `<ProductListing />` (listagem de produtos)
+- Componente `<Section />` (seções reutilizáveis)
+- Página `HomePage` (página inicial)
+- Página de Categorias + 404 (página não encontrada)
+
+#### 👤 **May** - Finalização de Compra + Inputs
+📁 Diretório: `src/pages/` + `src/components/`
+- Componente `<ProductOptions />` (opções de produto)
+- Componente `<Input />` (campos de entrada)
+- Página `PageFinalizarCompra` (checkout)
+- Página `BuySuccess` (confirmação de compra)
+
+#### 👤 **Gaabe** - Header + Visualização de Produto
+📁 Diretório: `src/components/Header` + `src/pages/`
+- Componente `<Header />` (cabeçalho principal)
+- Componente `<Logo />` (logotipo da Tecnobits)
+- Página `ProductViewPage` (detalhes do produto)
+- Página `LoginPage` (autenticação)
+
+#### 👤 **Carlos** - Filtros + Carrinho
+📁 Diretório: `src/components/` + `src/pages/`
+- Componente `<FilterGroup />` (grupo de filtros)
+- Componente `<Buttons />` (botões reutilizáveis)
+- Página `ProductListingPage` (listagem com filtros)
+- Página `ShoppingCartPage` (carrinho de compras)
+
+#### 👤 **Vini** - Footer + Cards
+📁 Diretório: `src/components/` + `src/pages/`
+- Componente `<Footer />` (rodapé)
+- Componente `<ProductCard />` (card de produto)
+- Página `FormCreatePage` (formulário de criação)
+
+#### 👤 **Anderson** - Seleção + Galeria
+📁 Diretório: `src/components/` + `src/pages/`
+- Componente `<CustomSelect />` (select personalizado)
+- Componente `<Gallery />` (galeria de imagens)
+- Página `CreateAccountInitialPage` (criação de conta)
+
 ---
 
-## 🗂 Estrutura de pastas
+## 🗂 Estrutura de Pastas
 
 ```bash
 src/
@@ -68,141 +182,139 @@ src/
 
 ---
 
-## 📋 Regras de colaboração
+## 💾 Catálogo de Produtos (100+ Itens)
 
-- Criar sempre uma **branch por funcionalidade**:
-  - Ex: `feat/homepage-slide`, `feat/header-nav`, `feat/product-card`
-- Após concluir, **criar um Pull Request** e marcar a equipe para revisão.
-- Nunca trabalhar direto na branch `main`.
+### 🔧 **Processadores (25 produtos)**
+- Intel Core i3-12100F, i5-12400F, i5-13600K, i7-13700K, i9-13900K
+- AMD Ryzen 5 5600X, Ryzen 7 5700X, Ryzen 7 7700X, Ryzen 9 7900X, Ryzen 9 7950X
 
----
+### 🎮 **Placas de Vídeo (20 produtos)**
+- NVIDIA GeForce RTX 4060, RTX 4060 Ti, RTX 4070, RTX 4070 Ti, RTX 4080, RTX 4090
+- AMD Radeon RX 7600, RX 7700 XT, RX 7800 XT, RX 7900 GRE, RX 7900 XT, RX 7900 XTX
 
-## 🔄 Repartição de Tarefas
+### 🔌 **Motherboards (15 produtos)**
+- Intel Z790, B760, H610 | AMD X670E, X670, B650E, B650, A620
 
-### 👤 **Dani** - HomePage + Componentes de Listagem
+### 💾 **Memória RAM (15 produtos)**
+- DDR4: 8GB, 16GB, 32GB (3200MHz, 3600MHz)
+- DDR5: 16GB, 32GB, 64GB (5600MHz, 6000MHz, 6400MHz)
 
-📁 Diretório: `src/pages/HomePage` + `src/components/`
+### 💿 **Armazenamento (10 produtos)**
+- SSD NVMe: 500GB, 1TB, 2TB (PCIe 3.0/4.0)
+- SSD SATA: 240GB, 480GB, 1TB
+- HDD: 1TB, 2TB, 4TB
 
-**Responsável por:**
-- Componente `<ProductListing />` (listagem de produtos)
-- Componente `<Section />` (seções reutilizáveis)
-- Página `HomePage` (página inicial)
-- Página de Categorias + 404 (página não encontrada)
+### ⚡ **Fontes (8 produtos)**
+- 500W, 650W, 750W, 850W, 1000W - Certificação 80+ Gold/Platinum
 
----
+### ❄️ **Refrigeração (5 produtos)**
+- Air Cooler: Básico, Médio, High-End
+- Water Cooler AIO: 240mm, 280mm, 360mm
 
-### 👤 **May** - Finalização de Compra + Inputs
+### 📦 **Gabinetes (2 produtos)**
+- Mid Tower ATX, Full Tower E-ATX
 
-📁 Diretório: `src/pages/` + `src/components/`
-
-**Responsável por:**
-- Componente `<ProductOptions />` (opções de produto)
-- Componente `<Input />` (campos de entrada)
-- Página `PageFinalizarCompra` (checkout)
-- Página `BuySuccess` (confirmação de compra)
-
----
-
-### 👤 **Gaabe** - Header + Visualização de Produto
-
-📁 Diretório: `src/components/Header` + `src/pages/`
-
-**Responsável por:**
-- Componente `<Header />` (cabeçalho principal)
-- Componente `<Logo />` (logotipo da Tecnobits)
-- Página `ProductViewPage` (detalhes do produto)
-- Página `LoginPage` (autenticação)
+**Total: 100+ produtos** com descrição completa, preços e especificações técnicas
 
 ---
 
-### 👤 **Carlos** - Filtros + Carrinho
+## 🎨 Design System e Paleta de Cores
 
-📁 Diretório: `src/components/` + `src/pages/`
+### 💅 Paleta de Cores Tecnobits
 
-**Responsável por:**
-- Componente `<FilterGroup />` (grupo de filtros)
-- Componente `<Buttons />` (botões reutilizáveis)
-- Página `ProductListingPage` (listagem com filtros)
-- Página `ShoppingCartPage` (carrinho de compras)
+- **Base:** `#2D2D36` (Cinza Escuro/Quase Preto) - Solidez e base
+- **Profissional:** `#23395B` (Azul Escuro/Marinho) - Confiança
+- **Destaque:** `#4B5B9D` (Azul Médio/Azul-violeta Suave) - Ação e CTA
+- **Neutro:** `#A9B3B3` (Cinza Claro/Prata) - Versatilidade
+- **Fundo:** `#D9D9D9` (Cinza Muito Claro/Off-White) - Limpeza
+- **Success:** `#00C851` (Verde confirmação)
+- **Warning:** `#FFB000` (Amarelo alerta)
+- **Error:** `#FF3547` (Vermelho erro)
+- **Text:** `#2D2D36` / `#23395B` (Textos principais)
 
----
-
-### 👤 **Vini** - Footer + Cards
-
-📁 Diretório: `src/components/` + `src/pages/`
-
-**Responsável por:**
-- Componente `<Footer />` (rodapé)
-- Componente `<ProductCard />` (card de produto)
-- Página `FormCreatePage` (formulário de criação)
-
----
-
-### 👤 **Anderson** - Seleção + Galeria
-
-📁 Diretório: `src/components/` + `src/pages/`
-
-**Responsável por:**
-- Componente `<CustomSelect />` (select personalizado)
-- Componente `<Gallery />` (galeria de imagens)
-- Página `CreateAccountInitialPage` (criação de conta)
-
----
-
-## � Categorias de Hardware
-
-A loja trabalhará com as seguintes categorias principais:
-
-- **🔧 Processadores:** Intel Core, AMD Ryzen
-- **🎮 Placas de Vídeo:** NVIDIA GeForce, AMD Radeon
-- **🔌 Motherboards:** Gaming, Office, Workstation
-- **💾 Memória RAM:** DDR4, DDR5, Gaming
-- **💿 Armazenamento:** SSD, HDD, NVMe
-- **⚡ Fontes:** Modular, Semi-modular, 80+ Gold
-- **❄️ Refrigeração:** Air coolers, Liquid cooling
-- **📦 Gabinetes:** Mid tower, Full tower, Mini-ITX
-- **🔗 Periféricos:** Teclados, Mouses, Monitores
-
-## �💅 Estilo e cores
-
-Utilizar a paleta focada em tecnologia:
-
-- Primary: `#00D4FF` (Azul tech)
-- Secondary: `#FF6B35` (Laranja energia)
-- Tertiary: `#1A1A2E` (Azul escuro)
-- Background: `#16213E` (Azul profundo)
-- Success: `#00C851` (Verde confirmação)
-- Warning: `#FFB000` (Amarelo alerta)
-- Error: `#FF3547` (Vermelho erro)
-- Text: `#FFFFFF` / `#E0E6ED` (Textos claros)
-
-## ✒️ Fontes e weights
+### ✒️ Tipografia
 
 Utilizar a fonte `Roboto` (ideal para tech):
-
 - `Roboto-700` para títulos e preços
 - `Roboto-500` para especificações e labels
 - `Roboto-400` para textos descritivos
 - `Roboto Mono` para códigos de produto
 
+### 🎯 Princípios de Design
+- **Contraste:** Texto sempre legível sobre fundos
+- **Hierarquia Visual:** Cores guiam para elementos importantes
+- **Consistência:** Padrão uniforme em toda aplicação
+- **Minimalismo:** Evitar sobrecarga visual
+
+### 🖌️ Aplicação da Paleta por Componente
+
+#### 🏗️ **Layout Principal**
+- **Header/Footer:** `#2D2D36` (base sólida)
+- **Fundo Geral:** `#D9D9D9` (limpeza)
+- **Seções de Destaque:** `#23395B` (confiança)
+
+#### 🛒 **Produtos e Carrinho**
+- **Cards de Produto:** Fundo `#A9B3B3`, bordas `#D9D9D9`
+- **Preços Normais:** `#2D2D36`
+- **Preços Promocionais:** `#4B5B9D`
+- **Botão "Adicionar Carrinho":** Fundo `#4B5B9D`, texto branco
+- **Botão Secundário:** Outline `#23395B`
+
+#### 🎯 **Interações e Estados**
+- **Hover em Links:** `#23395B`
+- **Estados Ativos:** `#4B5B9D`
+- **Texto Secundário:** `#A9B3B3`
+- **Bordas de Input:** `#A9B3B3`
+
+#### 📊 **Feedback do Sistema**
+- **Sucesso:** `#00C851` (confirmações)
+- **Alerta:** `#FFB000` (avisos)
+- **Erro:** `#FF3547` (problemas)
+
 ---
 
-## 🧠 Dicas técnicas para Tecnobits
+## 🧠 Dicas Técnicas para Hardware E-commerce
 
-- Usar `react-router-dom` para rotas
+- Usar `react-router-dom` para navegação entre páginas
+- Implementar `Context API` para carrinho e autenticação
 - Usar `props.children` nos componentes de layout
-- Usar `NavLink` para navegação com destaque na rota atual
 - Preferência por componentes funcionais com hooks
-- Reutilizar componentes com base em props
 - **Específico para hardware:**
-  - Implementar filtros por especificações (socket, memória, etc.)
-  - Criar sistema de compatibilidade entre componentes
-  - Adicionar comparador de produtos
-  - Incluir calculadora de PSU (fonte de alimentação)
+  - Filtros por especificações (socket, memória, compatibilidade)
+  - Sistema de recomendação de componentes compatíveis
+  - Comparador de produtos lado a lado
+  - Calculadora de consumo de energia (PSU)
 
 ---
 
-## ✅ Status do projeto
+## 📋 Regras de Colaboração
+
+### 🌿 Workflow Git
+- Criar sempre uma **branch por funcionalidade**:
+  - Ex: `feat/homepage-slide`, `feat/header-nav`, `feat/product-card`
+- Após concluir, **criar um Pull Request** e marcar a equipe para revisão
+- Nunca trabalhar direto na branch `main`
+- Usar commits descritivos seguindo padrão Conventional Commits
+
+### 📝 Convenções de Código
+- **Componentes:** `PascalCase` (ex: `ProductCard`, `HomePage`)
+- **Arquivos:** `camelCase` (ex: `productService.js`, `useCart.js`)
+- **Pastas:** `PascalCase` para componentes, `camelCase` para utilitários
+- **Variáveis/Funções:** `camelCase`
+- **Constantes:** `UPPER_SNAKE_CASE`
+
+### 🚀 Padrão de Commits
+Seguir [Conventional Commits](https://www.conventionalcommits.org/):
+- `feat:` nova funcionalidade
+- `fix:` correção de bug
+- `docs:` alterações na documentação
+- `style:` formatação, sem mudança de código
+- `refactor:` refatoração de código
+- `test:` adição/modificação de testes
+
+---
+
+## ✅ Status do Projeto
 
 | Parte                          | Responsável | Status                                    |
 | ------------------------------ | ----------- | ----------------------------------------- |
@@ -221,18 +333,98 @@ Utilizar a fonte `Roboto` (ideal para tech):
 
 ---
 
-## 📌 Como rodar o projeto
+## 🚀 Como Executar o Projeto
 
-```bash
-git clone https://github.com/SEU-USUARIO/tecnobits.git
-cd tecnobits
-npm install
-npm start
-```
+### Pré-requisitos
+- Node.js (versão 16 ou superior)
+- npm ou yarn
+- Git
+
+### Instalação e Execução
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/daniolivem/projeto-inter-capacita.git
+   cd projeto-inter-capacita
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+3. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm start
+   ```
+
+4. **Acesse a aplicação:**
+   - Abra o navegador em `http://localhost:5173`
+
+### Scripts Disponíveis
+- `npm start` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria build de produção
+- `npm run lint` - Executa o linting do código
+- `npm run preview` - Visualiza o build de produção
 
 ---
 
-> 🔧 Qualquer dúvida sobre compatibilidade de hardware ou sugestão técnica, converse com o time no grupo da equipe e atualize o progresso com Pull Requests! 
+## 🎯 Roadmap de Desenvolvimento
 
-## 🚀 **Tecnobits - _"Poder para o seu setup."_**
+### 📅 Sprint 1 - Fundação (Semana 1-2)
+- [x] ✅ Setup inicial do projeto com Vite + React
+- [x] ✅ Configuração do ESLint e Prettier
+- [x] ✅ Estrutura de pastas e organização
+- [x] ✅ Documentação completa (README)
+- [ ] 🔄 Implementação dos componentes base (Header, Footer, Layout)
+
+### 📅 Sprint 2 - Componentes Core (Semana 3-4)
+- [ ] 🔄 ProductCard e ProductListing
+- [ ] 🔄 Sistema de navegação e roteamento
+- [ ] 🔄 HomePage com seções principais
+- [ ] 🔄 Context API para carrinho
+- [ ] 🔄 Componentes de UI (Buttons, Input, CustomSelect)
+
+### 📅 Sprint 3 - Páginas e Funcionalidades (Semana 5-6)
+- [ ] ⏳ ProductViewPage com galeria
+- [ ] ⏳ ProductListingPage com filtros
+- [ ] ⏳ ShoppingCartPage
+- [ ] ⏳ Sistema de autenticação (Login/Register)
+- [ ] ⏳ Páginas de checkout e confirmação
+
+### 📅 Sprint 4 - Polimento e Deploy (Semana 7-8)
+- [ ] ⏳ Responsividade completa
+- [ ] ⏳ Otimizações de performance
+- [ ] ⏳ Testes e correções de bugs
+- [ ] ⏳ Deploy e documentação final
+
+**Legenda:** ✅ Concluído | 🔄 Em Progresso | ⏳ Pendente
+
+---
+
+## 📚 Recursos Úteis
+
+### 🔗 Links Importantes
+- [React Documentation](https://react.dev/)
+- [Vite Guide](https://vitejs.dev/guide/)
+- [Styled Components](https://styled-components.com/)
+- [React Router](https://reactrouter.com/)
+
+### 🤝 Contribuição
+
+1. **Fork** o projeto
+2. Crie sua **feature branch** (`git checkout -b feature/MinhaFeature`)
+3. **Commit** suas mudanças (`git commit -m 'feat: adiciona MinhaFeature'`)
+4. **Push** para a branch (`git push origin feature/MinhaFeature`)
+5. Abra um **Pull Request**
+
+---
+
+## 📄 Licença
+
+Este projeto é desenvolvido para fins educacionais como parte do curso de FullStack do Capacita Brasil.
+
+---
+
+## 🔧 **Tecnobits - _"Poder para o seu setup."_**
 

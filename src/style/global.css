@@ -1,0 +1,106 @@
+/* Importação da fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  /* Paleta de Cores Tecnobits - Design System */
+  --base-color: #2D2D36;          /* Cinza Escuro/Quase Preto - Base sólida */
+  --professional-color: #23395B;   /* Azul Escuro/Marinho - Confiança */
+  --highlight-color: #4B5B9D;      /* Azul Médio/Azul-violeta - Ação e CTA */
+  --neutral-color: #A9B3B3;        /* Cinza Claro/Prata - Versatilidade */
+  --background-color: #D9D9D9;     /* Cinza Muito Claro/Off-White - Limpeza */
+
+  /* Estados e Feedback */
+  --success-color: #00C851;        /* Verde confirmação */
+  --warning-color: #FFB000;        /* Amarelo alerta */
+  --error-color: #FF3547;          /* Vermelho erro */
+
+  /* Cores de Texto */
+  --text-primary: #2D2D36;         /* Texto principal */
+  --text-secondary: #23395B;       /* Texto secundário */
+  --text-muted: #A9B3B3;           /* Texto esmaecido */
+  --text-white: #FFFFFF;           /* Texto branco */
+
+  /* Aliases para compatibilidade com componentes existentes */
+  --primary-color: var(--highlight-color);
+  --secondary-color: var(--professional-color);
+  --tertiary-color: var(--base-color);
+  --bg-main: var(--background-color);
+  --white: var(--text-white);
+
+  /* Cores específicas para componentes */
+  --card-background: var(--neutral-color);
+  --card-border: var(--background-color);
+  --button-primary: var(--highlight-color);
+  --button-secondary: var(--professional-color);
+  --input-border: var(--neutral-color);
+  --hover-color: var(--professional-color);
+  --active-color: var(--highlight-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Fonte principal do Design System */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400; /* Roboto-400 para textos descritivos */
+}
+
+/* Tipografia - Design System Tecnobits */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Roboto-700 para títulos */
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.price, .highlight-text {
+  font-weight: 700; /* Roboto-700 para preços */
+  color: var(--highlight-color);
+}
+
+.label, .specification {
+  font-weight: 500; /* Roboto-500 para especificações e labels */
+  color: var(--text-secondary);
+}
+
+.product-code, .code {
+  font-family: 'Roboto Mono', monospace; /* Roboto Mono para códigos */
+  font-weight: 400;
+  background-color: var(--neutral-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.text-warning {
+  color: var(--warning-color);
+}
+
+.text-error {
+  color: var(--error-color);
+}
+
+html {
+  min-height: 100%;
+}
+
+input, textarea, button, a, ul {
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+}

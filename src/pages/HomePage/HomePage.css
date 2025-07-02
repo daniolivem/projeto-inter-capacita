@@ -1,0 +1,244 @@
+/* HomePage Styles */
+
+.content-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1440px;
+}
+
+@media (max-width: 1400px) {
+  .content-card {
+    align-items: center;
+  }
+}
+
+.content-card .card {
+  width: 100%;
+  max-width: 405px;
+  background-color: var(--card-destaque-color);
+  border-radius: 8px;
+  display: flex;
+  padding-left: 30px;
+}
+
+.content-card .card .card-info {
+  width: 100%;
+  max-width: 163px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-card .card .card-info h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.content-card .card .card-info .card-tag {
+  width: 100%;
+  max-width: 96px;
+  height: 32px;
+  border-radius: 29px;
+  padding: 5px 15px;
+  background-color: var(--card-tag-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.content-card .card .card-info .card-tag span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+  letter-spacing: 0.75px;
+  line-height: 22px;
+}
+
+.content-card .card .card-image {
+  width: 242px;
+  height: 251px;
+}
+
+.content-card .card .card-image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Responsividade */
+
+@media (max-width: 1400px) {
+  .content-card .card {
+    width: 100%;
+    max-width: 380px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .content-card .card .card-info h3 {
+    font-size: 1.8rem;
+  }
+}
+
+.container-circles {
+  width: 100%;
+  max-width: 712px;
+  height: 138px;
+  display: flex;
+  gap: 48px;
+}
+
+.container-circles .content {
+  width: 100%;
+  max-width: 104px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.container-circles .content p {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.container-circles .content .content-image {
+  background-color: var(--white);
+  width: 104px;
+  height: 104px;
+  border-radius: 150px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-circles .content .content-image img {
+  width: 64px;
+  height: 64px;
+}
+
+/* Responsividade */
+
+@media (max-width: 1400px) {
+  .container-circles {
+    max-width: 835px;
+  }
+}
+
+@media (max-width: 460px) {
+  .container-circles {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+.container-bottom {
+  background-color: var(--white);
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  height: 553px;
+  align-items: center;
+  padding: 0px 140px 20px 100px;
+  gap: 70px;
+}
+
+.container-bottom .content-bottom-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(227, 198, 247, 1) 0%,
+    rgba(242, 227, 252, 1) 27%,
+    rgba(255, 255, 255, 1) 64%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-bottom .content-bottom-image img {
+  width: 466px;
+}
+
+.container-bottom .content-bottom-right {
+  width: 100%;
+  max-width: 589px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container-bottom .content-bottom-right h4 {
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  color: var(--primary-color);
+}
+
+.container-bottom .content-bottom-right h3 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 48px;
+  letter-spacing: 1px;
+  color: var(--dark-gray-2);
+}
+
+.container-bottom .content-bottom-right p {
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  line-height: 28px;
+  color: var(--dark-gray-2);
+  margin-top: 10px;
+}
+
+/* Responsividade */
+
+@media (max-width: 460px) {
+  .container-bottom {
+    width: 100%;
+    min-height: 375px;
+    height: 700px;
+    flex-direction: column;
+    padding: 40px 45px 50px;
+    gap: 0px;
+  }
+
+  .container-bottom .content-bottom-image {
+    width: 270px;
+    height: 270px;
+  }
+
+  .container-bottom .content-bottom-image img {
+    width: 330px;
+  }
+
+  .container-bottom .content-bottom-right h3 {
+    font-size: 1.9rem;
+    line-height: 36px;
+    letter-spacing: 2px;
+  }
+
+  .container-bottom .content-bottom-right p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 20px;
+    color: var(--dark-gray-2);
+  }
+}

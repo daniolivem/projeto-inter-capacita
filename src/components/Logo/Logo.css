@@ -1,0 +1,45 @@
+/* Logo Component Styles */
+
+.logo-container {
+  display: flex;
+  gap: 8px;
+  height: 44px;
+  width: 256px;
+  align-items: center;
+}
+
+.logo-container .content-icon,
+.logo-container .content-image {
+  height: 40px;
+  width: 100%;
+  color: var(--white);
+}
+
+.logo-container .icon-logo {
+  width: 33px;
+}
+
+.logo-container .logo-image {
+  height: 100%;
+  width: 100%;
+}
+
+.logo-container .content-image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 1400px) {
+  .logo-container {
+    width: 170px;
+    height: 29.5px;
+  }
+}
+
+@media (max-width: 460px) {
+  .logo-container {
+    width: 180px;
+    height: 29.5px;
+  }
+}
