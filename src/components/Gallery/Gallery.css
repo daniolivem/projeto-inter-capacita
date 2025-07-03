@@ -1,8 +1,8 @@
 /* Gallery Component Styles */
 
 .gallery-container {
-  width: 100%;
-  height: 681px;
+  width: auto;
+  height: auto;
   padding: 78px 37px 0px 100px;
   background-color: var(--light-gray-3);
   display: flex;
