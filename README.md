@@ -88,7 +88,7 @@ Este projeto faz parte do curso de Front-End e será desenvolvido em equipe por 
 
 | Membro | Nome         | Responsabilidade Principal                                      |
 | ------ | ------------ | --------------------------------------------------------------- |
-| 👤 1   | **Dani**     | ProductListing + Section + HomePage + Categorias (404)         |
+| 👤 1   | **Dani**     | ProductListing + Section + HomePage + Categorias (404) + Carrossel         |
 | 👤 2   | **May**      | ProductOptions + Input + PageFinalizarCompra + BuySuccess      |
 | 👤 3   | **Gaabe**    | Header + Logo + ProductViewPage + LoginPage                    |
 | 👤 4   | **Carlos**   | FilterGroup + Buttons + ProductListingPage + ShoppingCartPage  |
@@ -155,6 +155,8 @@ src/
 │   │   ├── processors/
 │   │   ├── graphics-cards/
 │   │   ├── memory/
+│   │   ├── mobile-devices/
+│   │   ├── mobile-pc/
 │   │   └── storage/
 │   └── icons/
 ├── components/           # Componentes reutilizáveis
@@ -225,7 +227,18 @@ src/
 ### 📦 **Gabinetes (2 produtos)**
 - Mid Tower ATX, Full Tower E-ATX
 
-**Total: 100+ produtos** com descrição completa, preços e especificações técnicas
+### 📱 **Mobile Devices (12 produtos)**
+- **Smartphones:** iPhone 15 Pro Max, Samsung Galaxy S24 Ultra, Google Pixel 8 Pro, Xiaomi 13 Pro
+- **Tablets:** iPad Air 5ª Geração, Samsung Galaxy Tab S9 Ultra, Microsoft Surface Pro 9, Lenovo Tab P11 Plus
+- **Smartwatches:** Apple Watch Series 9, Samsung Galaxy Watch 6, Garmin Forerunner 965
+- **Fones Bluetooth:** AirPods Pro 2ª Geração, Sony WH-1000XM5, JBL Tune 760NC
+
+### 💻 **Mobile PC (8 produtos)**
+- **Notebooks Ultra-portáteis:** MacBook Air M3 13", Dell XPS 13 Plus, Lenovo ThinkPad X1 Carbon Gen 11
+- **Notebooks Gamer:** ASUS ROG Zephyrus G14, MSI Stealth 15M, Acer Predator Helios 300
+- **2-em-1:** Microsoft Surface Pro 9, Lenovo Yoga 9i 14"
+
+**Total: 120+ produtos** com descrição completa, preços e especificações técnicas
 
 ---
 
@@ -268,8 +281,8 @@ Utilizar a fonte `Roboto` (ideal para tech):
 - **Cards de Produto:** Fundo `#A9B3B3`, bordas `#D9D9D9`
 - **Preços Normais:** `#2D2D36`
 - **Preços Promocionais:** `#4B5B9D`
-- **Botão "Adicionar Carrinho":** Fundo `#4B5B9D`, texto branco
-- **Botão Secundário:** Outline `#23395B`
+- **Botão "Adicionar Carrinho":** Fundo `#4B5B9D`, texto `#FFFFFF` (branco)
+- **Botão Secundário:** Outline `#23395B`, texto `#FFFFFF` (branco)
 
 #### 🎯 **Interações e Estados**
 - **Hover em Links:** `#23395B`
@@ -534,7 +547,9 @@ A loja trabalhará com as seguintes categorias principais:
 - **⚡ Fontes:** Modular, Semi-modular, 80+ Gold
 - **❄️ Refrigeração:** Air coolers, Liquid cooling
 - **📦 Gabinetes:** Mid tower, Full tower, Mini-ITX
-- **🔗 Periféricos:** Teclados, Mouses, Monitores
+- **� Mobile Devices:** Smartphones, Tablets, Smartwatches, Fones Bluetooth
+- **💻 Mobile PC:** Notebooks Ultra-portáteis, Notebooks Gamer, 2-em-1
+- **�🔗 Periféricos:** Teclados, Mouses, Monitores
 
 ## �💅 Estilo e cores
 
