@@ -3,7 +3,7 @@
 .logo-container {
   display: flex;
   gap: 8px;
-  height: 44px;
+  height: 64px;
   width: 256px;
   align-items: center;
 }
@@ -16,7 +16,8 @@
 }
 
 .logo-container .icon-logo {
-  width: 33px;
+  width: 50px;
+  border-radius: 8px;
 }
 
 .logo-container .logo-image {
