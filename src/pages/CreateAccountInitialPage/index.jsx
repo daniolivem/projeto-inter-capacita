@@ -122,10 +122,10 @@ const LoginPage = () => {
                 {/* Imagem de fundo da página de login */}
                 <img src={rizenproc} alt="Imagem de fundo" />
             </div>
-            <div className='container-image2'>
-                {/* Imagem de fundo da página de login */}
+            {/* <div className='container-image2'>
+                
                 <img src={rizenproc} alt="Imagem de fundo" />
-            </div>
+            </div> */}
             </div>
     </>
     );
