@@ -6,9 +6,9 @@
   align-items: center;
   gap: 8px;
   width: 100%;
-  max-width: 292px;
+  max-width: 692px;
   height: 100%;
-  max-height: 439px;
+  max-height: 839px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -18,7 +18,8 @@
 }
 
 .product-card .card-product {
-  width: 292px;
+  width: 250px;
+  max-width: 292px; 
   height: 321px;
   flex-shrink: 0;
   background-color: var(--white);

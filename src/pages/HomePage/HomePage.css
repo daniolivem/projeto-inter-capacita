@@ -2,62 +2,6 @@
 
 /* Estilos específicos da HomePage que não fazem parte dos componentes */
 
-.container-circles {
-  width: 100%;
-  max-width: 712px;
-  height: 138px;
-  display: flex;
-  gap: 48px;
-}
-
-.container-circles .content {
-  width: 100%;
-  max-width: 104px;
-  height: 100%;
-  cursor: pointer;
-}
-
-.container-circles .content p {
-  text-align: center;
-  margin-top: 12px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--dark-gray-2);
-}
-
-.container-circles .content .content-image {
-  background-color: var(--white);
-  width: 104px;
-  height: 104px;
-  border-radius: 150px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container-circles .content .content-image img {
-  width: 64px;
-  height: 64px;
-}
-
-/* Responsividade para Circles */
-@media (max-width: 1400px) {
-  .container-circles {
-    max-width: 835px;
-  }
-}
-
-@media (max-width: 460px) {
-  .container-circles {
-    max-width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  }
-}
-
 /* Seção Marketing Bottom */
 .container-bottom {
   background-color: var(--white);

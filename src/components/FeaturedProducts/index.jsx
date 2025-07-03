@@ -1,10 +1,38 @@
 import './FeaturedProducts.css';
 import { ButtonSecundary } from '../Buttons/ButtonComponents';
+import { featuredProductsData } from '../../data/featuredProducts';
+import RyzenProc from '../../assets/images/rizenproc.png';
+import IpodMax from '../../assets/images/ipodmax.png';
+import Samsung from '../../assets/images/galaxybook4.avif';
 
-const FeaturedProducts = ({ products }) => {
+
+const FeaturedProducts = () => {
+  // Mapeamento das imagens (necessário devido aos imports)
+  const imageMap = {
+    '../assets/images/rizenproc.png': RyzenProc,
+    '../assets/images/galaxybook4.avif': Samsung,
+    '../assets/images/ipodmax.png': IpodMax
+  };
+
+  // Processa os dados adicionando as imagens corretas
+  const featuredProducts = featuredProductsData.map(product => ({
+    ...product,
+    image: imageMap[product.image] || product.image,
+    onBuy: () => console.log(`Comprar ${product.title}`)
+  }));
+
+  // Validação de segurança
+  if (!featuredProducts || featuredProducts.length === 0) {
+    return (
+      <section className='featured-products'>
+        <p>Nenhum produto em destaque disponível.</p>
+      </section>
+    );
+  }
+
   return (
     <section className='featured-products'>
-      {products.map((product, index) => (
+      {featuredProducts.map((product, index) => (
         <div className='featured-card' key={index}>
           <div className='featured-card-info'>
             <div className='featured-card-tag'>

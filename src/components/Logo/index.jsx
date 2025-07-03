@@ -1,7 +1,5 @@
-import IconLogo from '../../assets/images/Vector.svg';
-import ImageLogo from '../../assets/images/DigitalStore.svg';
-import IconLogo2 from '../../assets/images/Vector-white.svg';
-import ImageLogo2 from '../../assets/images/DigitalStore-white.svg';
+import IconLogo from '../../assets/icons/logo.png';
+import ImageLogo from '../../assets/images/tecnobits.png';
 import './Logo.css';
 
 const Logo = ({ $footer }) => {

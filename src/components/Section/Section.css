@@ -2,13 +2,14 @@
 
 .section {
   width: 100%;
-  max-width: 1440px;
+  max-width: none;
   height: 100%;
-  padding-top: 100px;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
   padding-bottom: 50px;
-  margin-left: 315px;
+  margin: 0 auto;
+  /* margin-left: 50px; */
 }
 
 .section.padding-bottom {
@@ -37,6 +38,8 @@
   font-weight: 700;
   color: var(--dark-gray-2);
   margin-bottom: 20px;
+  margin-left: 63px;
+  text-align: center;
 }
 
 .section-link {
