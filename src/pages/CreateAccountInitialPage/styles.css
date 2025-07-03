@@ -138,7 +138,7 @@
     position: absolute;
     right: 0;
     /* margin-top: 0px; */
-    top: 10rem;
+    /* top: 10rem;
     margin-right: 22rem;
     width: 256px;
     height: 483px;
@@ -162,5 +162,5 @@
     width: 252px;
     height: 515px;
     flex-shrink: 0;
-    background: url('src\assets\images\pexels2.svg') no-repeat;
+    background: url('src/assets/images/pexels2.svg') no-repeat;
 }

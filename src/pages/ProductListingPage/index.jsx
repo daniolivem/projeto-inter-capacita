@@ -3,58 +3,10 @@ import { CiFilter } from 'react-icons/ci';
 import ProductListing from '../../components/ProductListing';
 import CustomSelect from '../../components/CustomSelect'; // Importe o novo componente
 import './ProductListingPage.css';
-import Thumb1 from '../../public/product-thumb-1.svg';
-import Thumb3 from '../../public/product-thumb-3.svg';
-import Thumb4 from '../../public/product-thumb-4.svg';
 import Section from '../../components/Section';
+import products from '../../data/products.json';
 
-// Array de produtos com valores de desconto pré-calculados
-const products = [
-  {
-    id: 1,
-    name: 'Nike Air Force 1',
-    image: Thumb1,
-    price: 200,
-    priceDiscount: 140,
-    tagValue: '30% Off',
-  },
-  {
-    id: 2,
-    name: 'Nike Air Force 2',
-    image: Thumb1,
-    price: 150,
-    priceDiscount: 105,
-    tagValue: '30% Off',
-  },
-  {
-    id: 3,
-    name: 'Nike Air Force 3',
-    image: Thumb3,
-    price: 300,
-    priceDiscount: 210,
-  },
-  {
-    id: 4,
-    name: 'Nike Air Force 4',
-    image: Thumb4,
-    price: 100,
-    priceDiscount: 70,
-  },
-  {
-    id: 5,
-    name: 'Nike Air Force 5',
-    image: Thumb1,
-    price: 200,
-    priceDiscount: 140,
-  },
-  {
-    id: 6,
-    name: 'Nike Air Force 6',
-    image: Thumb4,
-    price: 150,
-    priceDiscount: 105,
-  },
-];
+
 
 const ProductListingPage = () => {
   const [selectedFilters, setSelectedFilters] = useState({
@@ -78,6 +30,54 @@ const ProductListingPage = () => {
     { value: 'maior-preco', label: 'maior preço' },
     { value: 'mais-vendidos', label: 'mais vendidos' },
   ];
+
+  // Função para filtrar produtos baseada nos filtros selecionados
+  const getFilteredProducts = () => {
+    let filtered = products;
+
+    // Filtrar por marca
+    if (selectedFilters.marca.length > 0) {
+      filtered = filtered.filter(product => 
+        selectedFilters.marca.includes(product.brand)
+      );
+    }
+
+    // Filtrar por categoria
+    if (selectedFilters.categoria.length > 0) {
+      filtered = filtered.filter(product => 
+        selectedFilters.categoria.includes(product.category)
+      );
+    }
+
+    // Ordenar produtos
+    switch (sortBy) {
+      case 'menor-preco':
+        filtered.sort((a, b) => a.price - b.price);
+        break;
+      case 'maior-preco':
+        filtered.sort((a, b) => b.price - a.price);
+        break;
+      case 'mais-vendidos':
+        // Simular produtos mais vendidos (pode ser baseado em rating)
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
+      default:
+        // Manter ordem original para "mais relevantes"
+        break;
+    }
+
+    return filtered;
+  };
+
+  const filteredProducts = getFilteredProducts();
+
+  // Extrair marcas e categorias únicas dos produtos
+  const getUniqueValues = (key) => {
+    return [...new Set(products.map(product => product[key]).filter(Boolean))];
+  };
+
+  const uniqueBrands = getUniqueValues('brand');
+  const uniqueCategories = getUniqueValues('category');
 
   // Verificar o tamanho da tela quando o componente montar e quando a janela for redimensionada
   useEffect(() => {
@@ -160,18 +160,16 @@ const ProductListingPage = () => {
             <div className='filter-group'>
               <h4>Marca</h4>
               <div className='filter-options'>
-                {['Adidas', 'Calenciaga', 'K-Swiss', 'Nike', 'Puma'].map(
-                  marca => (
-                    <label key={marca} className='filter-option'>
-                      <input
-                        type='checkbox'
-                        checked={selectedFilters.marca.includes(marca)}
-                        onChange={() => handleFilterChange('marca', marca)}
-                      />
-                      <span>{marca}</span>
-                    </label>
-                  )
-                )}
+                {uniqueBrands.slice(0, 10).map(marca => (
+                  <label key={marca} className='filter-option'>
+                    <input
+                      type='checkbox'
+                      checked={selectedFilters.marca.includes(marca)}
+                      onChange={() => handleFilterChange('marca', marca)}
+                    />
+                    <span>{marca}</span>
+                  </label>
+                ))}
               </div>
             </div>
 
@@ -233,9 +231,7 @@ const ProductListingPage = () => {
 
           {/* Grid de produtos */}
           <main className='products-grid'>
-            <ProductListing $isPageProducts products={products} />
-            <ProductListing $isPageProducts products={products} />
-            <ProductListing $isPageProducts products={products} />
+            <ProductListing $isPageProducts products={filteredProducts} />
           </main>
         </div>
       </Section>
