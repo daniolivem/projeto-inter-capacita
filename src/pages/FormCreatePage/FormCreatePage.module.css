@@ -1,0 +1,144 @@
+/*
+ * Estilização para a página de criação de conta (FormCreatePage)
+ * Cores baseadas na paleta do README.md:
+ * Base: #2D2D36
+ * Profissional: #23395B
+ * Destaque: #4B5B9D
+ * Neutro: #A9B3B3
+ * Fundo: #D9D9D9
+ * Error: #FF3547
+*/
+
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #D9D9D9; /* Cor de fundo geral */
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formWrapper {
+    background-color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.titleContainer {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    color: #23395B; /* Azul Profissional */
+    font-size: 2rem;
+    font-weight: 700; /* Roboto-700 */
+    margin: 0;
+}
+
+.subtitle {
+    color: #2D2D36; /* Base */
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.link {
+    color: #4B5B9D; /* Destaque */
+    text-decoration: none;
+    font-weight: 500; /* Roboto-500 */
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.formRow {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.formRow .formGroup {
+    flex: 1;
+}
+
+.formGroup {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2D2D36;
+    font-weight: 500; /* Roboto-500 */
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #A9B3B3; /* Neutro */
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #4B5B9D; /* Destaque */
+    box-shadow: 0 0 0 3px rgba(75, 91, 157, 0.2);
+}
+
+.formGroup .inputError {
+    border-color: #FF3547; /* Error */
+}
+
+.formGroup .inputError:focus {
+    box-shadow: 0 0 0 3px rgba(255, 53, 71, 0.2);
+}
+
+.errorMessage {
+    color: #FF3547; /* Error */
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4B5B9D; /* Destaque */
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 700; /* Roboto-700 */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+    background-color: #23395B; /* Azul Profissional */
+    transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+    background-color: #A9B3B3; /* Neutro */
+    cursor: not-allowed;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .formRow {
+        flex-direction: column;
+        gap: 0;
+    }
+    .formWrapper {
+        padding: 1.5rem;
+    }
+}
