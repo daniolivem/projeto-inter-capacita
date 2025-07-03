@@ -88,7 +88,7 @@ Este projeto faz parte do curso de Front-End e será desenvolvido em equipe por 
 
 | Membro | Nome         | Responsabilidade Principal                                      |
 | ------ | ------------ | --------------------------------------------------------------- |
-| 👤 1   | **Dani**     | ProductListing + Section + HomePage + Categorias (404)         |
+| 👤 1   | **Dani**     | ProductListing + Section + HomePage + Categorias (404) + Carrossel         |
 | 👤 2   | **May**      | ProductOptions + Input + PageFinalizarCompra + BuySuccess      |
 | 👤 3   | **Gaabe**    | Header + Logo + ProductViewPage + LoginPage                    |
 | 👤 4   | **Carlos**   | FilterGroup + Buttons + ProductListingPage + ShoppingCartPage  |
@@ -281,8 +281,8 @@ Utilizar a fonte `Roboto` (ideal para tech):
 - **Cards de Produto:** Fundo `#A9B3B3`, bordas `#D9D9D9`
 - **Preços Normais:** `#2D2D36`
 - **Preços Promocionais:** `#4B5B9D`
-- **Botão "Adicionar Carrinho":** Fundo `#4B5B9D`, texto branco
-- **Botão Secundário:** Outline `#23395B`
+- **Botão "Adicionar Carrinho":** Fundo `#4B5B9D`, texto `#FFFFFF` (branco)
+- **Botão Secundário:** Outline `#23395B`, texto `#FFFFFF` (branco)
 
 #### 🎯 **Interações e Estados**
 - **Hover em Links:** `#23395B`
