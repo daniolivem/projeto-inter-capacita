@@ -1,166 +1,84 @@
 import Section from '../../components/Section';
-import Collection1 from '../../public/collection-1.png';
-import Collection2 from '../../public/collection-2.png';
-import Collection3 from '../../public/collection-3.png';
+import Collection1 from '/collection-1.png';
+import Collection2 from '../../assets/images/samsung-galaxy-book-4-pro-16.avif';
+import Collection3 from '/collection-3.png';
 import './HomePage.css';
-import Camiseta from '../../assets/images/camiseta.png';
-import Pants from '../../assets/images/pants.png';
-import Sneakers from '../../assets/images/sneakers.png';
-import Chap from '../../assets/images/chap.png';
-import Headphone from '../../assets/images/headphone.png';
 
 import {
   ButtonPrimary,
-  ButtonSecundary,
 } from '../../components/Buttons/ButtonComponents';
 import Gallery from '../../components/Gallery';
 import ProductListing from '../../components/ProductListing';
-import Thumb1 from '../../public/product-thumb-1.svg';
-import Thumb3 from '../../public/product-thumb-3.svg';
-import Thumb4 from '../../public/product-thumb-4.svg';
-import MarketingBottom from '../../public/nike-bottom.png';
+import FeaturedProducts from '../../components/FeaturedProducts';
+import MarketingBottom from '/nike-bottom.png';
+import products from '../../data/products.json';
 
-const cardsCircle = [
-  {
-    id: 1,
-    image: Camiseta,
-    title: 'Camisetas',
-  },
-  {
-    id: 2,
-    image: Pants,
-    title: 'Calças',
-  },
-  {
-    id: 3,
-    image: Sneakers,
-    title: 'Tênis',
-  },
-  {
-    id: 4,
-    image: Chap,
-    title: 'Chapéus',
-  },
-  {
-    id: 5,
-    image: Headphone,
-    title: 'Headphones',
-  },
-];
-
-// Array de produtos com valores de desconto pré-calculados
-const products = [
-  {
-    id: 1,
-    name: 'Nike Air Force 1',
-    image: Thumb1,
-    price: 200,
-    priceDiscount: 140, // 30% de desconto: 200 - (200 * 0.3) = 140
-    tagValue: '30% Off',
-  },
-  {
-    id: 2,
-    name: 'Nike Air Force 2',
-    image: Thumb1,
-    price: 150,
-    priceDiscount: 105, // 30% de desconto: 150 - (150 * 0.3) = 105
-    tagValue: '30% Off',
-  },
-  {
-    id: 3,
-    name: 'Nike Air Force 3',
-    image: Thumb3,
-    price: 300,
-    priceDiscount: 210, // 30% de desconto: 300 - (300 * 0.3) = 210
-  },
-  {
-    id: 4,
-    name: 'Nike Air Force 4',
-    image: Thumb4,
-    price: 100,
-    priceDiscount: 70, // 30% de desconto: 100 - (100 * 0.3) = 70
-  },
-  {
-    id: 5,
-    name: 'Nike Air Force 5',
-    image: Thumb1,
-    price: 200,
-    priceDiscount: 140, // 30% de desconto: 200 - (200 * 0.3) = 140
-  },
-  {
-    id: 6,
-    name: 'Nike Air Force 6',
-    image: Thumb4,
-    price: 150,
-    priceDiscount: 105, // 30% de desconto: 150 - (150 * 0.3) = 105
-  },
-  {
-    id: 7,
-    name: 'Nike Air Force 7',
-    image: Thumb3,
-    price: 300,
-    priceDiscount: 210, // 30% de desconto: 300 - (300 * 0.3) = 210
-  },
-  {
-    id: 8,
-    name: 'Nike Air Force 8',
-    image: Thumb4,
-    price: 100, // Sem desconto conforme o exemplo original
-    priceDiscount: 70, // 30% de desconto: 100 - (100 * 0.3) = 70
-  },
-];
+// const cardsCircle = [
+//   {
+//     id: 1,
+//     image: Camiseta,
+//     title: 'Camisetas',
+//   },
+//   {
+//     id: 2,
+//     image: Pants,
+//     title: 'Calças',
+//   },
+//   {
+//     id: 3,
+//     image: Sneakers,
+//     title: 'Tênis',
+//   },
+//   {
+//     id: 4,
+//     image: Chap,
+//     title: 'Chapéus',
+//   },
+//   {
+//     id: 5,
+//     image: Headphone,
+//     title: 'Headphones',
+//   },
+// ];
 
 const HomePage = () => {
   const windowWidth = window.innerWidth;
 
+  // Dados dos produtos em destaque
+  const featuredProducts = [
+    {
+      title: 'Processadores',
+      image: Collection1,
+      discount: 15,
+      buttonText: 'Comprar',
+      onBuy: () => console.log('Comprar Processadores')
+    },
+    {
+      title: 'Samsung',
+      image: Collection2,
+      tag: '15% off',
+      buttonText: 'Comprar',
+      onBuy: () => console.log('Comprar Samsung')
+    },
+    {
+      title: 'Apple',
+      image: Collection3,
+      tag: '14% off',
+      buttonText: 'Comprar',
+      onBuy: () => console.log('Comprar Apple')
+    }
+  ];
+
   return (
     <div>
-      <Gallery />
+      {/* <Gallery /> */}
 
-      {/* Seção de Coleções em destaque (cards) */}
-      <Section title='Coleçoes em destaque'>
-        <section className='content-card'>
-          <div className='card'>
-            <div className='card-info'>
-              <div className='card-tag'>
-                <span>30%</span>
-                <span>OFF</span>
-              </div>
-
-              <h3>Novo drop Supreme</h3>
-              <ButtonSecundary>Comprar</ButtonSecundary>
-            </div>
-
-            <div className='card-image'>
-              <img src={Collection1} alt='Coleção 1' />
-            </div>
-          </div>
-
-          <div className='card'>
-            <div className='card-info'>
-              <div className='card-tag'>30% off</div>
-              <h3>Novo drop Supreme</h3>
-              <ButtonSecundary>Comprar</ButtonSecundary>
-            </div>
-            <div className='card-image'>
-              <img src={Collection2} alt='Coleção 1' />
-            </div>
-          </div>
-
-          <div className='card'>
-            <div className='card-info'>
-              <div className='card-tag'>30% off</div>
-              <h3>Novo drop Supreme</h3>
-              <ButtonSecundary>Comprar</ButtonSecundary>
-            </div>
-            <div className='card-image'>
-              <img src={Collection3} alt='Coleção 1' />
-            </div>
-          </div>
-        </section>
+      {/* Seção de Produtos em destaque */}
+      <Section title='Produtos em destaque'>
+        <FeaturedProducts products={featuredProducts} />
       </Section>
 
-      {/* Seção de Coleções em destaque  (icons circles)*/}
+      {/* Seção de Coleções em destaque  (icons circles)
       <Section
         title='Coleçoes em destaque'
         titleAlign={windowWidth <= 1024 ? 'left' : 'center'}
@@ -175,7 +93,7 @@ const HomePage = () => {
             </div>
           ))}
         </section>
-      </Section>
+      </Section> */}
 
       {/* Seção de Produtos em alta */}
       <Section
