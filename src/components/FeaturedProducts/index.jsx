@@ -3,14 +3,14 @@ import { ButtonSecundary } from '../Buttons/ButtonComponents';
 import { featuredProductsData } from '../../data/featuredProducts';
 import RyzenProc from '../../assets/images/rizenproc.png';
 import IpodMax from '../../assets/images/ipodmax.png';
-import Samsung from '../../assets/images/galaxybook4.avif';
+import Samsung from '../../assets/images/gws.png';
 
 
 const FeaturedProducts = () => {
   // Mapeamento das imagens (necessário devido aos imports)
   const imageMap = {
     '../assets/images/rizenproc.png': RyzenProc,
-    '../assets/images/galaxybook4.avif': Samsung,
+    '../assets/images/gws.png': Samsung,
     '../assets/images/ipodmax.png': IpodMax
   };
 
@@ -47,7 +47,7 @@ const FeaturedProducts = () => {
 
             <h3>{product.title}</h3>
             <ButtonSecundary onClick={product.onBuy}>
-              {product.buttonText || 'Comprar'}
+              {product.buttonText || 'Ver mais'}
             </ButtonSecundary>
           </div>
 

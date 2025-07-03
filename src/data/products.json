@@ -631,7 +631,7 @@
     "priceDiscount": 799.99,
     "category": "memory",
     "brand": "Corsair",
-    "image": "/images/corsair-vengeance-lpx-32gb-ddr4.jpg",
+    "image": "../../assets/images/rizenproc.png",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "11% Off"

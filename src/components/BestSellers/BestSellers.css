@@ -1,18 +1,19 @@
 /* BestSellers Component Styles */
 
 .best-sellers {
-  display: flex;
-  flex-direction: column;
-  width: auto;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  background-color: red;
+  background-color: var(--light-gray);
 }
 
 /* Customizações específicas para produtos em destaque */
 .best-sellers .product-listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .best-sellers .product-card {
@@ -29,6 +30,10 @@
   .best-sellers {
     padding: 0 15px;
   }
+  
+  .best-sellers .product-listing {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -37,6 +42,14 @@
   }
   
   .best-sellers .product-listing {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .best-sellers .product-listing {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }

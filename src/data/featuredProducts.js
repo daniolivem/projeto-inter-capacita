@@ -5,25 +5,25 @@ export const featuredProductsData = [
     title: 'Processadores',
     image: '../assets/images/rizenproc.png',
     discount: 15,
-    buttonText: 'Comprar',
+    buttonText: 'Ver mais',
     category: 'processors',
     description: 'Os melhores processadores para seu setup'
   },
   {
     id: 2,
     title: 'Samsung',
-    image: '../assets/images/galaxybook4.avif',
+    image: 'src/assets/images/gws.png',
     tag: '15% OFF',
-    buttonText: 'Comprar',
-    category: 'mobile-pc',
-    description: 'Notebooks Samsung com tecnologia avançada'
+    buttonText: 'Ver mais',
+    category: 'mobile-devices',
+    description: 'Produtos Samsung com tecnologia avançada'
   },
   {
     id: 3,
     title: 'Apple',
     image: '../assets/images/ipodmax.png',
     tag: '14% OFF',
-    buttonText: 'Comprar',
+    buttonText: 'Ver mais',
     category: 'mobile-devices',
     description: 'Produtos Apple com design inovador'
   }

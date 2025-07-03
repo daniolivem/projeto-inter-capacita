@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
-import pexels from '../../assets/images/pexels.svg';
-import pexels2 from '../../assets/images/pexels2.svg';
+// import pexels from '../../assets/images/pexels.svg';
+// import pexels2 from '../../assets/images/pexels2.svg';
 import { InputDefault } from '../../components/Input';
 import { ButtonPrimary } from '../../components/Buttons/ButtonComponents';
 
