@@ -3,7 +3,7 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   gap: 8px;
   width: 100%;
   max-width: 692px;
@@ -11,6 +11,7 @@
   max-height: 839px;
   cursor: pointer;
   transition: transform 0.3s ease;
+
 }
 
 .product-card:hover {
@@ -30,6 +31,7 @@
   overflow: hidden;
   padding: 38px 20px 0;
   position: relative;
+
 }
 
 .product-card .card-product .discount {
