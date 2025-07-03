@@ -1,13 +1,66 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import styles from './FormCreatePage.module.css'; // Usando CSS Modules para evitar conflitos de estilo
+import styles from './FormCreatePage.module.css';
 
-// Componente da página de criação de conta
+// --- LÓGICA DE VALIDAÇÃO INTEGRADA ---
+
+// Constantes com as regras de validação
+const VALIDATION_RULES = {
+    EMAIL_REGEX: /\S+@\S+\.\S+/,
+    PASSWORD_MIN_LENGTH: 8,
+};
+
+// Mensagens de erro padronizadas
+const ERROR_MESSAGES = {
+    REQUIRED: (fieldName) => `O campo ${fieldName} é obrigatório`,
+    INVALID_EMAIL: 'O formato do email é inválido',
+    PASSWORD_TOO_SHORT: (minLength) => `A senha deve ter no mínimo ${minLength} caracteres`,
+    PASSWORDS_DO_NOT_MATCH: 'As senhas não coincidem',
+};
+
+/**
+ * Valida os dados do formulário de registo.
+ * @param {object} formData - O estado atual do formulário.
+ * @returns {object} Um objeto contendo os erros de validação.
+ */
+const validateForm = (formData) => {
+    const errors = {};
+    const { firstName, lastName, email, password, confirmPassword } = formData;
+
+    // Validação de nome e sobrenome
+    if (!firstName) errors.firstName = ERROR_MESSAGES.REQUIRED('nome');
+    if (!lastName) errors.lastName = ERROR_MESSAGES.REQUIRED('sobrenome');
+
+    // Validação de email
+    if (!email) {
+        errors.email = ERROR_MESSAGES.REQUIRED('email');
+    } else if (!VALIDATION_RULES.EMAIL_REGEX.test(email)) {
+        errors.email = ERROR_MESSAGES.INVALID_EMAIL;
+    }
+
+    // Validação de senha
+    if (!password) {
+        errors.password = ERROR_MESSAGES.REQUIRED('senha');
+    } else if (password.length < VALIDATION_RULES.PASSWORD_MIN_LENGTH) {
+        errors.password = ERROR_MESSAGES.PASSWORD_TOO_SHORT(VALIDATION_RULES.PASSWORD_MIN_LENGTH);
+    }
+
+    // Validação da confirmação de senha
+    if (!confirmPassword) {
+        errors.confirmPassword = ERROR_MESSAGES.REQUIRED('confirmação da senha');
+    } else if (password !== confirmPassword) {
+        errors.confirmPassword = ERROR_MESSAGES.PASSWORDS_DO_NOT_MATCH;
+    }
+
+    return errors;
+};
+
+
+// --- COMPONENTE FormCreatePage ---
+
 const FormCreatePage = () => {
-    // Hook para navegação programática após o sucesso do cadastro
     const navigate = useNavigate();
 
-    // Estado para armazenar os dados do formulário
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -15,59 +68,26 @@ const FormCreatePage = () => {
         password: '',
         confirmPassword: ''
     });
-
-    // Estado para armazenar mensagens de erro de validação
     const [errors, setErrors] = useState({});
-    // Estado para controlar se o formulário está sendo enviado
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // Função para atualizar o estado do formulário conforme o usuário digita
     const handleChange = e => {
         const { name, value } = e.target;
         setFormData(prevData => ({ ...prevData, [name]: value }));
     };
 
-    // Função para validar todos os campos do formulário
-    const validate = () => {
-        const newErrors = {};
-
-        // Validações dos campos
-        if (!formData.firstName) newErrors.firstName = 'O nome é obrigatório';
-        if (!formData.lastName) newErrors.lastName = 'O sobrenome é obrigatório';
-        if (!formData.email) {
-            newErrors.email = 'O email é obrigatório';
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = 'O formato do email é inválido';
-        }
-        if (!formData.password) {
-            newErrors.password = 'A senha é obrigatória';
-        } else if (formData.password.length < 8) {
-            newErrors.password = 'A senha deve ter no mínimo 8 caracteres';
-        }
-        if (!formData.confirmPassword) {
-            newErrors.confirmPassword = 'A confirmação da senha é obrigatória';
-        } else if (formData.password !== formData.confirmPassword) {
-            newErrors.confirmPassword = 'As senhas não coincidem';
-        }
-
-        return newErrors;
-    };
-
-    // Função chamada ao enviar o formulário
     const handleSubmit = e => {
         e.preventDefault();
-        const newErrors = validate();
+        // A validação agora chama a função que está neste mesmo ficheiro
+        const newErrors = validateForm(formData);
         setErrors(newErrors);
 
-        // Se não houver erros, simula o envio do formulário
         if (Object.keys(newErrors).length === 0) {
             setIsSubmitting(true);
             console.log('Formulário enviado com sucesso:', formData);
 
-            // Simula uma chamada à API e redireciona o usuário
             setTimeout(() => {
                 setIsSubmitting(false);
-                // Redireciona para a página de login ou para a página da conta
                 navigate('/login');
             }, 2000);
         }
@@ -85,7 +105,6 @@ const FormCreatePage = () => {
 
                 <form onSubmit={handleSubmit} noValidate>
                     <div className={styles.formRow}>
-                        {/* Campo Nome */}
                         <div className={styles.formGroup}>
                             <label htmlFor="firstName">Nome *</label>
                             <input
@@ -99,7 +118,6 @@ const FormCreatePage = () => {
                             />
                             {errors.firstName && <p className={styles.errorMessage}>{errors.firstName}</p>}
                         </div>
-                        {/* Campo Sobrenome */}
                         <div className={styles.formGroup}>
                             <label htmlFor="lastName">Sobrenome *</label>
                             <input
@@ -115,7 +133,6 @@ const FormCreatePage = () => {
                         </div>
                     </div>
 
-                    {/* Campo Email */}
                     <div className={styles.formGroup}>
                         <label htmlFor="email">Email *</label>
                         <input
@@ -130,7 +147,6 @@ const FormCreatePage = () => {
                         {errors.email && <p className={styles.errorMessage}>{errors.email}</p>}
                     </div>
 
-                    {/* Campo Senha */}
                     <div className={styles.formGroup}>
                         <label htmlFor="password">Senha *</label>
                         <input
@@ -145,7 +161,6 @@ const FormCreatePage = () => {
                         {errors.password && <p className={styles.errorMessage}>{errors.password}</p>}
                     </div>
 
-                    {/* Campo Confirmar Senha */}
                     <div className={styles.formGroup}>
                         <label htmlFor="confirmPassword">Confirmar Senha *</label>
                         <input
@@ -160,7 +175,6 @@ const FormCreatePage = () => {
                         {errors.confirmPassword && <p className={styles.errorMessage}>{errors.confirmPassword}</p>}
                     </div>
 
-                    {/* Botão de envio */}
                     <button
                         type="submit"
                         className={styles.submitButton}
