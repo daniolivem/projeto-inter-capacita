@@ -33,7 +33,7 @@
 
 .featured-card {
   width: 100%;
-  max-width: 350px;
+  max-width: 450px;
   height: 250px;
   background-color: var(--card-destaque-color);
   border-radius: 8px;
@@ -59,7 +59,7 @@
 }
 
 .featured-card-info h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--dark-gray);
   margin: 0;

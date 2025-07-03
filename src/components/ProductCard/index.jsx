@@ -35,7 +35,6 @@ function ProductCard({ product }) {
           {tagValue && <div className='discount'>{tagValue}</div>}
           <img src={image} alt={name} />
         </div>
-        <p>Tênis</p>{' '}
         {/* Esta categoria parece estática, pode ser dinâmica se necessário */}
         <h4>{name}</h4>
         <div className='card-info'>
