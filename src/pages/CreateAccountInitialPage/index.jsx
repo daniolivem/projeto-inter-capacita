@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
-import pexels from '../../assets/images/pexels.svg';
-import pexels2 from '../../assets/images/pexels2.svg';
+import rizenproc from '../../assets/images/rizenproc.png';
+// import pexels2 from '../../assets/images/pexels2.svg';
 
 
 // Componente principal da página de login
@@ -119,14 +119,14 @@ const LoginPage = () => {
                 </div>
             </div>
             <div className='container-image1'>
-                        {/* Imagem de fundo da página de login */}
-                        <img src={pexels} alt="Imagem de fundo" />
-                    </div>
-                    <div className='container-image2'>
-                        {/* Imagem de fundo da página de login */}
-                        <img src={pexels2} alt="Imagem de fundo" />
-                    </div>
-       </div>
+                {/* Imagem de fundo da página de login */}
+                <img src={rizenproc} alt="Imagem de fundo" />
+            </div>
+            {/* <div className='container-image2'>
+                
+                <img src={rizenproc} alt="Imagem de fundo" />
+            </div> */}
+            </div>
     </>
     );
 };

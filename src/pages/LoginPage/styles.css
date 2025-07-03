@@ -155,7 +155,7 @@
   position: relative;
 }
 
-.container-image1 {
+/* .container-image1 {
   position: absolute;
   top: -25px;
   width: 256px;
@@ -174,7 +174,7 @@
   height: 515px;
   flex-shrink: 0;
   background: url('src\assets\images\pexels2.svg') no-repeat;
-}
+} */
 
 /* Responsividade */
 @media screen and (max-width: 460px) {
