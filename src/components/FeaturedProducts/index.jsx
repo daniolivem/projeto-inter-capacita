@@ -46,7 +46,7 @@ const FeaturedProducts = () => {
             </div>
 
             <h3>{product.title}</h3>
-            <ButtonSecundary onClick={product.onBuy}>
+            <ButtonSecundary onClick={window.location.href = `/produtos/${product.category}`}>
               {product.buttonText || 'Ver mais'}
             </ButtonSecundary>
           </div>
