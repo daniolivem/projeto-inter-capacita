@@ -1,6 +1,4 @@
 import './style.css';
-import NikeImg from '../../assets/images/White-Sneakers.png';
-import ConfeteIcon from '../../assets/icons/confete.png';
 import { ButtonShop } from '../../components/Buttons/ButtonComponents';
 
 const BuySuccessPage = () => {
@@ -9,7 +7,7 @@ const BuySuccessPage = () => {
       <div class='container'>
         <div className='content-icon-title'>
           <div class='confete-icon'>
-            <img src={ConfeteIcon} alt='Confete de festa' />
+            <img src="/images/confete.png" alt='Confete de festa' />
           </div>
 
           <div class='content-title'>
@@ -84,11 +82,11 @@ const BuySuccessPage = () => {
 
           <div class='container-imagem-texto'>
             <div class='lado-esquerdo'>
-              <img src={NikeImg} alt='Ícone de menu' className='tenis' />
+              <img src="/images/iphone-15-pro-max.jpg" alt='Produto comprado' className='tenis' />
             </div>
             <div class='lado-direito'>
-              <p>Tênis Nike Revolution 6 Next Nature</p>
-              <p>Masculino</p>
+              <p>iPhone 15 Pro Max 256GB</p>
+              <p>Tecnologia</p>
             </div>
           </div>
         </div>

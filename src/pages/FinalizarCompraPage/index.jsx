@@ -1,6 +1,5 @@
 import React from "react";
 import './App.css'
-import tenis from '../src/assets/tenis.png';
 
 
 
@@ -48,7 +47,7 @@ const Confirmacompra = () => {
           <div className="conteudo, border">
             <div className="teniseh6">
               <div className="tenisf">
-                <img src={tenis} alt='Logo Icon' className='tenis' />
+                <img src="/images/iphone-15-pro-max.jpg" alt='Logo Icon' className='tenis' />
               </div>
               <div className="h">
                 <h6>Tênis Nike Revolution 6 Next Nature Masculino</h6>

@@ -7,7 +7,6 @@ import {
 import Gallery from '../../components/Gallery';
 import FeaturedProducts from '../../components/FeaturedProducts';
 import BestSellers from '../../components/BestSellers';
-import MarketingBottom from '/nike-bottom.png';
 
 
 const HomePage = () => {
@@ -35,7 +34,7 @@ const HomePage = () => {
         <section className='container-bottom'>
           <div className='content-bottom-left'>
             <div className='content-bottom-image'>
-              <img src={MarketingBottom} alt='Marketing Bottom' />
+              <img src="/images/iphone-15-pro-max.jpg" alt='Marketing Bottom' />
             </div>
           </div>
 

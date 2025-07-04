@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
-import rizenproc from '../../assets/images/rizenproc.png';
 // import pexels2 from '../../assets/images/pexels2.svg';
 
 
@@ -120,11 +119,11 @@ const LoginPage = () => {
             </div>
             <div className='container-image1'>
                 {/* Imagem de fundo da página de login */}
-                <img src={rizenproc} alt="Imagem de fundo" />
+                <img src="/images/rizenproc.png" alt="Imagem de fundo" />
             </div>
             {/* <div className='container-image2'>
                 
-                <img src={rizenproc} alt="Imagem de fundo" />
+                <img src="/images/rizenproc.png" alt="Imagem de fundo" />
             </div> */}
             </div>
     </>

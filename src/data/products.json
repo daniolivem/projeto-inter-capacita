@@ -202,7 +202,7 @@
     "priceDiscount": 10999.99,
     "category": "notebook",
     "brand": "ASUS",
-    "image": "/images/asus-rog-zephyrus-g14.jpg",
+    "image": "/public/images/asus-rog-zephyrus-g14.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
@@ -631,7 +631,7 @@
     "priceDiscount": 799.99,
     "category": "memory",
     "brand": "Corsair",
-    "image": "../../assets/images/rizenproc.png",
+    "image": "/images/rizenproc.png",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "11% Off"
