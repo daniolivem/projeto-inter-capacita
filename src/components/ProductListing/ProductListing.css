@@ -12,6 +12,11 @@
   background-color: blue;
 }
 
+.content-limit {
+
+
+}
+
 @media (max-width: 1400px) {
   .product-listing-container {
     gap: 20px;
