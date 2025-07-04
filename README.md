@@ -63,8 +63,8 @@ A **Tecnobits** é uma loja especializada em hardware para gamers, entusiastas e
 | `/checkout` | PageFinalizarCompra | **May** | Processo de finalização |
 | `/success` | BuySuccess | **May** | Confirmação de compra realizada |
 | `/login` | LoginPage | **Gaabe** | Autenticação de usuário |
-| `/register` | FormCreatePage | **Vini** | Cadastro de novo usuário |
-| `/account` | CreateAccountInitialPage | **Anderson** | Perfil e dados do usuário |
+| `/register` |  CreateAccountInitialPage| **Vini** | Cadastro de novo usuário |
+| `/account` | FormCreatePage | **Anderson** | Perfil e dados do usuário |
 | `/*` | CategoriaPage (404) | **Dani** | Página de erro para rotas inválidas |
 
 ### 🎯 **Fluxo Principal do Usuário:**
