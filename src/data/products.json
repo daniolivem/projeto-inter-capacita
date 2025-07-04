@@ -202,7 +202,7 @@
     "priceDiscount": 10999.99,
     "category": "notebook",
     "brand": "ASUS",
-    "image": "/images/asus-rog-zephyrus-g14.jpg",
+    "image": "/public/images/asus-rog-zephyrus-g14.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
