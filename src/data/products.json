@@ -202,7 +202,7 @@
     "priceDiscount": 10999.99,
     "category": "notebook",
     "brand": "ASUS",
-    "image": "/images/asus-rog-zephyrus-g14.jpg",
+    "image": "/public/images/asus-rog-zephyrus-g14.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
@@ -631,7 +631,7 @@
     "priceDiscount": 799.99,
     "category": "memory",
     "brand": "Corsair",
-    "image": "../../assets/images/rizenproc.png",
+    "image": "/images/rizenproc.png",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "11% Off"
@@ -1298,5 +1298,44 @@
     "rating": 4.9,
     "inStock": true,
     "tagValue": "6% Off"
+  },
+  {
+    "id": 101,
+    "name": "ASUS PRIME A520M-A WiFi",
+    "description": "Motherboard ASUS PRIME A520M-A WiFi, Socket AM4, Micro-ATX, DDR4, compatível com Ryzen 5 5500",
+    "price": 449.99,
+    "priceDiscount": 399.99,
+    "category": "motherboard",
+    "brand": "ASUS",
+    "image": "/images/asus-prime-a520m-a-wifi.jpg",
+    "rating": 4.3,
+    "inStock": true,
+    "tagValue": "11% Off"
+  },
+  {
+    "id": 102,
+    "name": "MSI A520M-A PRO",
+    "description": "Motherboard MSI A520M-A PRO, Socket AM4, Micro-ATX, DDR4, suporte para Ryzen série 5000",
+    "price": 329.99,
+    "priceDiscount": 299.99,
+    "category": "motherboard",
+    "brand": "MSI",
+    "image": "/images/msi-a520m-a-pro.jpg",
+    "rating": 4.2,
+    "inStock": true,
+    "tagValue": "9% Off"
+  },
+  {
+    "id": 103,
+    "name": "GIGABYTE A520M DS3H",
+    "description": "Motherboard GIGABYTE A520M DS3H, Socket AM4, Micro-ATX, DDR4, ideal para Ryzen 5 5500",
+    "price": 379.99,
+    "priceDiscount": 349.99,
+    "category": "motherboard",
+    "brand": "GIGABYTE",
+    "image": "/images/gigabyte-a520m-ds3h.jpg",
+    "rating": 4.1,
+    "inStock": true,
+    "tagValue": "8% Off"
   }
 ]

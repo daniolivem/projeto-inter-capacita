@@ -1,67 +1,56 @@
 import { useState } from 'react';
-import QueimaEstoque from '../../assets/images/queima-estoque.png';
-import OrnamentImg from '../../assets/icons/Ornament.png';
 import { ButtonPrimary } from '../Buttons/ButtonComponents';
 import './Gallery.css';
 
-import Slide01 from '../../assets/bg-removed/home-slide-01.svg';
-
-import Slide3 from '../../assets/bg-removed/home-slide-3.png';
-import Slide4 from '../../assets/bg-removed/home-slide-4.png';
-import Slide5 from '../../assets/bg-removed/home-slide-5.png';
-import Slide6 from '../../assets/bg-removed/home-slide-6.png';
-import Slide7 from '../../assets/bg-removed/home-slide-7.png';
-import Slide8 from '../../assets/bg-removed/home-slide-8.png';
-
-// Array com todos os slides disponíveis
+// Array com todos os slides disponíveis (usando imagens que existem)
 const slides = [
   {
     id: 1,
-    image: Slide01,
-    title: 'Nike Air Force 1',
-    description: 'Tênis clássico com design atemporal para o dia a dia.',
+    image: "/images/iphone-15-pro-max.jpg",
+    title: 'iPhone 15 Pro Max',
+    description: 'Smartphone premium com design atemporal para o dia a dia.',
   },
   {
     id: 2,
-    image: Slide3,
-    title: 'Nike Running Pro',
-    description: 'Performance e conforto para suas corridas diárias.',
+    image: "/images/rizenproc.png",
+    title: 'Processador Ryzen',
+    description: 'Performance e velocidade para suas tarefas diárias.',
   },
   {
     id: 3,
-    image: Slide4,
-    title: 'Nike SB Dunk',
-    description: 'O favorito dos skatistas com durabilidade superior.',
+    image: "/images/ipodmax.png",
+    title: 'iPod Max',
+    description: 'O favorito dos audiófilos com qualidade superior.',
   },
   {
     id: 4,
-    image: Slide3,
-    title: 'Nike Air Max',
-    description: 'Amortecimento visível para máximo conforto.',
+    image: "/images/gws.png",
+    title: 'Gaming Headset',
+    description: 'Som imersivo para máximo conforto nos jogos.',
   },
   {
     id: 5,
-    image: Slide8,
-    title: 'Nike Jordan',
-    description: 'Estilo icônico inspirado no basquete.',
+    image: "/images/tecnobits.png",
+    title: 'TecnoBits Store',
+    description: 'Estilo icônico da nossa marca.',
   },
   {
     id: 6,
-    image: Slide6,
-    title: 'Nike Free',
-    description: 'Sensação natural com flexibilidade aumentada.',
+    image: "/images/iphone-15-pro-max.jpg",
+    title: 'iPhone 15 Pro Max',
+    description: 'Design natural com flexibilidade aumentada.',
   },
   {
     id: 7,
-    image: Slide7,
-    title: 'Nike React',
-    description: 'Tecnologia responsiva para cada passada.',
+    image: "/images/rizenproc.png",
+    title: 'Ryzen Processor',
+    description: 'Tecnologia responsiva para cada tarefa.',
   },
   {
     id: 8,
-    image: Slide8,
-    title: 'Nike Blazer',
-    description: 'Nike o Visual retrô com toques modernos. ',
+    image: "/images/ipodmax.png",
+    title: 'iPod Max',
+    description: 'Visual retrô com toques modernos.',
   },
 ];
 
@@ -103,7 +92,7 @@ const Gallery = () => {
         </div>
 
         <div className='content-image-icon'>
-          <img src={OrnamentImg} alt='Desenho de estrelas amarelas' />
+          <img src="/images/Ornament.png" alt='Desenho de estrelas amarelas' />
         </div>
       </div>
 

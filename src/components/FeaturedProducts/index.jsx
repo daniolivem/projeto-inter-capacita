@@ -1,17 +1,13 @@
 import './FeaturedProducts.css';
 import { ButtonSecundary } from '../Buttons/ButtonComponents';
 import { featuredProductsData } from '../../data/featuredProducts';
-import RyzenProc from '../../assets/images/rizenproc.png';
-import IpodMax from '../../assets/images/ipodmax.png';
-import Samsung from '../../assets/images/gws.png';
-
 
 const FeaturedProducts = () => {
-  // Mapeamento das imagens (necessário devido aos imports)
+  // Mapeamento das imagens usando caminhos públicos
   const imageMap = {
-    '../assets/images/rizenproc.png': RyzenProc,
-    '../assets/images/gws.png': Samsung,
-    '../assets/images/ipodmax.png': IpodMax
+    '../assets/images/rizenproc.png': '/images/rizenproc.png',
+    '../assets/images/gws.png': '/images/gws.png',
+    '../assets/images/ipodmax.png': '/images/ipodmax.png'
   };
 
   // Processa os dados adicionando as imagens corretas

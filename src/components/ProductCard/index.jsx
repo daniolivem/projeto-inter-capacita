@@ -7,6 +7,12 @@ function ProductCard({ product }) {
   const { addToCart } = useCart(); // Use o hook para acessar a função
   const { id, image, name, price, priceDiscount, tagValue } = product; // Desestruturar props de 'product'
 
+  // Função para tratar erro de carregamento de imagem
+  const handleImageError = (e) => {
+    // Usar uma imagem padrão se a imagem não carregar
+    e.target.src = '/product-thumb-1.svg'; // Imagem padrão que existe na pasta public
+  };
+
   // Formatar os preços para exibição em formato R$ XX,XX
   const formatPrice = value => {
     if (typeof value !== 'number') {
@@ -33,7 +39,11 @@ function ProductCard({ product }) {
       <Link to={`/produtos/${id}`} className='product-link'>
         <div className='card-product'>
           {tagValue && <div className='discount'>{tagValue}</div>}
-          <img src={image} alt={name} />
+          <img 
+            src={image} 
+            alt={name} 
+            onError={handleImageError}
+          />
         </div>
         {/* Esta categoria parece estática, pode ser dinâmica se necessário */}
         <h4>{name}</h4>
