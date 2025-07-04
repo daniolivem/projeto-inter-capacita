@@ -1,9 +1,5 @@
 import Logo from '../Logo';
-import CartImage from '../../assets/icons/buy.svg?react'; // Importação padrão com ?react
 import './Header.css';
-import SearchIcon from '../../assets/icons/Search.svg';
-import MenuIcon from '../../assets/icons/Menu.svg';
-import MenuVertIcon from '../../assets/icons/Menu-vertical.svg';
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation, NavLink } from 'react-router-dom';
 import { PrimaryBtn } from '../Buttons/ButtonComponents';
@@ -132,12 +128,12 @@ const Header = () => {
             <button className='hamburger-menu' onClick={handleMenuClick}>
               {isMenuOpen ? (
                 <img
-                  src={MenuVertIcon}
+                  src="/images/Menu-vertical.svg"
                   alt='Ícone de menu vertical'
                   style={{ height: '24px' }}
                 />
               ) : (
-                <img src={MenuIcon} alt='Ícone de menu' />
+                <img src="/images/Menu.svg" alt='Ícone de menu' />
               )}
             </button>
           )}
@@ -169,7 +165,7 @@ const Header = () => {
                   // No desktop, executamos a pesquisa
                   onClick={isMobile ? toggleSearch : handleSearch}
                 >
-                  <img src={SearchIcon} alt='Ícone de pesquisa' />
+                  <img src="/images/Search.svg" alt='Ícone de pesquisa' />
                 </div>
 
                 <NavLink to='/register' className='nav-link'>Cadastre-se</NavLink>
@@ -181,7 +177,7 @@ const Header = () => {
                 </PrimaryBtn>
 
                 <Link to="/shopping-cart" className="icon-link"> 
-                  <CartImage />
+                  <img src="/images/buy.svg" alt="Carrinho de compras" />
                   {cartItemCount > 0 && ( // Only display count if greater than 0
                     <span className="cart-badge">{cartItemCount}</span>
                   )}

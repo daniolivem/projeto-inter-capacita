@@ -1,4 +1,3 @@
-import Logo from '../../assets/images/Logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebook,
@@ -15,7 +14,7 @@ const Footer = () => (
   <footer className='footer'>
     {/* div cabeçalho */}
     <div className='footer-header'>
-      <img className='footer-logo' src={Logo} alt='Logo da loja' />
+      <img className='footer-logo' src="/images/tecnobits.png" alt='Logo da loja' />
       <h3 className='footer-title'>Digital Store</h3>
     </div>
 
