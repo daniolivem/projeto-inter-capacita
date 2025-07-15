@@ -1,6 +1,5 @@
-/* TECNOBITS - FORMULARIOS / PÁGINAS INTERNAS */
 :root {
-  --background-light: var(--background-color);     /* F1F5F9 */
+  --background-light: var(--background-color); 
   --background-medium: var(--background-color);
   --input-background: #dfd7d7;
   --text-color: var(--text-primary);
@@ -133,7 +132,7 @@
 .summaryButton {
   width: 100%;
   height: 60px;
-  background-color: var(--highlight-color); /* Usa o mesmo ciano do Design System */
+  background-color: var(--highlight-color); 
   border-radius: var(--border-radius);
   color: var(--text-white);
   font-weight: 700;

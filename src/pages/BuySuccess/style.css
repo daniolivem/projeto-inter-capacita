@@ -245,7 +245,7 @@ body {
   color: #1461c7;
 }
 
-/* RESPONSIVO */
+/* responsividade*/
 @media (max-width: 768px) {
   .container-main {
     margin: 20px 15px;
