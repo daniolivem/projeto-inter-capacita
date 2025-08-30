@@ -220,7 +220,7 @@ body {
   align-items: center; /* Alinha verticalmente o preço */
   justify-content: flex-end; /* Alinha o conteúdo à direita */
   flex-basis: 20%; /* Corresponde ao header */
-  color: #c92071;
+  color: #1461c7;
   font-size: 1em;
   font-weight: bold;
   white-space: nowrap;
@@ -276,13 +276,13 @@ body {
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .coupon-input input:focus, .shipping-input input:focus {
-  border-color: #c92071;
-  box-shadow: 0 0 0 0.2rem rgba(201, 32, 113, 0.25);
+  border-color: var(--professional-color);
+  box-shadow: 0 0 0 0.2rem #1461c7;
   outline: none;
 }
 
 .ok-button {
-  background-color: #c92071;
+  background-color: var(--professional-color);
   color: var(--white);
   border: none;
   padding: 10px 20px;
@@ -297,12 +297,12 @@ body {
   cursor: not-allowed;
 }
 .ok-button:hover:not(:disabled) {
-  background-color: #a51057;
+  background-color: #1461c7;
 }
 
 /* Estilos para mensagens de erro e opções de frete */
 .shipping-error-message, .no-shipping-options-message {
-  color: #dc3545;
+  color: var(--error-color);
   font-size: 0.85em;
   margin-top: 10px;
 }
@@ -330,7 +330,7 @@ body {
   transition: border-color 0.2s ease-in-out;
 }
 .shipping-option:hover {
-  border-color: #c92071;
+  border-color: #1461c7;
 }
 .shipping-option label {
   font-size: 0.95em;
@@ -396,7 +396,7 @@ body {
   border-top: 1px solid #ced4da;
 }
 .total-row span:last-child {
-  color: #c92071;
+  color: #1461c7;
 }
 
 /* Botões no Resumo */
@@ -416,23 +416,23 @@ body {
     transform: translateY(1px);
 }
 .checkout-button {
-  background-color: #c92071;
+  background-color: var(--professional-color);
   color: white;
-  border-color: #c92071;
+  border-color: var(--professional-color);
 }
 .checkout-button:hover {
-  background-color: #a51057;
-  border-color: #a51057;
+  background-color: #1461c7;
+  border-color: #1461c7;
 }
 .continue-shopping-button {
   background-color: #ffffff;
-  color: #c92071;
-  border: 1px solid #c92071;
+  color: var(--professional-color);
+  border: 1px solid var(--professional-color);
 }
 .continue-shopping-button:hover {
-  background-color: #c92071;
+  background-color: #1461c7;
   color: var(--white);
-  border-color: #a51057;
+  border-color: #1461c7;
 }
 
 

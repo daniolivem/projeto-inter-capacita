@@ -4,7 +4,7 @@
   position: relative;
   color: aliceblue;
   background-color: #0B0E16;
-  width: 1521px;
+  width: 100%;
   height: 550px; /* antes: 454px */
   padding: 5% 6% 2%; /*72px 100px 30px  */
   flex-direction: column;

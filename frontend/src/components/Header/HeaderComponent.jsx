@@ -111,7 +111,7 @@ const handleSearch = () => {
                     <div className='header-main-auth'>
                         <Link to="/" className="back-icon" aria-label="Voltar para a página principal">
                              {/* 2. Use a imagem importada aqui */}
-                             <img src={logoIcon} alt="Logotipo Tecnobits" className="auth-logo-icon" />
+                             <img src="images/tecnobits.png" alt="Logotipo Tecnobits" className="auth-logo-icon" />
                         </Link>
                     </div>
                 ) : (
@@ -218,7 +218,7 @@ const handleSearch = () => {
                                 <li><NavLink to='/' end className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Home</NavLink></li>
                                 <li><NavLink to='/produtos' className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Produtos</NavLink></li>
                                 <li><NavLink to='/categorias' className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Categorias</NavLink></li>
-                                <li><NavLink to='/orders' className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Meus Pedidos</NavLink></li>
+                                <li><NavLink to='/*' className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Meus Pedidos</NavLink></li>
                             </ul>
                         </nav>
                     </>

@@ -57,9 +57,9 @@
 }
 
 .auth-logo-icon {
-    height: 40px; 
-    width: 40px; /* Definir largura para criar um quadrado */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    height: 495px; 
+    width: 210px; /* Definir largura para criar um quadrado */
+    object-fit: contain; /* Garante que a imagem preencha o espaço sem distorcer */
     border-radius: 8px; /* Adiciona as bordas arredondadas */
     display: block;
 }
@@ -106,7 +106,7 @@
   left: 0;
   background: white;
   width: 100%;
-  max-width: 559px;
+  max-width: 650px;
   max-height: 260px; /* altura suficiente para 5 itens com padding */
   overflow-y: auto; /* ativa scroll se ultrapassar altura */
   border: 1px solid #ccc;
@@ -193,7 +193,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  cursor: pointer;
+  
   padding: 6px 10px;
   border-radius: 4px;
   transition: background-color 0.2s ease;
@@ -220,10 +220,14 @@
   font-weight: bold;
  
 }
+.user-actions .user-icons:hover, .user-actions .user .user-text .user-link:hover  {
+  color: #1461c7;
+  
+}
 .user-actions .user .user-text .user-link .user-icons {
   all: unset;
   cursor: pointer;
-  color: #333;
+  color: #4B5B9D;
   text-decoration: none;
  
 }
@@ -232,6 +236,7 @@
   color: var(--professional-color);
   white-space: nowrap;
   text-decoration: none;
+  cursor: default;
 }
 .user-actions .functions {
     display: flex;
@@ -240,21 +245,22 @@
 }
 .user-actions .icon-link {
     text-decoration: none;
-    color: #2D2D36;
+    color: #4B5B9D;
     position: relative;
     transition: color 0.2s ease;
     display: flex;
     align-items: center;
 }
 
-.user-actions .icon-link:hover {
-    color: #4B5B9D;
-}
 .user-actions .icon-link .icon-sun, .user-actions .icon-link .icon-heart, .user-actions .icon-link .cart-icon {
     width: 30px;
     height: 30px;
-    color: #4B5B9D;
+    color: var(#4B5B9D);
 }
+.user-actions .icon-link .icon-sun:hover, .user-actions .icon-link .icon-heart:hover, .user-actions .icon-link .cart-icon:hover {
+    color: #1461c7;
+}
+
 .cart-badge {
     position: absolute;
     top: -8px;

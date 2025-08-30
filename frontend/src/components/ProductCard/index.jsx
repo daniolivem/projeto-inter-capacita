@@ -10,7 +10,7 @@ function ProductCard({ product }) {
   // Função para tratar erro de carregamento de imagem
   const handleImageError = (e) => {
     // Usar uma imagem padrão se a imagem não carregar
-    e.target.src = '/product-thumb-1.svg'; // Imagem padrão que existe na pasta public
+    e.target.src = '/images/404.png'; // Imagem padrão que existe na pasta public
   };
 
   // Formatar os preços para exibição em formato R$ XX,XX

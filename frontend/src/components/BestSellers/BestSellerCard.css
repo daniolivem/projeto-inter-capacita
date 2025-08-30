@@ -13,7 +13,7 @@
 }
 
 .best-seller-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-20px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -82,7 +82,7 @@
 }
 
 .best-seller-card:hover .best-seller-image img {
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 
 /* Informações do produto */
