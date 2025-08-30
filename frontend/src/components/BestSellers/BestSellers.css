@@ -1,6 +1,6 @@
 /* Container principal dos campeões de vendas */
 .best-sellers-container {
-  width: 100%;
+  width: 90%;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
@@ -19,6 +19,34 @@
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+/* Para garantir que os 3 cards fiquem na mesma linha em telas maiores */
+@media (min-width: 1200px) {
+  .best-sellers-grid {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid; /* Usa grid para controle mais preciso */
+    justify-items: center; /* Centraliza os itens dentro de suas células de grid */
+  }
+}
+
+/* Ajuste para 2 cards em telas médias */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .best-sellers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    justify-items: center;
+  }
+}
+
+/* Ajuste para 1 card em telas menores */
+@media (max-width: 768px) {
+  .best-sellers-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+    justify-items: center;
+  }
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {

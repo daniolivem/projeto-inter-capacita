@@ -3,17 +3,9 @@ import { ButtonSecundary } from '../Buttons/ButtonComponents';
 import { featuredProductsData } from '../../data/featuredProducts';
 
 const FeaturedProducts = () => {
-  // Mapeamento das imagens usando caminhos públicos
-  const imageMap = {
-    '/public/images/rizenproc.png': '/images/rizenproc.png',
-    '/public/images/gws.png': '/images/gws.png',
-    '/public/images/ipodmax.png': '/images/ipodmax.png'
-  };
-
-  // Processa os dados adicionando as imagens corretas
+  // Processa os dados adicionando função de compra
   const featuredProducts = featuredProductsData.map(product => ({
     ...product,
-    image: imageMap[product.image] || product.image,
     onBuy: () => window.location.href = '/404' //retorna para a página 404
   }));
 
@@ -21,7 +13,7 @@ const FeaturedProducts = () => {
   if (!featuredProducts || featuredProducts.length === 0) {
     return (
       <section className='featured-products'>
-        <p>Nenhum produto em destaque disponível.</p>
+        
       </section>
     );
   }

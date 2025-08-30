@@ -26,7 +26,7 @@ export const ButtonIcon = ({ children, className = '', ...props }) => {
 
 export const ButtonShop = ({ children, className = '', ...props }) => {
   return (
-    <button className={`btn-shop ${className}`} {...props}>
+    <button className={`btn-primary ${className}`} {...props}>
       {children}
     </button>
   );
