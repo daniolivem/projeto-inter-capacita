@@ -7,8 +7,8 @@
     "priceDiscount": 7999.99,
     "category": "SMARTPHONE",
     "brand": "Apple",
-    "image": "/public/images/iphone-15-pro-max.png",
-    "rating": 4.8,
+    "image": "/images/iphone-15-pro-max.png",
+    "rating": 3.0,
     "inStock": true,
     "tagValue": "11% Off"
   },
@@ -20,7 +20,7 @@
     "priceDiscount": 6999.99,
     "category": "SMARTPHONE",
     "brand": "Samsung",
-    "image": "/public/images/galaxy-s24-ultra.png",
+    "image": "/images/galaxy-s24-ultra.png",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "13% Off"
@@ -33,7 +33,7 @@
     "priceDiscount": 3499.99,
     "category": "NOTEBOOK",
     "brand": "Lenovo",
-    "image": "/public/images/lenovo-v14.jpg",
+    "image": "/images/lenovo-v14.jpg",
     "rating": 4.9,
     "inStock": true,
     "tagValue": "16% Off"
@@ -46,7 +46,7 @@
     "priceDiscount": 4599.99,
     "category": "NOTEBOOK",
     "brand": "ASUS",
-    "image": "/public/images/asus-vivobook-15.jpg",
+    "image": "/images/asus-vivobook-15.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
@@ -59,7 +59,7 @@
     "priceDiscount": 1499.99,
     "category": "HEADPHONE",
     "brand": "Sony",
-    "image": "/public/images/sony-wh1000xm5.avif",
+    "image": "/images/sony-wh1000xm5.avif",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "17% Off"
@@ -72,7 +72,7 @@
     "priceDiscount": 1699.99,
     "category": "HEADPHONE",
     "brand": "Apple",
-    "image": "/public/images/airpods-pro-2.jpg",
+    "image": "/images/airpods-pro-2.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -85,7 +85,7 @@
     "priceDiscount": 4299.99,
     "category": "TABLET",
     "brand": "Apple",
-    "image": "/public/images/ipad-air-m3.jpg",
+    "image": "/images/ipad-air-m3.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "14% Off"
@@ -98,7 +98,7 @@
     "priceDiscount": 5999.99,
     "category": "TABLET",
     "brand": "Samsung",
-    "image": "/public/images/galaxy-tab-s9-ultra.jpg",
+    "image": "/images/galaxy-tab-s9-ultra.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "14% Off"
@@ -111,7 +111,7 @@
     "priceDiscount": 6799.99,
     "category": "SMART-TV",
     "brand": "Samsung",
-    "image": "/public/images/samsung-neo-qled-65.webp",
+    "image": "/images/samsung-neo-qled-65.webp",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -124,7 +124,7 @@
     "priceDiscount": 4999.99,
     "category": "SMART-TV",
     "brand": "LG",
-    "image": "/public/images/lg-oled-c3-55.jpg",
+    "image": "/images/lg-oled-c3-55.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "17% Off"
@@ -137,7 +137,7 @@
     "priceDiscount": 2999.99,
     "category": "ACESSÓRIOS",
     "brand": "Apple",
-    "image": "/public/images/apple-watch-series-9.jpeg",
+    "image": "/images/apple-watch-series-9.jpeg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "14% Off"
@@ -150,7 +150,7 @@
     "priceDiscount": 1899.99,
     "category": "CONSOLES",
     "brand": "Nintendo",
-    "image": "/public/images/nintendo-switch-oled.webp",
+    "image": "/images/nintendo-switch-oled.webp",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "14% Off"
@@ -163,7 +163,7 @@
     "priceDiscount": 4199.99,
     "category": "SMARTPHONE",
     "brand": "Xiaomi",
-    "image": "/public/images/xiaomi-13-pro.jpg",
+    "image": "/images/xiaomi-13-pro.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "16% Off"
@@ -176,7 +176,7 @@
     "priceDiscount": 5199.99,
     "category": "SMARTPHONE",
     "brand": "Google",
-    "image": "/public/images/google-pixel-8-pro.jpg",
+    "image": "/images/google-pixel-8-pro.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "13% Off"
@@ -189,7 +189,7 @@
     "priceDiscount": 12199.99,
     "category": "NOTEBOOK",
     "brand": "ASUS",
-    "image": "/public/images/asus-rog-strix-g16.jpg",
+    "image": "/images/asus-rog-strix-g16.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -202,7 +202,7 @@
     "priceDiscount": 10999.99,
     "category": "NOTEBOOK",
     "brand": "ASUS",
-    "image": "/public/images/asus-rog-zephyrus-g14.jpg",
+    "image": "/images/asus-rog-zephyrus-g14.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
@@ -215,7 +215,7 @@
     "priceDiscount": 1599.99,
     "category": "HEADPHONE",
     "brand": "Bose",
-    "image": "/public/images/bose-qc45.jpg",
+    "image": "/images/bose-qc45.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "20% Off"
@@ -228,7 +228,7 @@
     "priceDiscount": 549.99,
     "category": "HEADPHONE",
     "brand": "JBL",
-    "image": "/public/images/jbl-tune-760nc.png",
+    "image": "/images/jbl-tune-760nc.png",
     "rating": 4.4,
     "inStock": true,
     "tagValue": "21% Off"
@@ -241,7 +241,7 @@
     "priceDiscount": 7699.99,
     "category": "TABLET",
     "brand": "Microsoft",
-    "image": "/public/images/surface-pro-9.jpg",
+    "image": "/images/surface-pro-9.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "14% Off"
@@ -254,7 +254,7 @@
     "priceDiscount": 1599.99,
     "category": "TABLET",
     "brand": "Lenovo",
-    "image": "/public/images/lenovo-tab-p11-plus.jpg",
+    "image": "/images/lenovo-tab-p11-plus.jpg",
     "rating": 4.3,
     "inStock": true,
     "tagValue": "20% Off"
@@ -267,7 +267,7 @@
     "priceDiscount": 3599.99,
     "category": "PROCESSADOR",
     "brand": "Intel",
-    "image": "/public/images/intel-i9-13900k.jpg",
+    "image": "/images/intel-i9-13900k.jpg",
     "rating": 4.9,
     "inStock": true,
     "tagValue": "10% Off"
@@ -280,7 +280,7 @@
     "priceDiscount": 2499.99,
     "category": "PROCESSADOR",
     "brand": "Intel",
-    "image": "/public/images/intel-i7-13700k.jpg",
+    "image": "/images/intel-i7-13700k.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "11% Off"
@@ -293,7 +293,7 @@
     "priceDiscount": 1799.99,
     "category": "PROCESSADOR",
     "brand": "Intel",
-    "image": "/public/images/intel-i5-13600k.jpg",
+    "image": "/images/intel-i5-13600k.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "10% Off"
@@ -306,7 +306,7 @@
     "priceDiscount": 1099.99,
     "category": "PROCESSADOR",
     "brand": "Intel",
-    "image": "/public/images/intel-i5-12400f.jpg",
+    "image": "/images/intel-i5-12400f.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
@@ -319,7 +319,7 @@
     "priceDiscount": 699.99,
     "category": "PROCESSADOR",
     "brand": "Intel",
-    "image": "/public/images/intel-i3-12100f.jpg",
+    "image": "/images/intel-i3-12100f.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "13% Off"
@@ -332,7 +332,7 @@
     "priceDiscount": 3799.99,
     "category": "PROCESSADOR",
     "brand": "AMD",
-    "image": "/public/images/amd-ryzen-9-7950x.jpg",
+    "image": "/images/amd-ryzen-9-7950x.jpg",
     "rating": 4.9,
     "inStock": true,
     "tagValue": "10% Off"
@@ -345,7 +345,7 @@
     "priceDiscount": 2999.99,
     "category": "PROCESSADOR",
     "brand": "AMD",
-    "image": "/public/images/amd-ryzen-9-7900x.jpg",
+    "image": "/images/amd-ryzen-9-7900x.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "9% Off"
@@ -358,7 +358,7 @@
     "priceDiscount": 2099.99,
     "category": "PROCESSADOR",
     "brand": "AMD",
-    "image": "/public/images/amd-ryzen-7-7700x.jpg",
+    "image": "/images/amd-ryzen-7-7700x.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "9% Off"
@@ -371,7 +371,7 @@
     "priceDiscount": 1499.99,
     "category": "PROCESSADOR",
     "brand": "AMD",
-    "image": "/public/images/amd-ryzen-7-5700x.jpg",
+    "image": "/images/amd-ryzen-7-5700x.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "12% Off"
@@ -384,7 +384,7 @@
     "priceDiscount": 999.99,
     "category": "PROCESSADOR",
     "brand": "AMD",
-    "image": "/public/images/amd-ryzen-5-5600x.jpg",
+    "image": "/images/amd-ryzen-5-5600x.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "17% Off"
@@ -397,7 +397,7 @@
     "priceDiscount": 24479.99,
     "category": "PLACA DE VÍDEO",
     "brand": "NVIDIA",
-    "image": "/public/images/nvidia-rtx-4090.png",
+    "image": "/images/nvidia-rtx-4090.png",
     "rating": 4.9,
     "inStock": true,
     "tagValue": "10% Off"
@@ -410,7 +410,7 @@
     "priceDiscount": 11553.24,
     "category": "PLACA DE VÍDEO",
     "brand": "NVIDIA",
-    "image": "/public/images/nvidia-rtx-4080.jpg",
+    "image": "/images/nvidia-rtx-4080.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "23% Off"
@@ -423,7 +423,7 @@
     "priceDiscount": 5999.99,
     "category": "PLACA DE VÍDEO",
     "brand": "NVIDIA",
-    "image": "/public/images/nvidia-rtx-4070-ti.jpg",
+    "image": "/images/nvidia-rtx-4070-ti.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "18% Off"
@@ -436,7 +436,7 @@
     "priceDiscount": 4759.99,
     "category": "PLACA DE VÍDEO",
     "brand": "NVIDIA",
-    "image": "/public/images/nvidia-rtx-4070.jpg",
+    "image": "/images/nvidia-rtx-4070.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
@@ -449,7 +449,7 @@
     "priceDiscount": 3159.99,
     "category": "PLACA DE VÍDEO",
     "brand": "NVIDIA",
-    "image": "/public/images/nvidia-rtx-4060-ti.jpg",
+    "image": "/images/nvidia-rtx-4060-ti.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "15% Off"
@@ -462,7 +462,7 @@
     "priceDiscount": 2659.99,
     "category": "PLACA DE VÍDEO",
     "brand": "NVIDIA",
-    "image": "/public/images/nvidia-rtx-4060.jpg",
+    "image": "/images/nvidia-rtx-4060.jpg",
     "rating": 4.4,
     "inStock": true,
     "tagValue": "15% Off"
@@ -475,7 +475,7 @@
     "priceDiscount": 7299.99,
     "category": "PLACA DE VÍDEO",
     "brand": "AMD",
-    "image": "/public/images/amd-rx-7900-xtx.jpg",
+    "image": "/images/amd-rx-7900-xtx.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -488,7 +488,7 @@
     "priceDiscount": 4899.99,
     "category": "PLACA DE VÍDEO",
     "brand": "AMD",
-    "image": "/public/images/amd-rx-7900-xt.jpg",
+    "image": "/images/amd-rx-7900-xt.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
@@ -501,7 +501,7 @@
     "priceDiscount": 4299.99,
     "category": "PLACA DE VÍDEO",
     "brand": "AMD",
-    "image": "/public/images/amd-rx-7800-xt.jpg",
+    "image": "/images/amd-rx-7800-xt.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "14% Off"
@@ -514,7 +514,7 @@
     "priceDiscount": 3899.99,
     "category": "PLACA DE VÍDEO",
     "brand": "AMD",
-    "image": "/public/images/amd-rx-7700-xt.jpg",
+    "image": "/images/amd-rx-7700-xt.jpg",
     "rating": 4.4,
     "inStock": true,
     "tagValue": "15% Off"
@@ -527,7 +527,7 @@
     "priceDiscount": 2199.99,
     "category": "PLACA DE VÍDEO",
     "brand": "AMD",
-    "image": "/public/images/amd-rx-7600.jpg",
+    "image": "/images/amd-rx-7600.jpg",
     "rating": 4.3,
     "inStock": true,
     "tagValue": "15% Off"
@@ -540,7 +540,7 @@
     "priceDiscount": 2499.99,
     "category": "PLACA-MÃE",
     "brand": "GIGABYTE",
-    "image": "/public/images/gigabyte-z790-aorus-elite.jpg",
+    "image": "/images/gigabyte-z790-aorus-elite.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "15% Off"
@@ -553,7 +553,7 @@
     "priceDiscount": 1199.99,
     "category": "PLACA-MÃE",
     "brand": "MSI",
-    "image": "/public/images/msi-mag-b760-gaming-plus.jpg",
+    "image": "/images/msi-mag-b760-gaming-plus.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
@@ -566,7 +566,7 @@
     "priceDiscount": 629.99,
     "category": "PLACA-MÃE",
     "brand": "GIGABYTE",
-    "image": "/public/images/gigabyte-h610m-h.jpg",
+    "image": "/images/gigabyte-h610m-h.jpg",
     "rating": 4.3,
     "inStock": true,
     "tagValue": "15% Off"
@@ -579,7 +579,7 @@
     "priceDiscount": 2069.99,
     "category": "PLACA-MÃE",
     "brand": "ASUS",
-    "image": "/public/images/asus-tuf-x670e-plus.jpg",
+    "image": "/images/asus-tuf-x670e-plus.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -592,7 +592,7 @@
     "priceDiscount": 2992.99,
     "category": "PLACA-MÃE",
     "brand": "MSI",
-    "image": "/public/images/msi-mag-x670e-tomahawk.jpg",
+    "image": "/images/msi-mag-x670e-tomahawk.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "13% Off"
@@ -605,7 +605,7 @@
     "priceDiscount": 1899.99,
     "category": "PLACA-MÃE",
     "brand": "GIGABYTE",
-    "image": "/public/images/gigabyte-b650m-aorus-elite.jpg",
+    "image": "/images/gigabyte-b650m-aorus-elite.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "15% Off"
@@ -618,7 +618,7 @@
     "priceDiscount": 689.99,
     "category": "PLACA-MÃE",
     "brand": "ASRock",
-    "image": "/public/images/asrock-a620m-hdv.jpg",
+    "image": "/images/asrock-a620m-hdv.jpg",
     "rating": 4.2,
     "inStock": true,
     "tagValue": "15% Off"
@@ -631,7 +631,7 @@
     "priceDiscount": 549.99,
     "category": "MEMÓRIA RAM",
     "brand": "Corsair",
-    "image": "/public/images/corsair-vengeance-lpx-32gb-ddr4.jpg",
+    "image": "/images/corsair-vengeance-lpx-32gb-ddr4.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "11% Off"
@@ -644,7 +644,7 @@
     "priceDiscount": 869.99,
     "category": "MEMÓRIA RAM",
     "brand": "G.Skill",
-    "image": "/public/images/corsair-vengeance-32gb-ddr5.jpg",
+    "image": "/images/corsair-vengeance-32gb-ddr5.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "15% Off"
@@ -657,7 +657,7 @@
     "priceDiscount": 449.99,
     "category": "MEMÓRIA RAM",
     "brand": "Kingston",
-    "image": "/public/images/kingston-fury-beast-16gb-ddr4.jpg",
+    "image": "/images/kingston-fury-beast-16gb-ddr4.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "15% Off"
@@ -670,7 +670,7 @@
     "priceDiscount": 1698.99,
     "category": "MEMÓRIA RAM",
     "brand": "Corsair",
-    "image": "/public/images/corsair-dominator-64gb-ddr5.jpg",
+    "image": "/images/corsair-dominator-64gb-ddr5.jpg",
     "rating": 4.9,
     "inStock": true,
     "tagValue": "15% Off"
@@ -683,7 +683,7 @@
     "priceDiscount": 999.99,
     "category": "ARMAZENAMENTO",
     "brand": "Samsung",
-    "image": "/public/images/samsung-980-pro-1tb.jpg",
+    "image": "/images/samsung-980-pro-1tb.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "15% Off"
@@ -696,7 +696,7 @@
     "priceDiscount": 1499.99,
     "category": "ARMAZENAMENTO",
     "brand": "Western Digital",
-    "image": "/public/images/wd-black-sn850x-2tb.jpg",
+    "image": "/images/wd-black-sn850x-2tb.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -709,7 +709,7 @@
     "priceDiscount": 345.99,
     "category": "ARMAZENAMENTO",
     "brand": "Kingston",
-    "image": "/public/images/kingston-nv2-500gb.jpg",
+    "image": "/images/kingston-nv2-500gb.jpg",
     "rating": 4.4,
     "inStock": true,
     "tagValue": "15% Off"
@@ -722,7 +722,7 @@
     "priceDiscount": 789.99,
     "category": "ARMAZENAMENTO",
     "brand": "Seagate",
-    "image": "/public/images/seagate-barracuda-4tb.jpg",
+    "image": "/images/seagate-barracuda-4tb.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "15% Off"
@@ -735,7 +735,7 @@
     "priceDiscount": 326.99,
     "category": "ARMAZENAMENTO",
     "brand": "Western Digital",
-    "image": "/public/images/wd-blue-1tb.jpg",
+    "image": "/images/wd-blue-1tb.jpg",
     "rating": 4.3,
     "inStock": true,
     "tagValue": "15% Off"
@@ -748,7 +748,7 @@
     "priceDiscount": 1249.99,
     "category": "FONTE DE ENERGIA",
     "brand": "Corsair",
-    "image": "/public/images/corsair-rm1000x.jpg",
+    "image": "/images/corsair-rm1000x.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "15% Off"
@@ -761,7 +761,7 @@
     "priceDiscount": 1349.99,
     "category": "FONTE DE ENERGIA",
     "brand": "Seasonic",
-    "image": "/public/images/seasonic-focus-gx-850.jpg",
+    "image": "/images/seasonic-focus-gx-850.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -774,7 +774,7 @@
     "priceDiscount": 404.72,
     "category": "FONTE DE ENERGIA",
     "brand": "EVGA",
-    "image": "/public/images/evga-supernova-750w.jpg",
+    "image": "/images/evga-supernova-750w.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "15% Off"
@@ -787,7 +787,7 @@
     "priceDiscount": 699.99,
     "category": "FONTE DE ENERGIA",
     "brand": "Cooler Master",
-    "image": "/public/images/coolermaster-mwe-gold-v2-650w.jpg",
+    "image": "/images/coolermaster-mwe-gold-v2-650w.jpg",
     "rating": 4.4,
     "inStock": true,
     "tagValue": "15% Off"
@@ -800,7 +800,7 @@
     "priceDiscount": 299.99,
     "category": "FONTE DE ENERGIA",
     "brand": "Thermaltake",
-    "image": "/public/images/thermaltake-smart-500w.jpg",
+    "image": "/images/thermaltake-smart-500w.jpg",
     "rating": 4.2,
     "inStock": true,
     "tagValue": "15% Off"
@@ -813,7 +813,7 @@
     "priceDiscount": 359.99,
     "category": "RESFRIAMENTO",
     "brand": "Noctua",
-    "image": "/public/images/deepcool-ag620-argb.jpg",
+    "image": "/images/deepcool-ag620-argb.jpg",
     "rating": 4.9,
     "inStock": true,
     "tagValue": "15% Off"
@@ -826,7 +826,7 @@
     "priceDiscount": 1850.00,
     "category": "RESFRIAMENTO",
     "brand": "Corsair",
-    "image": "/public/images/corsair-h150i-elite.jpg",
+    "image": "/images/corsair-h150i-elite.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "15% Off"
@@ -839,7 +839,7 @@
     "priceDiscount": 1545.36,
     "category": "RESFRIAMENTO",
     "brand": "NZXT",
-    "image": "/public/images/nzxt-kraken-x63.jpg",
+    "image": "/images/nzxt-kraken-x63.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -852,7 +852,7 @@
     "priceDiscount": 299.99,
     "category": "RESFRIAMENTO",
     "brand": "Cooler Master",
-    "image": "/public/images/coolermaster-hyper-212.jpg",
+    "image": "/images/coolermaster-hyper-212.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "16% Off"
@@ -865,7 +865,7 @@
     "priceDiscount": 689.99,
     "category": "RESFRIAMENTO",
     "brand": "be quiet!",
-    "image": "/public/images/bequiet-dark-rock-pro4.jpg",
+    "image": "/images/bequiet-dark-rock-pro4.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "15% Off"
@@ -878,7 +878,7 @@
     "priceDiscount": 899.99,
     "category": "GABINETE",
     "brand": "Corsair",
-    "image": "/public/images/corsair-4000d-airflow-rgb.jpg",
+    "image": "/images/corsair-4000d-airflow-rgb.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -891,7 +891,7 @@
     "priceDiscount": 299.99,
     "category": "GABINETE",
     "brand": "Aigo",
-    "image": "/public/images/aigo-c285.jpg",
+    "image": "/images/aigo-c285.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "15% Off"
@@ -904,7 +904,7 @@
     "priceDiscount": 3999.99,
     "category": "SMARTPHONE",
     "brand": "OnePlus",
-    "image": "/public/images/oneplus-12.webp",
+    "image": "/images/oneplus-12.webp",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "11% Off"
@@ -917,7 +917,7 @@
     "priceDiscount": 3999.99,
     "category": "SMARTPHONE",
     "brand": "Nothing",
-    "image": "/public/images/nothing-phone-2.webp",
+    "image": "/images/nothing-phone-2.webp",
     "rating": 4.4,
     "inStock": true,
     "tagValue": "13% Off"
@@ -930,7 +930,7 @@
     "priceDiscount": 5499.99,
     "category": "SMARTPHONE",
     "brand": "Sony",
-    "image": "/public/images/sony-xperia-1-v.jpg",
+    "image": "/images/sony-xperia-1-v.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "8% Off"
@@ -943,7 +943,7 @@
     "priceDiscount": 6499.99,
     "category": "SMARTPHONE",
     "brand": "ASUS",
-    "image": "/public/images/asus-rog-phone-8-pro.png",
+    "image": "/images/asus-rog-phone-8-pro.png",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "7% Off"
@@ -956,7 +956,7 @@
     "priceDiscount": 2499.99,
     "category": "SMARTPHONE",
     "brand": "Motorola",
-    "image": "/public/images/motorola-edge-50-pro.jpg",
+    "image": "/images/motorola-edge-50-pro.jpg",
     "rating": 4.3,
     "inStock": true,
     "tagValue": "11% Off"
@@ -969,7 +969,7 @@
     "priceDiscount": 4299.99,
     "category": "SMARTPHONE",
     "brand": "Huawei",
-    "image": "/public/images/huawei-p60-pro.jpg",
+    "image": "/images/huawei-p60-pro.jpg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "10% Off"
@@ -982,7 +982,7 @@
     "priceDiscount": 3199.99,
     "category": "SMARTPHONE",
     "brand": "Realme",
-    "image": "/public/images/realme-gt-5-pro.jpg",
+    "image": "/images/realme-gt-5-pro.jpg",
     "rating": 4.4,
     "inStock": true,
     "tagValue": "9% Off"
@@ -995,7 +995,7 @@
     "priceDiscount": 4599.99,
     "category": "SMARTPHONE",
     "brand": "Vivo",
-    "image": "/public/images/vivo-x100-pro.webp",
+    "image": "/images/vivo-x100-pro.webp",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "8% Off"
@@ -1008,7 +1008,7 @@
     "priceDiscount": 3899.99,
     "category": "SMARTPHONE",
     "brand": "Honor",
-    "image": "/public/images/honor-magic6-pro.png",
+    "image": "/images/honor-magic6-pro.png",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "9% Off"
@@ -1021,7 +1021,7 @@
     "priceDiscount": 4999.99,
     "category": "SMARTPHONE",
     "brand": "OPPO",
-    "image": "/public/images/oppo-find-x7-ultra.webp",
+    "image": "/images/oppo-find-x7-ultra.webp",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "9% Off"
@@ -1034,7 +1034,7 @@
     "priceDiscount": 6999.99,
     "category": "NOTEBOOK",
     "brand": "Acer",
-    "image": "/public/images/acer-nitro-v-15.jpg",
+    "image": "/images/acer-nitro-v-15.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "15% Off"
@@ -1047,7 +1047,7 @@
     "priceDiscount": 5999.99,
     "category": "PC PORTÁTIL",
     "brand": "GPD",
-    "image": "/public/images/gpd-win-4.webp",
+    "image": "/images/gpd-win-4.webp",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "8% Off"
@@ -1058,10 +1058,10 @@
     "description": "Console portátil Steam Deck OLED com tela de 7,4 polegadas e armazenamento de 1TB",
     "price": 4999.99,
     "priceDiscount": 4699.99,
-    "category": "PC PORTÁTIL",
+    "category": "CONSOLE PORTÁTIL",
     "category": "CONSOLE PORTÁTIL",
     "brand": "Valve",
-    "image": "/public/images/steam-deck-oled.jpg",
+    "image": "/images/steam-deck-oled.jpg",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "6% Off"
@@ -1072,10 +1072,10 @@
     "description": "Console Portátil Gamer PC ASUS ROG Ally X com AMD Ryzen Z1 Extreme e tela de 7 polegadas",
     "price": 5499.99,
     "priceDiscount": 4999.99,
-    "category": "PC PORTÁTIL",
+    "category": "CONSOLE PORTÁTIL",
     "category": "CONSOLE PORTÁTIL",
     "brand": "ASUS",
-    "image": "/public/images/asus-rog-ally-x.jpg",
+    "image": "/images/asus-rog-ally-x.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "9% Off"
@@ -1086,10 +1086,10 @@
     "description": "Console Portátil Gamer PC Lenovo Legion Go com AMD Ryzen Z1 Extreme, controles destacáveis",
     "price": 4799.99,
     "priceDiscount": 4399.99,
-    "category": "PC PORTÁTIL",
+    "category": "CONSOLE PORTÁTIL",
     "category": "CONSOLE PORTÁTIL",
     "brand": "Lenovo",
-    "image": "/public/images/lenovo-legion-go.webp",
+    "image": "/images/lenovo-legion-go.webp",
     "rating": 4.4,
     "inStock": true,
     "tagValue": "8% Off"
@@ -1100,11 +1100,11 @@
     "description": "Console Portátil Gamer PC AYA Neo 2S com AMD Ryzen 7 7840U, design compacto e elegante",
     "price": 5999.99,
     "priceDiscount": 5499.99,
-    "category": "PC PORTÁTIL",
+    "category": "CONSOLE PORTÁTIL",
     "category": "CONSOLE PORTÁTIL",
     "brand": "AYA",
-    "image": "/public/images/aya-neo-2s.avif",
-    "rating": 4.3,
+    "image": "/images/aya-neo-2s.avif",
+    "rating": 3.5,
     "inStock": true,
     "tagValue": "8% Off"
   },
@@ -1114,10 +1114,10 @@
     "description": "Console Portátil Gamer PC OneXPlayer 2 Pro com AMD Ryzen 7 8840U e tela de 8,4 polegadas",
     "price": 6999.99,
     "priceDiscount": 6499.99,
-    "category": "PC PORTÁTIL",
+    "category": "CONSOLE PORTÁTIL",
     "category": "CONSOLE PORTÁTIL",
     "brand": "OneXPlayer",
-    "image": "/public/images/onexplayer-2-pro.avif",
+    "image": "/images/onexplayer-2-pro.avif",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "7% Off"
@@ -1128,10 +1128,10 @@
     "description": "Console Portátil Gamer Anbernic Win600 com AMD Athlon Silver 3050e, entrada no mundo PC portátil",
     "price": 2199.99,
     "priceDiscount": 1999.99,
-    "category": "PC PORTÁTIL",
+    "category": "CONSOLE PORTÁTIL",
     "category": "CONSOLE PORTÁTIL",
     "brand": "Anbernic",
-    "image": "/public/images/anbernic-win600.avif",
+    "image": "/images/anbernic-win600.avif",
     "rating": 4.1,
     "inStock": true,
     "tagValue": "9% Off"
@@ -1144,7 +1144,7 @@
     "priceDiscount": 3699.99,
     "category": "MINI-PC",
     "brand": "Intel",
-    "image": "/public/images/intel-nuc-13-pro.avif",
+    "image": "/images/intel-nuc-13-pro.avif",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "8% Off"
@@ -1157,7 +1157,7 @@
     "priceDiscount": 2799.99,
     "category": "MINI-PC",
     "brand": "MINISFORUM",
-    "image": "/public/images/minisforum-um880-pro.webp",
+    "image": "/images/minisforum-um880-pro.webp",
     "rating": 4.4,
     "inStock": true,
     "tagValue": "7% Off"
@@ -1170,7 +1170,7 @@
     "priceDiscount": 1999.99,
     "category": "MINI-PC",
     "brand": "Beelink",
-    "image": "/public/images/beelink-ser5-max.avif",
+    "image": "/images/beelink-ser5-max.avif",
     "rating": 4.3,
     "inStock": true,
     "tagValue": "9% Off"
@@ -1183,7 +1183,7 @@
     "priceDiscount": 4499.99,
     "category": "SMART-TV",
     "brand": "TCL",
-    "image": "/public/images/tcl-65c845-qled.jpg",
+    "image": "/images/tcl-65c845-qled.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "10% Off"
@@ -1196,7 +1196,7 @@
     "priceDiscount": 7999.99,
     "category": "SMART-TV",
     "brand": "Sony",
-    "image": "/public/images/sony-x90l-75.jpg",
+    "image": "/images/sony-x90l-75.jpg",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "11% Off"
@@ -1209,7 +1209,7 @@
     "priceDiscount": 4999.99,
     "category": "SMART-TV",
     "brand": "Hisense",
-    "image": "/public/images/hisense-u8k-65.jpeg",
+    "image": "/images/hisense-u8k-65.jpeg",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "9% Off"
@@ -1222,7 +1222,7 @@
     "priceDiscount": 6299.99,
     "category": "SMART-TV",
     "brand": "Philips",
-    "image": "/public/images/philips-oled-908-55.webp",
+    "image": "/images/philips-oled-908-55.webp",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "10% Off"
@@ -1235,7 +1235,7 @@
     "priceDiscount": 1099.99,
     "category": "HEADPHONE",
     "brand": "Samsung",
-    "image": "/public/images/samsung-galaxy-buds3-pro.avif",
+    "image": "/images/samsung-galaxy-buds3-pro.avif",
     "rating": 4.5,
     "inStock": true,
     "tagValue": "15% Off"
@@ -1248,7 +1248,7 @@
     "priceDiscount": 1299.99,
     "category": "HEADPHONE",
     "brand": "Audio-Technica",
-    "image": "/public/images/audio-technica-ath-m50xbt2.avif",
+    "image": "/images/audio-technica-ath-m50xbt2.avif",
     "rating": 4.7,
     "inStock": true,
     "tagValue": "13% Off"
@@ -1261,7 +1261,7 @@
     "priceDiscount": 1799.99,
     "category": "HEADPHONE",
     "brand": "SteelSeries",
-    "image": "/public/images/steelseries-arctis-nova-pro.png",
+    "image": "/images/steelseries-arctis-nova-pro.png",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "10% Off"
@@ -1274,7 +1274,7 @@
     "priceDiscount": 1999.99,
     "category": "HEADPHONE",
     "brand": "Sennheiser",
-    "image": "/public/images/sennheiser-momentum-4.webp",
+    "image": "/images/sennheiser-momentum-4.webp",
     "rating": 4.8,
     "inStock": true,
     "tagValue": "13% Off"
@@ -1287,7 +1287,7 @@
     "priceDiscount": 1899.99,
     "category": "ACESSÓRIOS",
     "brand": "Samsung",
-    "image": "/public/images/samsung-galaxy-watch6-classic.jpg",
+    "image": "/images/samsung-galaxy-watch6-classic.jpg",
     "rating": 4.6,
     "inStock": true,
     "tagValue": "14% Off"
@@ -1300,7 +1300,7 @@
     "priceDiscount": 4699.99,
     "category": "CONSOLES",
     "brand": "Sony",
-    "image": "/public/images/playstation-5-pro.jpg",
+    "image": "/images/playstation-5-pro.jpg",
     "rating": 4.9,
     "inStock": true,
     "tagValue": "6% Off"
@@ -1313,7 +1313,7 @@
     "priceDiscount": 499.99,
     "category": "PLACA-MÃE",
     "brand": "ASUS",
-    "image": "/public/images/asus-prime-a520m-k.jpg",
+    "image": "/images/asus-prime-a520m-k.jpg",
     "rating": 4.3,
     "inStock": true,
     "tagValue": "15% Off"
@@ -1326,7 +1326,7 @@
     "priceDiscount": 419.99,
     "category": "PLACA-MÃE",
     "brand": "MSI",
-    "image": "/public/images/msi-a520m-a-pro.jpg",
+    "image": "/images/msi-a520m-a-pro.jpg",
     "rating": 4.2,
     "inStock": true,
     "tagValue": "15% Off"
@@ -1339,7 +1339,7 @@
     "priceDiscount": 579.99,
     "category": "PLACA-MÃE",
     "brand": "GIGABYTE",
-    "image": "/public/images/gigabyte-a520m-ds3h-v2.jpg",
+    "image": "/images/gigabyte-a520m-ds3h-v2.jpg",
     "rating": 4.1,
     "inStock": true,
     "tagValue": "15% Off"
@@ -1351,9 +1351,8 @@
     "price": 4705.87,
     "priceDiscount": 3999.99,
     "category": "PROCESSADOR",
-    "category": "PROCESSOR",
     "brand": "Intel",
-    "image": "/public/images/core-ultra-9-285k.jpg",
+    "image": "/images/core-ultra-9-285k.jpg",
     "rating": 4.2,
     "inStock": true,
     "tagValue": "15% Off"
@@ -1366,9 +1365,35 @@
     "priceDiscount": 2599.99,
     "category": "PROCESSADOR",
     "brand": "Intel",
-    "image": "/public/images/core-ultra-7-265k.jpg",
+    "image": "/images/core-ultra-7-265k.jpg",
     "rating": 4.2,
     "inStock": true,
     "tagValue": "15% Off"
+  },
+  {
+    "id": 106,
+    "name": "AMD Ryzen 7 8700G",
+    "description": "Processador AMD Ryzen 7 8700G, 8 núcleos, 16 threads, frequência base 4.2GHz, Radeon Graphics",
+    "price": 2499.99,
+    "priceDiscount": 2199.99,
+    "category": "PROCESSADOR",
+    "brand": "AMD",
+    "image": "/images/amd-ryzen-7-8700g.jpg",
+    "rating": 4.4,
+    "inStock": true,
+    "tagValue": "12% Off"
+  },
+  {
+    "id": 107,
+    "name": "Kingston Fury Renegade 2TB NVMe",
+    "description": "SSD Kingston Fury Renegade 2TB, NVMe PCIe 4.0, velocidade até 7.300 MB/s",
+    "price": 1899.99,
+    "priceDiscount": 1599.99,
+    "category": "ARMAZENAMENTO",
+    "brand": "Kingston",
+    "image": "/images/kingston-fury-renegade-2tb.jpg",
+    "rating": 4.8,
+    "inStock": true,
+    "tagValue": "16% Off"
   }
 ]

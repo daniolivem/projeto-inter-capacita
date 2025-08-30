@@ -166,7 +166,7 @@ const BuySuccessPage = () => {
           </button>
         </div>
 
-        <div style={{ marginTop: 20, width: '100%', maxWidth: 778, display: 'flex', justifyContent: 'center' }}>
+        <div style={{ marginTop: 20, width: '100%', maxWidth: 778, display: 'flex', justifyContent: 'center'}}>
           <ButtonShop onClick={() => navigate('/')}>Voltar para Home</ButtonShop>
         </div>
       </div>

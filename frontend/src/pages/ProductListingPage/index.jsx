@@ -55,6 +55,7 @@ const ProductListingPage = () => {
     'GABINETE',
     'PC PORTÁTIL',
     'MINI-PC',
+    'CONSOLE PORTÁTIL'
   ];
 
   const categoriasDisponiveis = Array.from(new Set(products.map(p => p.category)))

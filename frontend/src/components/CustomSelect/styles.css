@@ -22,13 +22,13 @@
 
 /* Estado hover do botão */
 .custom-select-button:hover {
-  border-color: #c92071;
+  border-color: var(--professional-color);
   box-shadow: 0 0 0 3px rgba(201, 32, 113, 0.1);
 }
 
 /* Estado aberto do botão */
 .custom-select-button.open {
-  border-color: #c92071;
+  border-color: var(--professional-color);
   box-shadow: 0 0 0 3px rgba(201, 32, 113, 0.1);
 }
 
@@ -98,7 +98,7 @@
 
 /* Opção selecionada */
 .select-option.selected {
-  background-color: #c92071;
+  background-color: var(--professional-color);
   color: white;
 }
 
