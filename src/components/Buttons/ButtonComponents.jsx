@@ -1,6 +1,6 @@
 import './Buttons.css';
 
-export const ButtonPrimary = ({ children, className = '', ...props }) => {
+export const ButtonPrimary = ({ children, className = '', $mobile, $desktop, ...props }) => {
   return (
     <button className={`btn-primary ${className}`} {...props}>
       {children}
