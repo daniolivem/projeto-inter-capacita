@@ -1,332 +1,142 @@
+/* DESKTOP*/
+
 .footer {
-  /*color: aliceblue;*/ 
-  display: flex;
-  position: relative;
-  color: aliceblue;
+  display: grid;
+  /* cria colunas automáticas que se adaptam ao tamanho da tela. 
+    O navegador vai criar quantas colunas de no mínimo 250px couberem no espaço.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem 2rem;
   background-color: #0B0E16;
+  color: aliceblue;
   width: 100%;
-  height: 550px; /* antes: 454px */
-  padding: 5% 6% 2%; /*72px 100px 30px  */
-  flex-direction: column;
-  justify-content: baseline;
-  align-items: center;
-  gap: 10%;
-  max-width: none;
-  max-height: none;
- /* overflow-y: hidden;*/
-  overflow: hidden;
+  padding: 4rem 6%;
 }
 
-/* div cabeçalho */
+/* Logo e Descrição */
 .footer-header {
-  position: relative;
-  display: flexbox;
-  flex-flow: column;  
-  width: 30%;
-  height: 100%;/*height: 100%;*/
-  left: -33.5%;
-  top: -10%;
-  max-width: max-content;
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
+  /* Faz esta seção ocupar 2 colunas no grid se houver espaço.
+    Em telas menores (como tablets), onde só couberem 2 colunas, ela ocupará a linha inteira.
+  */
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-logo {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  /*align-items: flex-start;*/
-  width: 90%;
-  height: 100%;
-  max-width: 100%; /*mxwidth: 307px*/
-  padding-top: 5px;
-  top: -30%;
-  left: -40%;
+  display: block;
+  width: auto;
+  max-width: 200px;
+  margin-bottom: 1rem;
 }
 
-.footer-logo p {
-  font-weight: 400;
-  color: var(--white);
-}
-
-/* div descrição */
 .footer-description {
-  position: relative;
-  display: flex;
-  left: -1%;
-  top: -63%;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0%;
-  padding: 0%;
-  width: 16%;
+  font-size: 0.9rem;
+  color: #ccc;
+  max-width: 45ch;
+  /* 
+    A propriedade 'hyphens' ajuda o navegador a quebrar palavras longas com hífen,
+    reduzindo espaço em branco que o 'justify' pode criar.
+  */
   text-align: justify;
-  font-size: smaller;
+  hyphens: auto;
+  -webkit-hyphens: auto; /* Para compatibilidade com navegadores mais antigos */
 }
 
-/* div links informações */
-.footer-info {
-  position: relative;
+/* Títulos das colunas de links */
+.footer-info-title,
+.footer-address-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  color: #FFFFFF; /* Garante que a cor seja branca e visível */
+}
+
+/* Listas de links */
+.footer-info-list,
+.footer-categories-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  left: -16%;
-  top: -156%;
-  font-size: small;
+  gap: 0.8rem;
 }
 
-.footer-info-title { 
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 0%;
-  top: -150%;
-}
-
-.footer-a {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 0%;
-  top: -150%;
-}
-
-/* div links categorias */
-
-.footer-categories {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 8.0%;
-  top: -200%;
-  font-size: small;
-  color: aliceblue;
-}
-
-/* address */
-
+/* Seção de contatos e redes sociais */
 .contats-container {
   display: flex;
-  color: #ffffff;
   flex-direction: column;
-  position: relative;
-  top: -209.0%; /*-209.0%  */
-  left: 37.0%;
+  gap: 1rem;
 }
-.footer-address {
-  position: relative;
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  left: 20.5%;
-  top: -278%;
-  font-size: small;
-  width: 90%;
+  flex-direction: row;
+  gap: 1.5rem;
 }
 
-.footer-phone {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 20%;
-  top: -260%;
-  font-size: small;
+.footer-social a {
+  color: aliceblue; /* Cor dos ícones */
+  font-size: 1.5rem; /* Tamanho dos ícones */
+  transition: color 0.2s ease;
 }
 
-.footer-social {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: -21.5%;
-  top: -292.0%;
-  font-size: small;
+.footer-social a:hover {
+  color: #A9B3B3; /* Cor ao passar o mouse */
 }
 
-/* Redes sociais */
-
-.footer-social-icon-FB {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: -6%;
-  top: 0%;
-}
-
-.footer-social-icon-IG {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 0%;
-  top: -33%;
-}
-
-.footer-social-icon-TW {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 6%;
-  top: -66%;
-}
-
-/* div copyright */
-
+/* Copyright */
 .footer-copy {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 0%;
-  top: -228%;
+  grid-column: 1 / -1; /* Ocupa a linha inteira de baixo, de ponta a ponta */
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #4A4A4A;
   font-size: small;
 }
 
+/* Estiliza os links dentro das listas do rodapé */
+.footer-info-list a,
+.footer-categories-list a {
+  color: inherit; /* Faz o link herdar a cor do texto do pai (aliceblue) */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: color 0.2s ease; /* Adiciona uma transição suave para o hover */
+}
+
+/* Adiciona um efeito de hover para que o usuário saiba que é clicável */
+.footer-info-list a:hover,
+.footer-categories-list a:hover {
+  color: #A9B3B3; /* Um cinza claro, ou a cor que preferir */
+}
+
+/*RESPONSIVIDADE*/
 
 @media (max-width: 768px) {
   .footer {
-    padding: 10px 10px 10px;
-    overflow: hidden;
-    width: 424px;
-    height: 424px;
-    max-width: max-content;
-  }
-
-  .footer-header {
-    left: auto;
-    gap: 0px;
-  }
-
-  .footer-logo {
-    max-width: 100%;
-    gap: 20px;
-  }
-
-  .footer-description {
+    /* Flexbox, que é perfeito para colunas únicas. */
+    display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2.5rem;
   }
 
-  .footer-info {
-    top: -600px;
-    border: solid red 2px;
-    
+  /* Centraliza APENAS a seção do logo no mobile */
+  .footer-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Garante alinhamento vertical */
   }
 
-  .footer-categories {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 0.0%;
-  top: -203%;
-  font-size:larger;
-  color: aliceblue;
-}
-
-/* address */
-
-.contats-container {
-  display: flex;
-  color: #ffffff;
-  flex-direction: column;
-  position: relative;
-  top: -212.0%;
-  left: 22.5%;
-}
-.footer-address {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 20.5%;
-  top: -278%;
-  font-size: small;
-  width: 90%;
-}
-
-.footer-phone {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 20%;
-  top: -260%;
-  font-size: small;
-}
-
-.footer-social {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: -21.5%;
-  top: -292.0%;
-  font-size: small;
-}
-
-/* Redes sociais */
-
-.footer-social-icon-FB {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: -6%;
-  top: 0%;
-}
-
-.footer-social-icon-IG {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 0%;
-  top: -33%;
-}
-
-.footer-social-icon-TW {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: 6%;
-  top: -66%;
-}
-
-/* div copyright */
-
-.footer-copy {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  left: -4%;
-  top: -233%;
-  font-size: small;
-}
-
-
-
-
-}
-
-@media (max-width: 460px) {
-  .footer-container {
-    padding: 30px 20px 10px;
-    height: auto;
-  }
-
-  .footer-logo {
-    gap: 15px;
-  }
-
-  .footer-logo p {
-    font-size: 0.9rem;
-  }
-
-  .footer-info h3 {
-    font-size: 0.9rem;
-  }
-
-  .footer-info ul li {
-    font-size: 0.85rem;
-  }
-
-  .footer-social ul {
-    gap: 15px;
-  }
-
-  .footer-copyright p {
-    font-size: 0.75rem;
+  .footer-description,
+  .footer-logo p { /* O seletor para o parágrafo do logo estava faltando */
+    text-align: center;
   }
 }

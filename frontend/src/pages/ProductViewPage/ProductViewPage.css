@@ -1,254 +1,325 @@
-.principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    /*background-color: aqua;*/
-    height:  90vh;
-}
-.titulo {
 
-    width: 100%;
+/* DESKTOP */
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 90vh;
 }
+
+.titulo {
+  width: 100%;
+}
+
 .principal .titulo p.textotitulo {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.8em;
-    color: var(--professional-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: var(--professional-color);
 }
+
 .principal .titulo p span.pasta {
-    color: var(--text-muted);
-    font-weight: bold;
-    margin: 0 4px;
+  color: var(--text-muted);
+  font-weight: bold;
+  margin: 0 4px;
 }
-.conteudo{
-    display: flex;
-    /*background-color: blueviolet;*/
-    height: 900%;
-    width: 100%;
-    flex-direction: wrap;
+
+.conteudo {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
 }
+
 .esquerda {
-    /*background-color: greenyellow;*/
-    display: flex;
-    justify-content: center;   /* Centraliza horizontalmente */
-    align-items: center;       /* Centraliza verticalmente */
-    height: 100%;
-    width: 50%;
-    flex-direction: column;
-    padding-left: 0; /* ou ajuste conforme necessário */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  flex-direction: column;
+  padding-left: 0;
 }
-.esquerda .imagem-produto{
-    width: auto;
-    height: 500px;           /* Altura fixa */
-    object-fit: cover;
-    
+
+.esquerda .imagem-produto {
+  width: auto;
+  height: 500px;
+  object-fit: cover;
 }
+
 .direita {
-    background-color: var(--base-color); /*unico que vai ficar*/
-    border-radius: 0.8em;
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    margin-right: 5em;
+  background-color: var(--base-color);
+  border-radius: 0.8em;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5em;
 }
-.direita .direitainfo{
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-top: 0.5em;
-   
+
+.direita .direitainfo {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
 }
-.direita .direitainfo div.direitatitulo{
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    color: var(--text-light);
-    font-size: 1rem;
-    font-weight: bold;
-    justify-content: space-between;
+
+.direita .direitainfo div.direitatitulo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: bold;
+  justify-content: space-between;
 }
-.direita .direitainfo div.direitatitulo .prontaentrega{
-    width: 20px;
-    height: 20px;
-    color: #FFD700;
+
+.direita .direitainfo div.direitatitulo .prontaentrega,
+.direita .direitainfo div.direitatitulo .calendario,
+.direita .direitainfo div.direitatitulo .estrela {
+  width: 20px;
+  height: 20px;
 }
-.direita .direitainfo div.direitatitulo .calendario{
-    width: 20px;
-    height: 20px;
-    color: #00D2FF;
+
+.direita .direitainfo div.direitatitulo .prontaentrega { color: #FFD700; }
+.direita .direitainfo div.direitatitulo .calendario { color: #00D2FF; }
+.direita .direitainfo div.direitatitulo .estrela { color: #FFD700; }
+
+.direita .direitainfo div.direitatitulo span {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
-.direita .direitainfo div.direitatitulo .estrela{
-    width: 20px;
-    height: 20px;
-    color: #FFD700;
+
+.direita h2.descricao {
+  color: var(--text-light);
 }
-.direita .direitainfo div.direitatitulo span{
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
+
+.direita .desconto {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
 }
-.direita h2.descricao{
-    color: var(--text-light);
-    
+
+.direita .preco {
+  font-size: 3em;
+  color: var(--success-color);
+  font-weight: bold;
 }
-.direita .desconto{
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    text-decoration: line-through;
-    
+
+.direita div.avista {
+  color: var(--text-light);
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
-.direita .preco{
-font-size: 3em;
-color: var(--success-color);
-font-weight: bold;
+
+.direita div.avista .pix {
+  width: 25px;
+  height: 25px;
+  color: #00B686;
 }
-.direita div.avista{
-    color: var(--text-light);
-    font-size: 0.8em;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
+
+.direita div.parcelado {
+  color: var(--text-light);
+  gap: 0.5em;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding-top: 1em;
 }
-.direita div.avista .pix{
-    width: 25px;
-    height: 25px;
-    color: #00B686;
+
+.direita div.parcelado .cartao {
+  width: 25px;
+  height: 25px;
+  color: goldenrod;
 }
-.direita div.parcelado{
-    color: var(--text-light);
-    gap: 0.5em;
-    font-size: 0.8em;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    padding-top: 1em;
+
+.direita .freteinfo {
+  color: var(--text-light);
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
-.direita div.parcelado .cartao{
-    width: 25px;
-    height: 25px;
-    color: goldenrod;
-    gap: 0.5em;
+
+.direita .freteinfo .caminhao {
+  width: 25px;
+  height: 25px;
+  color: var(--text-muted);
 }
-.direita .freteinfo{
-   color: var(--text-light);
-   font-size: 0.8em;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    
-}
-.direita div.freteinfo .caminhao{
-    width: 25px;
-    height: 25px;
-    color: var(--text-muted);
-}
-/* Seções de Cupom e Frete */
+
 .direita .frete {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
 }
+
 .frete {
-    flex: 1;
-    min-width: 260px;
-    
+  flex: 1;
+  min-width: 260px;
 }
 
 .frete h4 {
-    font-size: 0.9em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #00D2FF;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #00D2FF;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
 }
+
 .frete h4 .caminhao {
-    width: 20px;
-    height: 20px;
-    color: #00D2FF;
-    margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  color: #00D2FF;
+  margin-right: 5px;
 }
 
 .frete-entrada {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.frete-entrada button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .frete-entrada input {
-    flex-grow: 1;
-    padding: 10px 12px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    font-size: 0.95em;
-    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    color: var(--text-light);
+  flex-grow: 1;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.95em;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  color: var(--text-light);
 }
+
 .frete-entrada input:focus {
-    border-color: #00D2FF;
-    box-shadow: 0 0 0 0.1rem #3B82F6;
-    outline: none;
+  border-color: #00D2FF;
+  box-shadow: 0 0 0 0.1rem #3B82F6;
+  outline: none;
 }
+
 .frete .valorfrete {
-    color: var(--text-light);
- 
+  color: var(--text-light);
 }
-.direita .botoes{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
+
+.direita .botoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-.direta .compraragr{
-    width: 100%;
+
+/* RESPONSIVIDADE 
+
+/* TELAS MÉDIAS (TABLET: 769px - 1024px) */
+@media (max-width: 1024px) {
+  /* Mantém as 2 colunas, mas ajusta os espaçamentos */
+  .principal {
+    padding: 1.5rem;
+  }
+  .conteudo {
+    gap: 2rem;
+  }
+  .direita {
+    margin-right: 0;
+  }
 }
-.direita .addcarrinho{
-    width: 100%;
-    margin-top: 0.5rem;
-}
+
+/* TELAS MENORES (MOBILE: até 768px) */
 @media (max-width: 768px) {
+  /* Transforma o layout em coluna única */
   .conteudo {
     flex-direction: column;
-    align-items: center;
   }
-
   .esquerda, .direita {
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
-
-  .esquerda {
-    padding-left: 0;
+  .direita {
+    margin-top: 2rem;
   }
-
+  .principal {
+    padding: 1rem;
+  }
   .esquerda .imagem-produto {
     height: auto;
     max-width: 100%;
   }
 
-  .direita {
-    margin-top: 2rem;
-    margin-right: 0;
+  
+  .direita h2.descricao {
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: normal;
+    word-wrap: break-word;
   }
-
+  .direita .preco {
+    font-size: clamp(1.5em, 10vw, 2.2em);
+    word-break: break-word;
+  }
+  .direita .desconto {
+    font-size: 0.8rem;
+  }
   .direita .botoes {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.5rem;
   }
-
+  .direita .botoes .btn-primary {
+    min-width: auto;
+    padding: 12px 10px;
+    font-size: 0.8rem;
+    white-space: normal;
+    height: auto;
+    min-height: 40px;
+  }
+  .frete {
+    min-width: 0;
+  }
+  .frete h4 {
+    white-space: normal;
+    word-break: break-word;
+  }
   .frete-entrada {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.5rem;
   }
-
-  .frete-entrada input,
-  .frete-entrada button {
-    width: 100%;
+  .frete-entrada .botao-ok,
+  .frete-entrada .input-default {
+    min-width: 0;
+  }
+  .direita .direitainfo div.direitatitulo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .direita .direitainfo div.direitatitulo span {
+    white-space: normal;
+    word-break: break-all;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .star-rating-container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .star-icons {
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
   }
 }

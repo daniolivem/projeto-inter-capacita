@@ -1,0 +1,81 @@
+/* Estilos para a página de Administrador */
+
+.dashboardContainer {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #666;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.pendingList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sellerCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.sellerCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sellerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.sellerName {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.sellerDate {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 4px;
+}
+
+.detailsButton {
+  /* Reutilizando o estilo do botão primário do site */
+  padding: 10px 20px;
+  background: #c92071; /* Cor primária do seu tema */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.detailsButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(110%);
+}
