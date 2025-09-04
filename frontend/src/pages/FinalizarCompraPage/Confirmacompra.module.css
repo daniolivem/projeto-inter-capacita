@@ -1,14 +1,9 @@
 /* TECNOBITS - FORMULARIOS / PÁGINAS INTERNAS */
 :root {
-<<<<<<< HEAD:src/pages/FinalizarCompraPage/Confirmacompra.module.css
-  --background-light: var(--background-color);     /* F1F5F9 */
-  --background-medium: var(--background-color);
-=======
   --primary-color: #F6AA1C;
   --danger-color: #cf0808;
   --background-light: #FFFFFF;
   --background-medium: #F1F5F9;
->>>>>>> develop:frontend/src/pages/FinalizarCompraPage/Confirmacompra.module.css
   --input-background: #dfd7d7;
   --text-color: var(--text-primary);
   --text-light: var(--text-muted);
