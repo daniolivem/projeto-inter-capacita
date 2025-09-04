@@ -32,7 +32,7 @@ export const ButtonShop = ({ children, className = '', ...props }) => {
   );
 };
 
-// Componentes anteriores mantidos para compatibilidade
+
 export const PrimaryBtn = ({ children, ...props }) => {
   return <ButtonPrimary {...props}>{children}</ButtonPrimary>;
 };

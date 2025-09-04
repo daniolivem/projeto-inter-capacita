@@ -1,11 +1,13 @@
 /* Layout Styles */
 
-.layout-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.layout-content {
+  width: 100%; /* Garante que o container tente ocupar todo o espaço */
+  max-width: 1440px; /* Define um limite máximo para telas muito grandes */
+  margin: 0 auto; /* A propriedade chave para centralizar horizontalmente */
+  padding: 0 1.5rem; /* Adiciona um respiro nas laterais */
+  box-sizing: border-box; /* Garante que o padding não some à largura */
 }
 
 .layout-content {
-  flex-grow: 1;
-}
+    max-width: 95%; /* Faz o container ocupar 95% da tela */
+  }
