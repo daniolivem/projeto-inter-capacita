@@ -1,11 +1,11 @@
 .btn-primary {
   cursor: pointer;
-  min-width: 114px;
-  height: 40px;
+  min-width: 90px;
+  height: 40px; 
   border-radius: 8px;
   background: var(--gradient-primary);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.75px;
   line-height: 22px;
   transition: all 0.3s ease-in-out;
@@ -14,7 +14,26 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+    overflow: hidden;
 }
+
+  /* Efeito de brilho animado no hover para btn-primary */
+  .btn-primary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    transition: left 0.5s;
+    z-index: 2;
+  }
+  .btn-primary:hover::after {
+    left: 100%;
+  }
 
 .btn-primary::before {
   content: '';
@@ -98,13 +117,28 @@
   border: none;
   position: relative;
   z-index: 1;
+    overflow: hidden;
 }
 
+  /* Efeito de brilho animado no hover */
+  .btn-secondary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    transition: left 0.5s;
+    z-index: 2;
+  }
+  .btn-secondary:hover::after {
+    left: 100%;
+  }
 .btn-secondary:hover {
-  background: var(--gradient-secondary);
-  transform: translateY(-2px);
-  border: none;
-  box-shadow: 0 8px 20px rgba(0, 210, 255, 0.3);
+  transform: scale(1.05);
 }
 
 .btn-shop {

@@ -5,15 +5,16 @@
   flex-direction: column;
   align-items:center;
   overflow-y: hidden; /*Vini-Bugador: evita que os cards passem a tela igual desgraçados*/
-  gap: 8px;
+  gap: 15px;
   padding: 5%; 
-  width: 100%;
+  width: 500px;
   /*border: 8px solid red;*/
-  max-width: 692px;
+  max-width: 100px;
   height: 100%;
-  max-height: 839px;
+  max-height: 939px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  overflow-x: hidden;
 }
 
 .product-link {
@@ -36,19 +37,17 @@
 }
 
 .product-card .card-product {
-  width: 250px; /*Vini-devorador-de-codigos: isso muda a imagem de dentro do cartao*/
-  max-width: 292px; 
-  height: 321px;
-  flex-shrink: 0;
+  width: 360px; /* Mais largo */
+  max-width: 100%; 
+  height: 340px;
   background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  padding: 38px 20px 0;
+  padding: 28px 20px 0;
   position: relative;
-
 }
 
 .product-card .card-product .discount {
@@ -56,7 +55,7 @@
   top: 20px;
   left: 20px;
   background-color: var(--card-tag-color);
-  color: var(--dark-gray-2);
+  color: var(--text-muted);
   padding: 5px 15px;
   border-radius: 29px;
   font-size: 0.9rem;
@@ -66,13 +65,13 @@
 }
 
 .product-card .card-product img {
-  width: auto; /* antes: 248px*/
-  height: 175px;
+  width: 80%;
+  height: auto;
+  max-height: 90%;
   display: block;
-  position: static; /*Vini: Arrumei a position, goxtaram? > 3 > */
-  top: 50%;
-  left: 50%;
-  /* transform: translate(-50%, -50%) rotate(-30deg); */
+  object-fit: contain;
+  margin: auto;
+  position: static;
 }
 
 /*.product-card p {
@@ -87,10 +86,10 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
   margin-top: 5%; /* vini: adicionei esses dois margin para ajustar a legenda dos produtos. */
-  margin-bottom: -1%;
-  color: var(--white);
+  margin-bottom: 2%;
+  color: var(--text-primary);
   /*line-break: anywhere;*/
   white-space: nowrap;
 }
@@ -103,17 +102,17 @@
   align-items: center;
 }
 
-.product-card .card-info .original-price {
-  color: rgb(189, 187, 187);/* antes: var(dark-gray-2) */
-  font-feature-settings:
+.original-price {
+  color: var(--text-muted);
+  /* font-feature-settings:
     'liga' off,
-    'clig' off;
+    'clig' off; */
   font-family: Inter;
-  font-size: 15px;
+  font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: 38px;
-  letter-spacing: 0px;
+  line-height: 28px;
+  letter-spacing: -1px;
   text-decoration: line-through;
   text-align: center;
 }
@@ -124,10 +123,10 @@
     'liga' off,
     'clig' off;
   font-family: Inter;
-  font-size: 18px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 700;
-  line-height: 38px;
+  line-height: 28px;
   letter-spacing: 0.75px;
   text-align: center;
 }
@@ -152,16 +151,17 @@
   }
 
   .product-card .card-info .original-price {
-    font-size: 1.3rem;
-    line-height: 28px;
+    font-size: 1rem;
+    line-height: 22px;
     letter-spacing: -0.75px;
   }
 
   .product-card .card-info .discount-price {
-    font-size: 1.3rem;
-    line-height: 28px;
+    font-size: 1.1rem;
+    line-height: 22px;
     letter-spacing: -0.75px;
   }
+  max-width: 100%;
 }
 
 @media (max-width: 460px) {

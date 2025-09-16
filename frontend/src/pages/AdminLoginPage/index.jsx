@@ -12,16 +12,24 @@ const AdminLoginPage = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
 
-    const loggedInUser = login(email, password);
+    try {
+      // A função login agora vem do contexto e já faz a chamada à API
+      const loggedInUser = await login(email, password);
 
-    if (loggedInUser && loggedInUser.role === 'admin') {
-      navigate('/admin/dashboard');
-    } else {
-      setError('Credenciais de administrador inválidas.');
+      // A lógica de redirecionamento permanece, mas agora confia no estado do contexto
+      if (loggedInUser && loggedInUser.role === 'admin') {
+        navigate('/admin/dashboard');
+      } else {
+        // O erro de "não é admin" ou credenciais inválidas será lançado pelo contexto
+        setError('Acesso negado. Verifique suas credenciais ou permissões.');
+      }
+    } catch (error) {
+      // O erro lançado pelo contexto (ex: "Falha no login") será capturado aqui
+      setError(error.message);
     }
   };
 

@@ -1,14 +1,137 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
+// 1. Define o gerador do cliente Prisma. Ele vai ler este schema
+// e criar o cliente tipado para o seu projeto.
 generator client {
   provider = "prisma-client-js"
 }
 
+// 2. Define a fonte de dados. Aqui, estamos dizendo ao Prisma
+// para usar PostgreSQL e pegar a URL de conexão da variável de ambiente.
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+// Enum para definir os perfis de usuário.
+// Usar um Enum garante que apenas esses valores possam ser atribuídos ao campo 'role'.
+// Mantivemos em minúsculo para ser compatível com o código já existente no controller.
+enum Role {
+  cliente
+  vendedor
+  admin
+}
+
+enum OrderStatus {
+  AGUARDANDO_PAGAMENTO      // Pedido criado, aguardando confirmação do pagamento
+  PAGAMENTO_CONFIRMADO      // Pagamento foi confirmado
+  EM_PREPARACAO            // Vendedor está preparando o pedido
+  ENVIADO                  // Pedido foi enviado
+  ENTREGUE                 // Pedido foi entregue ao cliente
+  CANCELADO                // Pedido foi cancelado
+  DEVOLVIDO               // Cliente devolveu o pedido
+}
+
+enum PaymentMethod {
+  CARTAO_CREDITO
+  CARTAO_DEBITO
+  PIX
+  BOLETO
+  TRANSFERENCIA_BANCARIA
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  phone     String?
+  address   String?
+  role      Role     @default(cliente) // Por padrão, um novo usuário é um cliente
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relações
+  products Product[] // Um vendedor (role='vendedor') pode ter vários produtos
+  orders   Order[]   // Um cliente (role='cliente') pode ter vários pedidos
+
+  @@map("users")
+}
+
+model Category {
+  id   String @id @default(cuid())
+  name String @unique
+
+  products Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  price       Float
+  stock       Int      @default(0)
+  images      String[] // Array de URLs para as imagens
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relação com o vendedor
+  sellerId String
+  seller   User   @relation(fields: [sellerId], references: [id])
+
+  // Relação com a categoria
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
+
+  orderItems OrderItem[]
+
+  @@map("products")
+}
+
+model Order {
+  id                   String      @id @default(cuid())
+  createdAt            DateTime    @default(now())
+  status               OrderStatus @default(AGUARDANDO_PAGAMENTO)
+  total                Float
+  
+  // Informações de entrega
+  enderecoEntrega      String      // Endereço completo de entrega
+  cep                  String      // CEP para facilitar buscas/filtros
+  cidade               String
+  estado               String
+  complemento          String?     // Opcional
+  
+  // Informações de pagamento
+  metodoPagamento      PaymentMethod
+  statusPagamento      String      @default("PENDENTE") // PENDENTE, APROVADO, RECUSADO
+  
+  // Datas de entrega
+  dataEntregaPrevista  DateTime    // Data prevista para entrega
+  dataEntregaRealizada DateTime?   // Data em que foi efetivamente entregue (opcional até ser entregue)
+  
+  // Relação com o comprador
+  buyerId             String
+  buyer               User       @relation(fields: [buyerId], references: [id])
+
+  items OrderItem[]
+
+  @@map("orders")
+}
+
+// Tabela de junção para representar os itens dentro de um pedido
+model OrderItem {
+  id       String @id @default(cuid())
+  quantity Int
+  price    Float // Preço do produto no momento da compra para registro histórico
+
+  orderId String
+  order   Order  @relation(fields: [orderId], references: [id])
+
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+
+  @@map("order_items")
 }

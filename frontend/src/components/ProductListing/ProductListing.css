@@ -1,12 +1,16 @@
 /* ProductListing Component Styles */
 
 .product-listing-container {
-  column-count: 4;
-  gap: 30px;
-  padding: 30px;
+  column-count: 3;
   width: 100%;
-  justify-content: center;
-  background-color: #0B0E16;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  width: auto;
+  overflow-y: hidden;
+  justify-content: space-around;  
+  
+  background-color: var(--background-color);
 }
 
 /*.content-limit {

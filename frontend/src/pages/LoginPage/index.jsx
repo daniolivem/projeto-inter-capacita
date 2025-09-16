@@ -28,18 +28,23 @@ const LoginPage = () => {
     setFormData(prevData => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateLoginForm(formData);
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
       setIsSubmitting(true);
-      const loggedInUser = login(formData.email, formData.password);
+      setErrors({}); // Limpa erros antigos
 
-      if (loggedInUser) {
-        // Navega para o painel correto após o sucesso
-        switch (loggedInUser.role) {
+      try {
+        // Utiliza a função de login centralizada do AuthContext
+        const user = await login(formData.email, formData.password);
+
+        console.log('Login bem-sucedido:', user);
+
+        // Navega para o painel correto com base na role do usuário
+        switch (user.role) {
           case 'cliente':
             navigate('/cliente/dashboard');
             break;
@@ -47,13 +52,16 @@ const LoginPage = () => {
             navigate('/vendedor/dashboard');
             break;
           default:
-            // Impede que admins façam login por aqui
-            setErrors({ general: 'Utilize a página de login de administrador.' });
+            setErrors({ general: 'Tipo de usuário não reconhecido.' });
+            break;
         }
-      } else {
-        setErrors({ general: 'Email ou senha inválidos.' });
+
+      } catch (error) {
+        // O erro lançado pelo contexto é capturado e exibido aqui
+        setErrors({ general: error.message });
+      } finally {
+        setIsSubmitting(false);
       }
-      setIsSubmitting(false);
     }
   };
 

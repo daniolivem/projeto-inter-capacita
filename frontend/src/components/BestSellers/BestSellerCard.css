@@ -199,11 +199,28 @@
   margin-top: auto;
   position: relative;
   overflow: hidden;
+    z-index: 1;
 }
 
+  /* Efeito de brilho animado no hover */
+  .best-seller-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    transition: left 0.5s;
+    z-index: 2;
+  }
+  .best-seller-btn:hover::after {
+    left: 100%;
+  }
 .best-seller-btn:hover {
-  background: var(--gradient-secondary);
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
 .best-seller-btn:active {
