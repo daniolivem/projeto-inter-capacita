@@ -37,7 +37,7 @@
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
-  background-color: #007bff;
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
   color: white;
   font-size: 1rem;
   font-weight: 600;
@@ -47,5 +47,5 @@
 }
 
 .homeButton:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
 }

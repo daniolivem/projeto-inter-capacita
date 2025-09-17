@@ -125,29 +125,53 @@ const RegistrationForm = ({ userType }) => {
     setFormData((prevData) => ({ ...prevData, [name]: maskedValue }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newErrors = validateForm(formData, userType);
-    setErrors(newErrors);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newErrors = validateForm(formData, userType);
+    setErrors(newErrors);
 
-    if (Object.keys(newErrors).length === 0) {
-      setIsSubmitting(true);
-      console.log(`Formulário de ${userType} enviado:`, {
-        ...formData,
-        userType,
-      });
-      setTimeout(() => {
-        setIsSubmitting(false);
-        if (userType === 'vendedor') {
-          navigate('/cadastro/pendente');
-        } else {
-          navigate('/login');
-        }
-      }, 2000);
-    }
-  };
+    if (Object.keys(newErrors).length === 0) {
+      setIsSubmitting(true);
+      try {
+        // Preparar os dados para enviar ao backend
+        const userData = {
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          password: formData.password,
+          role: userType,
+          phone: formData.celular,
+          address: formData.endereco,
+          ...(userType === 'vendedor' && { cnpj: formData.cnpj })
+        };
 
-  return (
+        // Fazer a requisição para a API
+        const response = await fetch('http://localhost:3001/api/auth/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.message || 'Erro ao cadastrar usuário');
+        }
+
+        // Se o cadastro for bem-sucedido
+        if (userType === 'vendedor') {
+          navigate('/cadastro/pendente');
+        } else {
+          navigate('/login');
+        }
+      } catch (error) {
+        setErrors({ general: error.message });
+      } finally {
+        setIsSubmitting(false);
+      }
+    }
+  };  return (
     <div className={styles.formWrapper}>
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>

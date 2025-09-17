@@ -175,7 +175,7 @@
 
 /* Tag personalizada */
 .custom-tag {
-  background: linear-gradient(135deg, var(--highlight-color), var(--professional-color));
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
   color: var(--text-white);
   padding: 4px 8px;
   border-radius: 8px;

@@ -86,3 +86,28 @@ export const deletarProduto = async (req, res) => {
     res.status(404).json({ error: "Produto não encontrado" });
   }
 };
+
+// Buscar produtos por vendedor
+export const buscarProdutosPorVendedor = async (req, res) => {
+  try {
+    const { sellerId } = req.params;
+    
+    const produtos = await prisma.product.findMany({
+      where: { sellerId },
+      include: {
+        category: {
+          select: {
+            id: true,
+            name: true
+          }
+        }
+      },
+      orderBy: { createdAt: "desc" }
+    });
+
+    res.json(produtos);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message });
+  }
+};

@@ -42,7 +42,7 @@
   cursor: pointer;
 }
 .actionButton:hover {
-  background-color: #007bff;
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
   color: #fff;
 }
 .dataList {
@@ -93,7 +93,7 @@
 .modalActions { display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem; }
 .modalActions button { padding: 10px 20px; border-radius: 6px; border: none; font-weight: 600; cursor: pointer; }
 .cancelButton { background-color: #f0f0f0; border: 1px solid #ccc; }
-.saveButton { background-color: #007bff; color: #fff; }
+.saveButton { background: linear-gradient(135deg, #00D2FF, #3B82F6); color: #fff; }
 
 /* --- REGRAS DE RESPONSIVIDADE --- */
 @media (max-width: 768px) {

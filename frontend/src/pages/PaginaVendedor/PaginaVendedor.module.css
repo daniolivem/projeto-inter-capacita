@@ -35,7 +35,7 @@
 }
 .addProductButton {
   padding: 10px 20px;
-  background-color: #007bff;
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
   color: white;
   border: none;
   border-radius: 6px;
@@ -73,12 +73,142 @@
     text-align: center;
     font-size: 0.85rem;
 }
+.actionButtons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
 .editButton {
-    padding: 6px 12px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
     border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.editButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.editButton:hover::before {
+    left: 100%;
+}
+
+.editButton:hover {
+    background: linear-gradient(135deg, #218838, #1ea080);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.4);
+}
+
+.editButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.editButton:focus {
+    outline: 2px solid #20c997;
+    outline-offset: 2px;
+}
+
+.deleteButton {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #dc3545, #e74c3c);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.deleteButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.deleteButton:hover::before {
+    left: 100%;
+}
+
+.deleteButton:hover {
+    background: linear-gradient(135deg, #c82333, #dc2626);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
+}
+
+.deleteButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+}
+
+.deleteButton:focus {
+    outline: 2px solid #e74c3c;
+    outline-offset: 2px;
+}
+
+.editButton:disabled,
+.deleteButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.editButton:disabled::before,
+.deleteButton:disabled::before {
+    display: none;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}
+
+.error {
+    text-align: center;
+    padding: 2rem;
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.noProducts {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    margin: 1rem 0;
 }
 .statusEntregue { background-color: #d4edda; color: #155724; }
 .statusEnviado { background-color: #fff3cd; color: #856404; }
@@ -118,7 +248,7 @@
 .modalActions { display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem; }
 .modalActions button { padding: 10px 20px; border-radius: 6px; border: none; font-weight: 600; cursor: pointer; }
 .cancelButton { background-color: #f0f0f0; border: 1px solid #ccc; }
-.saveButton { background-color: #007bff; color: #fff; }
+.saveButton { background: linear-gradient(135deg, #00D2FF, #3B82F6); color: #fff; }
 .actionButton {
   padding: 10px 20px;
   background-color: #6c757d;
@@ -174,7 +304,7 @@
 }
 .sidebar button:hover { background-color: #f0f0f0; }
 .sidebar button.active {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #00D2FF, #3B82F6);
     color: #fff;
     font-weight: 600;
 }
@@ -221,6 +351,55 @@
         align-items: stretch;
         gap: 0.8rem;
         justify-content: flex-end; 
+    }
+    
+    .actionButtons {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .editButton,
+    .deleteButton {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        min-width: 60px;
+    }
+    
+    .productsHeader,
+    .productItem {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .actionButtons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+    
+    .editButton,
+    .deleteButton {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+        min-width: 50px;
+    }
+    
+    .productsHeader,
+    .productItem {
+        grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr;
+        min-width: 400px;
+        font-size: 0.85rem;
+    }
+    
+    .sectionHeader {
+        gap: 0.5rem;
+    }
+    
+    .addProductButton {
+        padding: 8px 16px;
+        font-size: 0.875rem;
     }
 }
 

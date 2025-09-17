@@ -108,6 +108,9 @@ export const getProfile = async (req, res) => {
       role: true,
       phone: true,
       address: true,
+      cnpj: true, // Inclui CNPJ para vendedores
+      status: true,
+      createdAt: true,
     },
   });
 
@@ -130,7 +133,7 @@ export const updateProfile = async (req, res) => {
     return res.status(404).json({ message: 'Usuário não encontrado' });
   }
 
-  const { name, email, password, phone, address } = req.body;
+  const { name, email, password, phone, address, cnpj } = req.body;
 
   // Verifica se o e-mail já está em uso por outro usuário
   if (email && email !== user.email) {
@@ -146,6 +149,11 @@ export const updateProfile = async (req, res) => {
     phone: phone || user.phone,
     address: address || user.address,
   };
+
+  // Se o usuário for vendedor, permite atualizar CNPJ
+  if (user.role === 'vendedor' && cnpj !== undefined) {
+    dataToUpdate.cnpj = cnpj;
+  }
 
   // Se uma nova senha for fornecida, hasheia antes de salvar
   if (password) {
@@ -164,6 +172,8 @@ export const updateProfile = async (req, res) => {
         role: true,
         phone: true,
         address: true,
+        cnpj: true,
+        status: true,
       },
     });
 

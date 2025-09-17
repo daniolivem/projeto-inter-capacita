@@ -297,7 +297,7 @@ body {
   cursor: not-allowed;
 }
 .ok-button:hover:not(:disabled) {
-  background-color: #1461c7;
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
 }
 
 /* Estilos para mensagens de erro e opções de frete */
@@ -421,7 +421,7 @@ body {
   border-color: var(--professional-color);
 }
 .checkout-button:hover {
-  background-color: #1461c7;
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
   border-color: #1461c7;
 }
 .continue-shopping-button {
@@ -430,7 +430,7 @@ body {
   border: 1px solid var(--professional-color);
 }
 .continue-shopping-button:hover {
-  background-color: #1461c7;
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
   color: var(--white);
   border-color: #1461c7;
 }

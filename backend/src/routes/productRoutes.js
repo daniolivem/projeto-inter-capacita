@@ -6,6 +6,7 @@ const router = express.Router();
 
 // Rotas públicas
 router.get("/", ProductController.listarProduto);       // Listar todos os produtos
+router.get("/seller/:sellerId", ProductController.buscarProdutosPorVendedor); // Buscar produtos por vendedor
 router.get("/:id", ProductController.buscarPorId);     // Buscar produto por ID
 
 // Rotas protegidas (apenas admin e vendedor podem criar, atualizar e deletar)

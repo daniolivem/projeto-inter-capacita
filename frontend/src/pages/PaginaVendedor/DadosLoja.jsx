@@ -1,28 +1,61 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '../../contexts/AuthContext';
 import styles from './PaginaVendedor.module.css'; // Reutilizando os estilos principais
 
 // Este componente cuida apenas da seção "Dados da Minha Loja" e do modal
 const DadosLoja = () => {
-    const mockInitialData = {
-        storeName: 'TecnoBits Store',
-        ownerName: 'Carlos Pereira',
-        email: 'vendedor@tecnobits.com',
-        cnpj: '12.345.678/0001-99',
-        phone: '(11) 98765-4321',
-        address: 'Rua da Tecnologia, 456, São Paulo, SP'
-    };
-    
-    const [sellerData, setSellerData] = useState(mockInitialData);
+    const { user } = useAuth();
+    const [sellerData, setSellerData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [editableData, setEditableData] = useState({});
+    const [saving, setSaving] = useState(false);
+
+    // Função para buscar dados do perfil
+    const fetchProfile = async () => {
+        try {
+            const token = localStorage.getItem('authToken');
+            const response = await fetch('http://localhost:3001/api/auth/profile', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Falha ao carregar dados do perfil');
+            }
+
+            const data = await response.json();
+            setSellerData(data);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Carrega os dados quando o componente monta
+    useEffect(() => {
+        if (user) {
+            fetchProfile();
+        }
+    }, [user]);
 
     const handleEditData = () => {
-        setEditableData(sellerData);
+        setEditableData({
+            name: sellerData.name || '',
+            email: sellerData.email || '',
+            cnpj: sellerData.cnpj || '',
+            phone: sellerData.phone || '',
+            address: sellerData.address || ''
+        });
         setIsModalOpen(true);
     };
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
+        setEditableData({});
     };
 
     const handleModalChange = (e) => {
@@ -30,12 +63,70 @@ const DadosLoja = () => {
         setEditableData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSaveChanges = (e) => {
+    const handleSaveChanges = async (e) => {
         e.preventDefault();
-        setSellerData(editableData);
-        console.log("Dados da loja salvos:", editableData);
-        setIsModalOpen(false);
+        setSaving(true);
+        
+        try {
+            const token = localStorage.getItem('authToken');
+            const response = await fetch('http://localhost:3001/api/auth/profile', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify(editableData)
+            });
+
+            if (!response.ok) {
+                throw new Error('Falha ao atualizar dados do perfil');
+            }
+
+            const result = await response.json();
+            setSellerData(result.user);
+            setIsModalOpen(false);
+            setEditableData({});
+            
+            // Feedback visual de sucesso
+            alert('Dados atualizados com sucesso!');
+        } catch (err) {
+            setError(err.message);
+            alert('Erro ao salvar dados: ' + err.message);
+        } finally {
+            setSaving(false);
+        }
     };
+
+    // Estados de loading e error
+    if (loading) {
+        return (
+            <section className={styles.section}>
+                <h2 className={styles.sectionTitle}>Dados da Minha Loja</h2>
+                <div className={styles.loading}>Carregando dados...</div>
+            </section>
+        );
+    }
+
+    if (error) {
+        return (
+            <section className={styles.section}>
+                <h2 className={styles.sectionTitle}>Dados da Minha Loja</h2>
+                <div className={styles.error}>Erro: {error}</div>
+                <button onClick={fetchProfile} className={styles.actionButton}>
+                    Tentar Novamente
+                </button>
+            </section>
+        );
+    }
+
+    if (!sellerData) {
+        return (
+            <section className={styles.section}>
+                <h2 className={styles.sectionTitle}>Dados da Minha Loja</h2>
+                <div className={styles.error}>Dados não encontrados</div>
+            </section>
+        );
+    }
 
     return (
         <>
@@ -48,22 +139,22 @@ const DadosLoja = () => {
                 </div>
                 <div className={styles.dataList}>
                     <div className={styles.dataField}>
-                        <strong>Nome da Loja:</strong> <span>{sellerData.storeName}</span>
-                    </div>
-                    <div className={styles.dataField}>
-                        <strong>Responsável:</strong> <span>{sellerData.ownerName}</span>
+                        <strong>Nome da Loja:</strong> <span>{sellerData.name}</span>
                     </div>
                     <div className={styles.dataField}>
                         <strong>Email:</strong> <span>{sellerData.email}</span>
                     </div>
                     <div className={styles.dataField}>
-                        <strong>CNPJ:</strong> <span>{sellerData.cnpj}</span>
+                        <strong>CNPJ:</strong> <span>{sellerData.cnpj || 'Não informado'}</span>
                     </div>
                     <div className={styles.dataField}>
-                        <strong>Celular:</strong> <span>{sellerData.phone}</span>
+                        <strong>Celular:</strong> <span>{sellerData.phone || 'Não informado'}</span>
                     </div>
                     <div className={styles.dataField}>
-                        <strong>Endereço:</strong> <span>{sellerData.address}</span>
+                        <strong>Endereço:</strong> <span>{sellerData.address || 'Não informado'}</span>
+                    </div>
+                    <div className={styles.dataField}>
+                        <strong>Status:</strong> <span>{sellerData.status}</span>
                     </div>
                 </div>
             </section>
@@ -78,31 +169,67 @@ const DadosLoja = () => {
                         <form onSubmit={handleSaveChanges} className={styles.modalForm}>
                             <div className={styles.formGroup}>
                                 <label>Nome da Loja</label>
-                                <input type="text" name="storeName" value={editableData.storeName} onChange={handleModalChange} />
-                            </div>
-                            <div className={styles.formGroup}>
-                                <label>Responsável</label>
-                                <input type="text" name="ownerName" value={editableData.ownerName} onChange={handleModalChange} />
+                                <input 
+                                    type="text" 
+                                    name="name" 
+                                    value={editableData.name || ''} 
+                                    onChange={handleModalChange}
+                                    required 
+                                />
                             </div>
                             <div className={styles.formGroup}>
                                 <label>Email</label>
-                                <input type="email" name="email" value={editableData.email} onChange={handleModalChange} />
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    value={editableData.email || ''} 
+                                    onChange={handleModalChange}
+                                    required 
+                                />
                             </div>
                             <div className={styles.formGroup}>
                                 <label>CNPJ</label>
-                                <input type="text" name="cnpj" value={editableData.cnpj} onChange={handleModalChange} />
+                                <input 
+                                    type="text" 
+                                    name="cnpj" 
+                                    value={editableData.cnpj || ''} 
+                                    onChange={handleModalChange} 
+                                />
                             </div>
                             <div className={styles.formGroup}>
                                 <label>Celular</label>
-                                <input type="text" name="phone" value={editableData.phone} onChange={handleModalChange} />
+                                <input 
+                                    type="text" 
+                                    name="phone" 
+                                    value={editableData.phone || ''} 
+                                    onChange={handleModalChange} 
+                                />
                             </div>
                             <div className={styles.formGroup}>
                                 <label>Endereço</label>
-                                <input type="text" name="address" value={editableData.address} onChange={handleModalChange} />
+                                <input 
+                                    type="text" 
+                                    name="address" 
+                                    value={editableData.address || ''} 
+                                    onChange={handleModalChange} 
+                                />
                             </div>
                             <div className={styles.modalActions}>
-                                <button type="button" onClick={handleCloseModal} className={styles.cancelButton}>Cancelar</button>
-                                <button type="submit" className={styles.saveButton}>Salvar Alterações</button>
+                                <button 
+                                    type="button" 
+                                    onClick={handleCloseModal} 
+                                    className={styles.cancelButton}
+                                    disabled={saving}
+                                >
+                                    Cancelar
+                                </button>
+                                <button 
+                                    type="submit" 
+                                    className={styles.saveButton}
+                                    disabled={saving}
+                                >
+                                    {saving ? 'Salvando...' : 'Salvar Alterações'}
+                                </button>
                             </div>
                         </form>
                     </div>

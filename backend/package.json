@@ -9,7 +9,12 @@
     "dev": "NODE_ENV=development nodemon server.js",
     "start:staging": "NODE_ENV=staging node server.js",
     "start:prod": "NODE_ENV=production node server.js",
-    "test": "jest"
+    "test": "jest",
+    "seed:admin": "node seeds/createAdmin.js",
+    "seed:vendor": "node seeds/createVendedor.js",
+    "seed:client": "node seeds/createCliente.js",
+    "seed:products": "node seeds/createProductsAndCategories.js",
+    "seed:all": "npm run seed:admin && npm run seed:vendor && npm run seed:client && npm run seed:products"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",

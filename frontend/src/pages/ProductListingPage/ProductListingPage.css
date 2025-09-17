@@ -155,7 +155,7 @@
   width: calc(100% - 40px);
   margin: 15px auto 20px;
   padding: 10px 15px;
-  background-color: #c92071;
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
   color: white;
   border: none;
   border-radius: 4px;
@@ -167,7 +167,7 @@
 }
 
 .add-to-cart-button:hover {
-  background-color: #a51057;
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
 }
 
 .buy-button {
@@ -255,7 +255,7 @@
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    background-color: var(--primary-color, #c92071);
+    background: linear-gradient(135deg, #00D2FF, #3B82F6);
     display: flex;
     justify-content: center;
     align-items: center;

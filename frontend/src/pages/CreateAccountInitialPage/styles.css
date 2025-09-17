@@ -84,7 +84,7 @@
     width: 523px;
     height: 48px;
     margin-top: 15px;
-    background: var(--primary-dark, #C92071);
+    background: linear-gradient(135deg, #00D2FF, #3B82F6);
     border: none;
     border-radius: 8px;
     color: var(--white, #FFFFFF);
@@ -100,7 +100,7 @@
 }
 
 .button:hover {
-    background: var(--Tertiary, #991956);
+    background: linear-gradient(135deg, #00D2FF, #3B82F6);
 }
 
 .container-social {

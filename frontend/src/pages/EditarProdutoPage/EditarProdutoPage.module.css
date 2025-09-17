@@ -84,12 +84,12 @@
 }
 
 .submitButton {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #00D2FF, #3B82F6);
     color: #fff;
 }
 
 .submitButton:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #00D2FF, #3B82F6);
 }
 
 .loading {

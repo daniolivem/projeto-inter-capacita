@@ -38,7 +38,7 @@
 
 .detailItem {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   padding: 1rem 0;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -48,9 +48,9 @@
 }
 
 .detailLabel {
+  width: 150px;
   font-size: 0.85rem;
   color: #666;
-  margin-bottom: 0.25rem;
   text-transform: uppercase;
 }
 
@@ -58,16 +58,33 @@
   font-size: 1.1rem;
   font-weight: 500;
   color: #333;
+  flex: 1;
 }
 
-.actionButtons {
+/* Status styles */
+.detailValue.pending {
+  color: #f39c12;
+  font-weight: 600;
+}
+
+.detailValue.approved {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.detailValue.rejected {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.actions {
   display: flex;
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   justify-content: flex-end;
 }
 
-.btn {
+.actionButton {
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -78,16 +95,32 @@
   color: white;
 }
 
-.btn:hover {
+.actionButton:hover {
   transform: translateY(-2px);
   filter: brightness(110%);
 }
 
-.btnApprove {
-  background-color: #28a745; /* Verde */
+.approveButton {
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
 }
 
-.btnReject {
-  background-color: #dc3545; /* Vermelho */
+.rejectButton {
+  background: linear-gradient(135deg, #00D2FF, #3B82F6);
 }
 
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: #dc3545;
+  font-size: 1.2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
