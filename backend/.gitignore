@@ -15,6 +15,5 @@
 .idea/
 
 # Prisma
-/prisma/migrations/
 /prisma/*.db
 /prisma/*.sqlite
